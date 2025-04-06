@@ -63,7 +63,7 @@ It automates the process of collecting, enriching, and analyzing security bullet
 ## Why Use DroidHunter?
 
 - **Track Vulnerabilities:** Monitor Android CVEs as soon as they're published.
-- ⚙**Automated Enrichment:** Fetch detailed data from the NVD (National Vulnerability Database) and Proof-of-Concept (PoC) exploits from GitHub and ExploitDB.
+- **Automated Enrichment:** Fetch detailed data from the NVD (National Vulnerability Database) and Proof-of-Concept (PoC) exploits from GitHub and ExploitDB.
 - **Smart Scoring:** Automatically calculate priority scores based on severity, exploitability, and public PoCs.
 - **File-Based:** Work with local JSON files and dig into the data offline or programmatically.
 - **Insightful Exploration:** Search, filter, and prioritize CVEs by category, type, or PoC count with interactive menus.
