@@ -191,13 +191,12 @@ Sr = 2.1, Ss = 0.6, Se = 2.1, Sp = 2.1, Sv = 1.2
 Allows you to define your own weights interactively.
 
 You’ll be prompted for each weight:
-```
-  - Enter weight for Sr - Recency (0-5): 1.5
-  - Enter weight for Ss - CVSS Base Score (0-5): 2
-  - Enter weight for Se - Exploitability (0-5): 5
-  - Enter weight for Sp - PoC Availability (0-5): 5
-  - Enter weight for Sv - Versions Affected (0-5): 1
-```
+  - Enter weight for Sr (0-5): 1.5
+  - Enter weight for Ss (0-5): 2
+  - Enter weight for Se  (0-5): 5
+  - Enter weight for Sp  (0-5): 5
+  - Enter weight for Sv (0-5): 1
+
 
 > **Note:** On first run, the tool will download vulnerability databases from sources such as the NVD, ExploitDB, and a curated list of PoC repositories on GitHub. This setup process may take a few minutes and will consume disk space depending on the size of the datasets.
 
