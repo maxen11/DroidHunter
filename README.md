@@ -167,36 +167,37 @@ Choosing a profile determines how the following metrics are weighted:
 
 > Focuses on **new** and **high-severity** vulnerabilities for academic/security research.
 
-```text
+```
 Sr = 2.5, Ss = 2.0, Se = 1.0, Sp = 0.5, Sv = 1.0
 ```
-### 2. redteam
+### 2. `redteam`
 Targets CVEs that are easily exploitable and have public PoCs.
 ```
 Sr = 1.0, Ss = 0.5, Se = 3.0, Sp = 3.0, Sv = 0.5
 ```
-### 3. blueteam
+### 3. `blueteam`
 Focuses on vulnerabilities that impact many versions and pose broader risk.
 ```
 Sr = 2.0, Ss = 1.5, Se = 1.5, Sp = 1.0, Sv = 2.0
 ```
 
-### 4. default
+### 4. `default`
 Balanced scoring profile for general triage or reporting.
 ```
 Sr = 2.1, Ss = 0.6, Se = 2.1, Sp = 2.1, Sv = 1.2
 ```
 
-### 5. custom
+### 5. `custom`
 Allows you to define your own weights interactively.
 
 You’ll be prompted for each weight:
-  Enter weight for Sr - Recency (0-5): 1.5
-  Enter weight for Ss - CVSS Base Score (0-5): 2
-  Enter weight for Se - Exploitability (0-5): 5
-  Enter weight for Sp - PoC Availability (0-5): 5
-  Enter weight for Sv - Versions Affected (0-5): 1
-
+```
+  - Enter weight for Sr - Recency (0-5): 1.5
+  - Enter weight for Ss - CVSS Base Score (0-5): 2
+  - Enter weight for Se - Exploitability (0-5): 5
+  - Enter weight for Sp - PoC Availability (0-5): 5
+  - Enter weight for Sv - Versions Affected (0-5): 1
+```
 
 > **Note:** On first run, the tool will download vulnerability databases from sources such as the NVD, ExploitDB, and a curated list of PoC repositories on GitHub. This setup process may take a few minutes and will consume disk space depending on the size of the datasets.
 
