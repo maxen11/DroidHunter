@@ -126,5 +126,77 @@ From there, you can choose:
   - Timeframe filtering
   - CVE-specific lookups
 
+##DroidHunter Scoring Profiles
+
+DroidHunter supports multiple **scoring profiles** to help prioritize Android vulnerabilities based on the user's role or specific goals. These profiles affect how CVEs are scored during **Step 4: Enrich and Calculate Scores**.
+
+---
+
+## How It Works
+
+When you select:
+Main Menu → 4. Enrich and Calculate Scores
+
+You’ll be asked to:
+1. **Choose an enriched file**
+2. **Select a scoring profile**
+
+Options:
+  1. researcher
+  2. redteam
+  3. blueteam
+  4. default
+  5. custom
+  6. Exit
+
+Choosing a profile determines how the following metrics are weighted:
+
+| Code | Metric              | Description                                        |
+|------|---------------------|----------------------------------------------------|
+| Sr   | **Recency**         | Prioritizes recently published CVEs               |
+| Ss   | **Severity**        | CVSS base score normalized (0–10 → 0–1)           |
+| Se   | **Exploitability**  | Likelihood of successful exploitation             |
+| Sp   | **PoC Availability**| Number of public proof-of-concept exploits        |
+| Sv   | **Affected Versions** | Number of Android versions affected             |
+
+---
+
+## Available Profiles
+
+### 1. `researcher`
+
+> Focuses on **new** and **high-severity** vulnerabilities for academic/security research.
+
+```text
+Sr = 2.5, Ss = 2.0, Se = 1.0, Sp = 0.5, Sv = 1.0
+```
+### 2. redteam
+Targets CVEs that are easily exploitable and have public PoCs.
+```
+Sr = 1.0, Ss = 0.5, Se = 3.0, Sp = 3.0, Sv = 0.5
+```
+### 3. blueteam
+Focuses on vulnerabilities that impact many versions and pose broader risk.
+```
+Sr = 2.0, Ss = 1.5, Se = 1.5, Sp = 1.0, Sv = 2.0
+```
+
+### 4. default
+Balanced scoring profile for general triage or reporting.
+```
+Sr = 2.1, Ss = 0.6, Se = 2.1, Sp = 2.1, Sv = 1.2
+```
+
+### 5. custom
+Allows you to define your own weights interactively.
+
+You’ll be prompted for each weight:
+  Enter weight for Sr - Recency (0-5): 1.5
+  Enter weight for Ss - CVSS Base Score (0-5): 2
+  Enter weight for Se - Exploitability (0-5): 5
+  Enter weight for Sp - PoC Availability (0-5): 5
+  Enter weight for Sv - Versions Affected (0-5): 1
+
+
 > **Note:** On first run, the tool will download vulnerability databases from sources such as the NVD, ExploitDB, and a curated list of PoC repositories on GitHub. This setup process may take a few minutes and will consume disk space depending on the size of the datasets.
 
