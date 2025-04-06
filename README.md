@@ -126,7 +126,7 @@ From there, you can choose:
   - Timeframe filtering
   - CVE-specific lookups
 
-##DroidHunter Scoring Profiles
+## DroidHunter Scoring Profiles
 
 DroidHunter supports multiple **scoring profiles** to help prioritize Android vulnerabilities based on the user's role or specific goals. These profiles affect how CVEs are scored during **Step 4: Enrich and Calculate Scores**.
 
