@@ -97,7 +97,7 @@ It automates the process of collecting, enriching, and analyzing security bullet
 ```bash
 python3 DroidHunter.py
 ```
-DroidHunter Main Menu
+## DroidHunter Main Menu
   1. Collect Data from Android Security Bulletin
   2. Enrich with NVD data
   3. Enrich with PoCs
@@ -109,7 +109,7 @@ DroidHunter Main Menu
   9. Help
   10. Exit
 
-## When listing scores, you’ll be prompted to pick from available files like:
+When listing scores, you’ll be prompted to pick from available files like:
 
   1. asb-data.json
   2. enriched.json
@@ -117,11 +117,11 @@ DroidHunter Main Menu
   4. poc.json
   5. Exit
 
+From there, you can choose:
 
-## From there, you can choose:
-- Top CVEs by score
-- Full CVE details
-- CVEs by type or category
-- Most exploited (PoCs)
-- Timeframe filtering
-- CVE-specific lookups
+  - Top CVEs by score
+  - Full CVE details
+  - CVEs by type or category
+  - Most exploited (PoCs)
+  - Timeframe filtering
+  - CVE-specific lookups
