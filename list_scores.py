@@ -56,7 +56,7 @@ def lookup_cve(json_file, lookup_cve):
             for cve_id, cve_details in cves.items():
                 if cve_id == lookup_cve:
                     results[cve_id] = cve_details
-    print("ABRAKADABRA RESULTS \n\n\n")
+    #print("ABRAKADABRA RESULTS \n\n\n")
     return results
 
 def list_scores(file, amount):

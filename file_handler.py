@@ -27,7 +27,7 @@ def save_to_json(data, filename=None):
         json.dump(data, f, indent=4, ensure_ascii=False)
 
 
-def read_json_file(filename):
+def read_json_file(filename, data_dir=data_dir):
     filepath = data_dir / filename
     if not filepath.exists():
         raise FileNotFoundError(f"{filepath} does not exist.")
@@ -66,3 +66,12 @@ def choose_json_file(text):
             print("Please enter a valid number.")
         except Exception as e:
             print("FileHandler Error: ", e)
+
+def remove_file(filename):
+    data_dir = Path("data")
+    filepath = data_dir / filename
+    if filepath.exists():
+        os.remove(filepath)
+        print(f"File {filename} removed.")
+    else:
+        print(f"File {filename} does not exist.")

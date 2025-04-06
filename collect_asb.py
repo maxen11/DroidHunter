@@ -20,6 +20,8 @@ import pandas as pd
 
 import re
 import platform
+from selenium.common.exceptions import SessionNotCreatedException
+
 
 # Define a pattern for a valid CVE ID
 #cve_pattern = re.compile(r"^CVE-\d{4}-\d+")
@@ -48,14 +50,27 @@ edge_options.add_argument("--no-sandbox")
 system = platform.system()
 
 if system == "Windows":
-    service = Service("./msedgedriver.exe", log_output=None)
-elif system == "Linux" or system == "Darwin":
-    service = Service("./msedgedriver", log_output=None)
+    service = Service("./drivers/edgedriver_win64.exe", log_output=None)
+elif system == "Linux":
+    service = Service("./drivers/edgedriver_linux64", log_output=None)
+elif system == "Darwin":
+    service = Service("./drivers/edgedriver_mac64_m1", log_output=None)
 else:
     print("Unsupported OS")
     exit()
 
-driver = webdriver.Edge(service=service, options=edge_options)
+
+try:
+    driver = webdriver.Edge(service=service, options=edge_options)
+except SessionNotCreatedException as e:
+    if "cannot find msedge binary" in str(e):
+        print("Error: \nMicrosoft Edge is not installed or not in your PATH.")
+        print("Please install it from https://www.microsoft.com/edge")
+        print("Once installed, make sure 'msedge' is accessible from the terminal.")
+        exit()
+    else:
+        raise  # Re-raise if it's a different session error
+
 BASE_URL = "https://source.android.com"
 BULLETIN_URL = "https://source.android.com/docs/security/bulletin"
 

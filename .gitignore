@@ -1,7 +1,11 @@
 CVE-Data/
-PoC-in-GitHub/
+drivers/
 exploitdb/
 microsoft.gpg
 cve_tool/
 __pycache__
 Driver_Notes/
+CVE-Data/
+PoC-in-GitHub/
+__pycache__/
+venv/

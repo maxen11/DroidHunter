@@ -1,6 +1,8 @@
 import re
 import sys
 
+
+# Count all unuqie instances of a CVE in a file
 def count_unique_cves(filename):
     # Regular expression for matching CVE identifiers (e.g., CVE-2021-1234)
     cve_pattern = re.compile(r'\bCVE-\d{4}-\d+\b', re.IGNORECASE)

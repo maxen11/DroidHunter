@@ -69,7 +69,9 @@ def poc_enricher(file):
         "AbrarKhan",
         "RenukaSelvar",
         "saurabh2088",
-        "packages_providers"
+        "packages_providers",
+        "Pazhanivelmani",
+        "MssGmz99"
     ]
 
     for year, months in data.items():
