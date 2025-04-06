@@ -3,7 +3,7 @@ import re
 import json
 import subprocess
 import cve_searchsploit as CS  # Make sure to install and import cve_searchsploit
-import file_handler as fh
+import utils.file_handler as fh
 
 def update_local_poc_repo(repo_url="https://github.com/nomi-sec/PoC-in-GitHub.git", local_dir="PoC-in-GitHub"):
     """

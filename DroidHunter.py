@@ -1,11 +1,11 @@
-import list_scores as ls
-import score_calculator as sc
-import nvd_enricher as nvd
-import poc_analyser as poc
-import file_handler as fh
+import utils.list_scores as ls
+import utils.score_calculator as sc
+import utils.nvd_enricher as nvd
+import utils.poc_analyser as poc
+import utils.file_handler as fh
 import time
 import json
-import collect_asb as ca
+import utils.collect_asb as ca
 
 def main_menu():
 
