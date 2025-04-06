@@ -125,3 +125,6 @@ From there, you can choose:
   - Most exploited (PoCs)
   - Timeframe filtering
   - CVE-specific lookups
+
+> **Note:** On first run, the tool will download vulnerability databases from sources such as the NVD, ExploitDB, and a curated list of PoC repositories on GitHub. This setup process may take a few minutes and will consume disk space depending on the size of the datasets.
+
