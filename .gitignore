@@ -1,0 +1,7 @@
+CVE-Data/
+PoC-in-GitHub/
+exploitdb/
+microsoft.gpg
+cve_tool/
+__pycache__
+Driver_Notes/
