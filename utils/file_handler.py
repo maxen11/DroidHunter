@@ -47,8 +47,8 @@ def choose_json_file(text):
     print("\n" + text + "\n")
     # Display the JSON files using only their file names
     for i, file in enumerate(json_files, start=1):
-        print(f"{i}. {file.name}")
-    print(f"{len(json_files)+1}. Exit\n")
+        print(f"\t{i}. {file.name}")
+    print(f"\t{len(json_files)+1}. Exit\n")
     
     while True:
         try:
