@@ -203,7 +203,8 @@ You’ll be prompted for each weight:
 
 
 ## Example CVE Output
-```{
+```
+{
   "CVE": "CVE-2023-4863",
   "References": "A-299477569",
   "Type": "RCE",
