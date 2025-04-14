@@ -1,6 +1,6 @@
 import time
 from datetime import datetime
-import utils.file_handler as fh
+import file_handler as fh
 import random
 import os
 import sys
@@ -17,11 +17,12 @@ from selenium.webdriver.support import expected_conditions as EC
 
 from bs4 import BeautifulSoup
 import pandas as pd
+import file_handler as fh
 
 import re
 import platform
 from selenium.common.exceptions import SessionNotCreatedException
-
+import stat
 
 # Define a pattern for a valid CVE ID
 #cve_pattern = re.compile(r"^CVE-\d{4}-\d+")
@@ -50,14 +51,32 @@ edge_options.add_argument("--no-sandbox")
 system = platform.system()
 
 if system == "Windows":
-    service = Service("./drivers/edgedriver_win64.exe", log_output=None)
+    filename = "msedgedriver.exe"
+    zip_filename="edgedriver_win64.zip"
+        
 elif system == "Linux":
-    service = Service("./drivers/edgedriver_linux64", log_output=None)
+    filename = "msedgedriver"
+    zip_filename="edgedriver_linux64.zip"
+   
 elif system == "Darwin":
-    service = Service("./drivers/edgedriver_mac64_m1", log_output=None)
+    filename = "msedgedriver"
+    zip_filename="edgedriver_mac64_m1.zip"
+#service = Service("./drivers/edgedriver_mac64_m1", log_output=None)
 else:
     print("Unsupported OS")
     exit()
+
+data_folder="drivers"
+if not os.path.exists(f"{data_folder}/{filename}"):
+    print("Error finding Edge driver, downloading and extracting...")
+    url = f"https://msedgedriver.azureedge.net/134.0.3124.51/{zip_filename}.zip"
+    fh.download_and_unzip_into_folder(url, filename, zip_filename, data_folder)
+    #os.chmod("drivers/msedgedriver", 644)
+    path = f"drivers/{filename}"
+    current_permissions = os.stat(path).st_mode
+    os.chmod(path, current_permissions | stat.S_IXUSR)
+service = Service(f"./drivers/{filename}", log_output=None)
+        
 
 
 try:
@@ -73,6 +92,50 @@ except SessionNotCreatedException as e:
 
 BASE_URL = "https://source.android.com"
 BULLETIN_URL = "https://source.android.com/docs/security/bulletin"
+
+    
+def download_and_unzip_into_folder(url, filename, data_folder=""):
+    # Create data folder if it doesn't exist.
+    if not os.path.exists(data_folder):
+        os.makedirs(data_folder)
+
+    # Build URL and file names based on year.
+    url = f"https://nvd.nist.gov/feeds/json/cve/1.1/nvdcve-1.1-{year}.json.zip"
+    zip_filename = os.path.join(data_folder, f"nvdcve-1.1-{year}.json.zip")
+    json_filename = os.path.join(data_folder, f"nvdcve-1.1-{year}.json")
+    # Check if the JSON file already exists.
+    if os.path.exists(json_filename):
+        print_progress(f"[{year}] JSON file already exists. Skipping download.")
+        # Pause briefly so that the message is visible before overwriting.
+        time.sleep(0.5)
+        return
+
+    print_progress(f"[{year}] Downloading: {url}")
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+    except requests.RequestException as e:
+        print_progress(f"[{year}] Failed to download: {e}")
+        time.sleep(0.5)
+        return
+
+    # Save the zip file.
+    with open(zip_filename, "wb") as f:
+        f.write(response.content)
+    
+    # Extract the zip file.
+    try:
+        with zipfile.ZipFile(zip_filename, "r") as zip_ref:
+            zip_ref.extractall(data_folder)
+        print_progress(f"[{year}] Downloaded and extracted successfully.")
+        time.sleep(0.5)
+    except zipfile.BadZipFile as e:
+        print_progress(f"[{year}] Error unzipping file: {e}")
+        time.sleep(0.5)
+    finally:
+        # Remove the zip file.
+        if os.path.exists(zip_filename):
+            os.remove(zip_filename)
 
 def get_bulletin_links(start_year=2015, start_month=8, end_year=datetime.today().year, end_month=datetime.today().month):
     links = []

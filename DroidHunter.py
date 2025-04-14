@@ -95,7 +95,7 @@ def main_menu():
                                     break
                                 elif d == "1":
                                     cve_id = input("Enter CVE ID (e.g., CVE-2015-3864): ").strip()
-                                    data = ls.lookup_cve(filename, cve_id)
+                                    data = ls.lookup_cve(scores_file, cve_id)
                                     if data:
                                         print(json.dumps(data, indent=4, ensure_ascii=False))
                                         time.sleep(1)

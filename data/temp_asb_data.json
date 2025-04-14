@@ -190,6 +190,391 @@
                 "Category": "Unbounded buffer read in libstagefright while parsing 3GPP metadata",
                 "publishedDate": "2015-08"
             }
+        },
+        "9": {
+            "CVE-2015-3864": {
+                "CVE": "CVE-2015-3864",
+                "Bug with AOSP links": "ANDROID-23034759",
+                "Severity": "Critical",
+                "Affected Versions": "5.1 and below",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-09-01",
+                "Category": "Remote Code Execution Vulnerability in Mediaserver",
+                "publishedDate": "2015-09"
+            },
+            "CVE-2015-3636": {
+                "CVE": "CVE-2015-3636",
+                "Bug(s) with AOSP links": "ANDROID-20770158",
+                "Severity": "Critical",
+                "Affected Versions": "5.1 and below",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-09-01",
+                "Category": "Elevation Privilege Vulnerability in Kernel",
+                "publishedDate": "2015-09"
+            },
+            "CVE-2015-3845": {
+                "CVE": "CVE-2015-3845",
+                "Bug(s) with AOSP links": "ANDROID-17312693",
+                "Severity": "High",
+                "Affected Versions": "5.1 and below",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-09-01",
+                "Category": "Elevation of Privilege Vulnerability in Binder ",
+                "publishedDate": "2015-09"
+            },
+            "CVE-2015-1528": {
+                "CVE": "CVE-2015-1528",
+                "Bug(s) with AOSP links": "ANDROID-19334482 [2]",
+                "Severity": "High",
+                "Affected Versions": "5.1 and below",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-09-01",
+                "Category": "Elevation of Privilege Vulnerability in Binder ",
+                "publishedDate": "2015-09"
+            },
+            "CVE-2015-3863": {
+                "CVE": "CVE-2015-3863",
+                "Bug(s) with AOSP links": "ANDROID-22802399",
+                "Severity": "High",
+                "Affected Versions": "5.1 and below",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-09-01",
+                "Category": "Elevation of Privilege Vulnerability in Keystore",
+                "publishedDate": "2015-09"
+            },
+            "CVE-2015-3849": {
+                "CVE": "CVE-2015-3849",
+                "Bug(s) with AOSP links": "ANDROID-20883006 [2]",
+                "Severity": "High",
+                "Affected Versions": "5.1 and below",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-09-01",
+                "Category": "Elevation of Privilege Vulnerability in Region ",
+                "publishedDate": "2015-09"
+            },
+            "CVE-2015-3858": {
+                "CVE": "CVE-2015-3858",
+                "Bug(s) with AOSP links": "ANDROID-22314646",
+                "Severity": "High",
+                "Affected Versions": "5.1 and below",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-09-01",
+                "Category": "Elevation of Privilege vulnerability in SMS enables notification bypass ",
+                "publishedDate": "2015-09"
+            },
+            "CVE-2015-3860": {
+                "CVE": "CVE-2015-3860",
+                "Bug(s) with AOSP links": "ANDROID-22214934",
+                "Severity": "Moderate",
+                "Affected Versions": "5.1 and 5.0",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-09-01",
+                "Category": "Elevation of Privilege Vulnerability in Lockscreen",
+                "publishedDate": "2015-09"
+            },
+            "CVE-2015-3861": {
+                "CVE": "CVE-2015-3861",
+                "Bug(s) with AOSP links": "ANDROID-21296336",
+                "Severity": "Low",
+                "Affected Versions": "5.1 and below",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-09-01",
+                "Category": "Denial of Service Vulnerability in Mediaserver",
+                "publishedDate": "2015-09"
+            }
+        },
+        "10": {
+            "CVE-2015-3873": {
+                "CVE": "CVE-2015-3873",
+                "Bug(s) with AOSP links": "ANDROID-20674086  [2,3,4]",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Google Internal",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in libstagefright",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-3823": {
+                "CVE": "CVE-2015-3823",
+                "Bug(s) with AOSP links": "ANDROID-21335999",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "May 20, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in libstagefright",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-6600": {
+                "CVE": "CVE-2015-6600",
+                "Bug(s) with AOSP links": "ANDROID-22882938",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Jul 31, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in libstagefright",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-6601": {
+                "CVE": "CVE-2015-6601",
+                "Bug(s) with AOSP links": "ANDROID-22935234",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Aug 3, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in libstagefright",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-3869": {
+                "CVE": "CVE-2015-3869",
+                "Bug(s) with AOSP links": "ANDROID-23036083",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Aug 4, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in libstagefright",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-3870": {
+                "CVE": "CVE-2015-3870",
+                "Bug(s) with AOSP links": "ANDROID-22771132",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Aug 5, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in libstagefright",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-3871": {
+                "CVE": "CVE-2015-3871",
+                "Bug(s) with AOSP links": "ANDROID-23031033",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Aug 6, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in libstagefright",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-3868": {
+                "CVE": "CVE-2015-3868",
+                "Bug(s) with AOSP links": "ANDROID-23270724",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Aug 6, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in libstagefright",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-6604": {
+                "CVE": "CVE-2015-6604",
+                "Bug(s) with AOSP links": "ANDROID-23129786",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Aug 11, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in libstagefright",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-3867": {
+                "CVE": "CVE-2015-3867",
+                "Bug(s) with AOSP links": "ANDROID-23213430",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Aug 14, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in libstagefright",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-6603": {
+                "CVE": "CVE-2015-6603",
+                "Bug(s) with AOSP links": "ANDROID-23227354",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Aug 15,2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in libstagefright",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-3876": {
+                "CVE": "CVE-2015-3876",
+                "Bug(s) with AOSP links": "ANDROID-23285192",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Aug 15, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in libstagefright",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-6598": {
+                "CVE": "CVE-2015-6598",
+                "Bug(s) with AOSP links": "ANDROID-23306638",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Aug 18, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in libstagefright",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-3872": {
+                "CVE": "CVE-2015-3872",
+                "Bug(s) with AOSP links": "ANDROID-23346388",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Aug 19, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in libstagefright",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-6599": {
+                "CVE": "CVE-2015-6599",
+                "Bug(s) with AOSP links": "ANDROID-23416608",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Aug 21, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in libstagefright",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-3874": {
+                "CVE": "CVE-2015-3874",
+                "Bug(s) with AOSP links": "ANDROID-23335715",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Multiple",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in Sonivox",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-3875": {
+                "CVE": "CVE-2015-3875",
+                "Bug(s) with AOSP links": "ANDROID-22952485",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Aug 15, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in libutils ",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-6602": {
+                "CVE": "CVE-2015-6602",
+                "Bug(s) with AOSP links": "ANDROID-23290056 [2]",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Aug 15, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in libutils ",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-3877": {
+                "CVE": "CVE-2015-3877",
+                "Bug(s) with AOSP links": "ANDROID-20723696",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Jul 30, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerability in Skia",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2014-9028": {
+                "CVE": "CVE-2014-9028",
+                "Bug(s) with AOSP links": "ANDROID-18872897 [2]",
+                "Severity": "Critical",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Nov 14, 2014",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Remote Code Execution Vulnerabilities in libFLAC",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-3863": {
+                "CVE": "CVE-2015-3863",
+                "Bug(s) with AOSP links": "ANDROID-22802399",
+                "Severity": "High",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Jul 28, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Elevation of Privilege Vulnerability in KeyStore",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-3879": {
+                "CVE": "CVE-2015-3879",
+                "Bug(s) with AOSP links": "ANDROID-23223325 [2]*",
+                "Severity": "High",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Aug 14, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Elevation of Privilege Vulnerability in Media Player Framework",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-3865": {
+                "CVE": "CVE-2015-3865",
+                "Bug(s) with AOSP links": "ANDROID-23050463 [2]",
+                "Severity": "High",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Aug 8, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Elevation of Privilege Vulnerability in Android Runtime",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-6596": {
+                "CVE": "CVE-2015-6596",
+                "Bug(s) with AOSP links": "ANDROID-20731946",
+                "Severity": "High",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Multiple",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Elevation of Privilege Vulnerabilities in Mediaserver",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-6606": {
+                "CVE": "CVE-2015-6606",
+                "Bug(s) with AOSP links": "ANDROID-22301786*",
+                "Severity": "High",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Jun 30, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Elevation of Privilege Vulnerability in Secure Element Evaluation Kit",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-3878": {
+                "CVE": "CVE-2015-3878",
+                "Bug(s) with AOSP links": "ANDROID-23345192",
+                "Severity": "Moderate",
+                "Affected versions": "5.0 - 6.0",
+                "Date reported": "Aug 18, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Elevation of Privilege Vulnerability in Media Projection",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-3847": {
+                "CVE": "CVE-2015-3847",
+                "Bug(s) with AOSP links": "ANDROID-22343270",
+                "Severity": "Moderate",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Jul 8, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": "Elevation of Privilege Vulnerability in Bluetooth",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-6607": {
+                "CVE": "CVE-2015-6607",
+                "Bug(s) with AOSP links": "ANDROID-20099586",
+                "Severity": "Moderate",
+                "Affected versions": "5.1 and below",
+                "Date reported": "April 7, 2015Publicly Known",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": " Elevation of Privilege Vulnerabilities in SQLite",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-6605": {
+                "CVE": "CVE-2015-6605",
+                "Bug(s) with AOSP links": "ANDROID-20915134",
+                "Severity": "Low",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Google Internal",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": " Denial of Service Vulnerabilities in Mediaserver",
+                "publishedDate": "2015-10"
+            },
+            "CVE-2015-3862": {
+                "CVE": "CVE-2015-3862",
+                "Bug(s) with AOSP links": "ANDROID-22954006",
+                "Severity": "Low",
+                "Affected versions": "5.1 and below",
+                "Date reported": "Aug 2, 2015",
+                "Bulletin_URL": "https://source.android.com/docs/security/bulletin/2015-10-01",
+                "Category": " Denial of Service Vulnerabilities in Mediaserver",
+                "publishedDate": "2015-10"
+            }
         }
     }
 }

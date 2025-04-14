@@ -1,5 +1,5 @@
 import requests
-import utils.file_handler as fh
+import file_handler as fh
 import time
 import re
 import os
@@ -134,7 +134,12 @@ def enrich_with_nvd(json_file):
     
     # Ensure the feed files are downloaded for all years.
     for year in range(2015, current_year + 1):
-        download_and_extract(year)
+        url = f"https://nvd.nist.gov/feeds/json/cve/1.1/nvdcve-1.1-{year}.json.zip"
+        filename = f"nvdcve-1.1-{year}.json"
+        zip_filename = f"{filename}.zip"
+        data_dir = "CVE-Data"
+        if not os.path.exists(f"{data_dir}/{filename}"):
+            fh.download_and_unzip_into_folder(url, filename, zip_filename, data_dir)
 
     # Iterate over the input CVE data and enrich with NVD data.
     for period, months in asb_data.items():

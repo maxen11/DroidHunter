@@ -7,6 +7,21 @@ from tqdm import tqdm
 import cve_searchsploit as CS  # Ensure cve_searchsploit is installed if needed
 import utils.file_handler as fh
 
+from urllib.parse import urlparse
+
+
+STAR_CACHE = {}
+API_REQUEST_COUNT = 0
+GITHUB_REQUEST_BAR = tqdm(total=0, desc="GitHub API requests", dynamic_ncols=True, position=0)
+
+
+def clean_url(url):
+    """
+    Remove common trailing punctuation that might be added by markdown formatting.
+    """
+    # Remove common markdown wrapping characters.
+    return url.strip("[]()<>").strip()
+
 ###################### PoC Repository Updater ######################
 
 def update_local_poc_repo(repo_url="https://github.com/nomi-sec/PoC-in-GitHub.git", local_dir="PoC-in-GitHub"):
@@ -72,23 +87,53 @@ def is_excluded_link(link, exclusion_list):
             return True
     return False
 
+from urllib.parse import urlparse
+
+def is_regular_github_repo(url):
+    """
+    Returns True if the URL is a regular GitHub repository URL 
+    (e.g. https://github.com/owner/repo) and not from subdomains (e.g., gist.github.com)
+    or is malformed.
+    """
+    try:
+        clean = clean_url(url)
+        parsed = urlparse(clean)
+    except Exception as e:
+        # If the URL parsing fails (e.g. invalid IPv6), skip it.
+        return False
+
+    # Allow only exactly 'github.com'
+    if parsed.netloc.lower() != "github.com":
+        return False
+    # The path should have at least two segments: owner and repo.
+    parts = [p for p in parsed.path.split("/") if p]
+    return len(parts) >= 2
+
 def extract_related_links_from_text(text, category_keywords, interesting_keywords, exclusion_list):
     """
-    Extracts links from text and filters/classifies them based on interesting keywords,
-    while excluding links from common generic sites.
+    Extracts HTTP/HTTPS links from text, filters/classifies them based on keywords,
+    and augments GitHub repository URLs with the repository's star count.
     """
-    links = extract_links(text)
+    url_pattern = r'https?://[^\s)"]+'
+    raw_links = re.findall(url_pattern, text)
     related_links = []
-    for link in links:
-        if is_excluded_link(link, exclusion_list):
+    for link in raw_links:
+        link = clean_url(link)
+        if any(exclusion in link.lower() for exclusion in exclusion_list):
             continue
         if any(kw in link.lower() for kw in interesting_keywords):
-            classification = classify_url(link, category_keywords)
+            classification = {}  # Assume you have classify_url() implemented.
+            # For GitHub, get star count if applicable.
+            stars = None
+            if "github.com" in link.lower():
+                stars = get_github_stars(link)
             related_links.append({
                 'url': link,
-                'classification': classification
+                'classification': classification,
+                'stars': stars
             })
     return related_links
+
 
 def crawl_repo_for_related_links(repo_url, branch="master", depth=1, max_depth=2, visited=None):
     if visited is None:
@@ -198,7 +243,7 @@ def crawl_repo_for_related_links(repo_url, branch="master", depth=1, max_depth=2
     # Exploit / PoC-related
     "exploit", "exploit-code", "exploitdb", "poc", "proof-of-concept", "demo", "payload", "shellcode", 
     "remote-code-execution", "local-privilege-escalation", "code-execution", "arbitrary-code", "unauthorized-access",
-    "exec", "exec-code", "cve", "cve-", "cve-20", "exploitkit", "exploit-chain", "weaponized",
+    "exec", "exec-code", "cve", "cve-", "cve-20", "exploitkit", "exploit-chain", "weaponized", "evil", "exploitation",
 
     # Writeups & Analysis
     "writeup", "write-up", "walkthrough", "analysis", "deep-dive", "reversing", "reversed", "debug",
@@ -269,7 +314,7 @@ def crawl_repo_for_related_links(repo_url, branch="master", depth=1, max_depth=2
 
     # Recurse on valid GitHub URLs only
     for link in related_links:
-        if "github.com" in link["url"]:
+        if  is_regular_github_repo(link["url"]):
             sub_links = crawl_repo_for_related_links(link["url"], depth=depth+1, max_depth=max_depth, visited=visited)
             all_links.extend(sub_links)
 
@@ -279,11 +324,10 @@ def crawl_repo_for_related_links(repo_url, branch="master", depth=1, max_depth=2
 def get_poc_links_for_cve(cve_id, poc_in_github_dir='PoC-in-GitHub'):
     """
     Aggregates PoC links for a given CVE using local PoC-in-GitHub repository data.
-    ExploitDB links are included and returned.
+    ExploitDB links are included and returned, augmented with star counts for GitHub pages.
     """
     poc_links = set()
     
-    # Use PoC-in-GitHub data stored locally
     year_match = re.match(r'CVE-(\d{4})-\d+', cve_id)
     if year_match:
         year = year_match.group(1)
@@ -294,10 +338,104 @@ def get_poc_links_for_cve(cve_id, poc_in_github_dir='PoC-in-GitHub'):
                     data = json.load(f)
                     for entry in data:
                         if 'html_url' in entry:
-                            poc_links.add(entry['html_url'])
+                            url = entry['html_url']
+                            # Check if it's a GitHub URL
+                            if  is_regular_github_repo(url):
+                                stars = get_github_stars(url)
+                                #print(f"\n\n\n\nStars found: {stars} for url: {url}")
+                            else:
+                                stars = None
+                            # Instead of just storing the URL, store a dict
+                            poc_links.add(json.dumps({
+                                "url": url,
+                                "stars": stars
+                            }))
             except Exception as e:
                 print(f"[!] Error reading {file_path}: {e}")
-    return list(poc_links)
+    # Convert the set of JSON strings back to a list of dicts.
+    result = [json.loads(item) for item in poc_links]
+    return result
+
+
+def extract_github_repo(url):
+    """
+    Extract the repository owner and name from a GitHub URL.
+    The URL is first cleaned; then only the first two path segments are used.
+    Returns (owner, repo) or (None, None) if not valid.
+    """
+    try:
+        clean = clean_url(url)
+        parsed = urlparse(clean)
+    except Exception as e:
+        return None, None
+
+    if parsed.netloc.lower() != "github.com":
+        return None, None
+    parts = [p for p in parsed.path.split("/") if p]
+    if len(parts) < 2:
+        return None, None
+    owner, repo = parts[0], parts[1]
+    # Remove trailing .git if present.
+    repo = repo.replace(".git", "")
+    return owner, repo
+
+def get_github_stars(url, token=None):
+    """
+    Given a GitHub URL, extract the repository owner and name (after cleaning it).
+    Query the GitHub API for the repository information (including stargazers_count).
+    Uses a global cache to avoid repeated API calls for the same repository.
+    Updates a global progress counter and a tqdm progress bar on every API request.
+    If a personal access token is provided (or is in the GITHUB_TOKEN env variable),
+    it is used for authentication.
+    Returns the star count, or 0 if any issue occurs.
+    """
+    # First, ensure that this URL is a proper GitHub repo URL.
+    if not is_regular_github_repo(url):
+        return 0
+
+    owner, repo = extract_github_repo(url)
+    if not owner or not repo:
+        return 0
+
+    # Build a unique repo key to use in the global cache.
+    repo_key = f"{owner}/{repo}"
+    if repo_key in STAR_CACHE:
+        return STAR_CACHE[repo_key]
+
+    api_url = f"https://api.github.com/repos/{owner}/{repo}"
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "MyGitHubStarsFetcher"
+    }
+    # Use provided token or fall back to the GITHUB_TOKEN environment variable.
+    if token is None:
+        token = os.getenv("GITHUB_TOKEN")
+    if token:
+        headers["Authorization"] = f"token {token}"
+
+    global API_REQUEST_COUNT
+    try:
+        response = requests.get(api_url, headers=headers, timeout=5)
+        # Each API call increments our counter and updates the progress bar.
+        API_REQUEST_COUNT += 1
+        GITHUB_REQUEST_BAR.total += 1
+        GITHUB_REQUEST_BAR.update(1)
+        GITHUB_REQUEST_BAR.set_postfix(requests=API_REQUEST_COUNT)
+
+        if response.status_code == 200:
+            data = response.json()
+            star_count = data.get("stargazers_count", 0)
+            STAR_CACHE[repo_key] = star_count
+            return star_count
+        else:
+            print(f"GitHub API returned status {response.status_code} for {api_url}: {response.text} for url: {url}")
+            STAR_CACHE[repo_key] = 0
+            return 0
+    except Exception as e:
+        print("Exception encountered while fetching GitHub stars:", str(e))
+        STAR_CACHE[repo_key] = 0
+        return 0
+
 
 def poc_enricher(file):
     # Update the local PoC-in-GitHub repository before processing
@@ -320,7 +458,8 @@ def poc_enricher(file):
             for cve_id in tqdm(data[year][month], desc="Processing CVEs", leave=False):
                 cve_details = data[year][month][cve_id]
                 poc_links = get_poc_links_for_cve(cve_id)
-                filtered_poc_links = [link for link in poc_links if not any(name in link for name in blacklisted_names)]
+                # Access the URL from each dictionary when filtering blacklisted names
+                filtered_poc_links = [link for link in poc_links if not any(name in link["url"] for name in blacklisted_names)]
                 
                 # Gather all unique related links from all filtered PoC URLs,
                 # but skip crawling on ExploitDB links.
@@ -336,11 +475,12 @@ def poc_enricher(file):
                 }
                 
                 for filtered_link in filtered_poc_links:
-                    if "exploit-db.com" in filtered_link.lower():
+                    #print(filtered_link)
+                    # Use the "url" key to check for "exploit-db.com"
+                    if "exploit-db.com" in filtered_link["url"].lower():
                         continue  # Skip crawling ExploitDB links.
-                    related_links = crawl_repo_for_related_links(filtered_link)
+                    related_links = crawl_repo_for_related_links(filtered_link["url"])
                     # Add recursive method, to crawl related_links if they are GitHub links
-
                     for link_info in related_links:
                         url = link_info.get("url")
                         classification = link_info.get("classification", {})
@@ -362,22 +502,20 @@ def poc_enricher(file):
     new_file = input("New filename: ")
     fh.save_to_json(data, new_file)
 
+
 ###################### Example Usage ######################
 
 if __name__ == "__main__":
-    # Update cve_searchsploit database if needed
-    print("Updating cve_searchsploit database...")
-    CS.update_db()
+    # Example URLs; you can replace these with your actual links.
+    test_urls = [
+        "https://github.com/david415/scan_for_rfc5961]",
+        "https://github.com/violentshell/rover].",
+        "https://github.com/dirtycow/dirtycow.github.io/blob/master/pokemon.c",
+        "https://github.com/dirtycow/dirtycow.github.io/wiki"
+    ]
+    for url in test_urls:
+        stars = get_github_stars(url)
+        print(f"URL: {url} -> Stars: {stars}")
 
-    # Example: Aggregate PoC links for a specific CVE
-    cve = "CVE-2024-0044"
-    print(f"Aggregating PoC links for {cve}...")
-    links = get_poc_links_for_cve(cve)
-    if links:
-        for link in links:
-            print(link)
-    else:
-        print(f"No PoC links found for {cve}.")
-
-    # Enrich a JSON file with PoC and related links
-    poc_enricher("path/to/your_file.json")
+    # Ensure to close the progress bar at the end.
+    GITHUB_REQUEST_BAR.close()

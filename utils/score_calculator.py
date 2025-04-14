@@ -32,7 +32,7 @@ def calculate_scores(file):
                             all_pocs.extend(pocs)
                     # Remove duplicates
                     all_versions = list(set(all_versions))
-                    all_pocs = list(set(all_pocs))
+                    all_pocs = list(set([link["url"] for link in all_pocs]))
                     
                     cve_types.append(combined_type)
                     version_counts[cve_id] = len(all_versions)
@@ -47,7 +47,7 @@ def calculate_scores(file):
                         "Updated AOSP versions": ", ".join(all_versions),
                         "PoC_Links": all_pocs
                     }
-                else:
+                else: 
                     # Process single dictionary case
                     cve_details = cve_entry
                     cve_types.append(cve_details.get("Type", "Unknown"))
@@ -144,6 +144,9 @@ def calc_S_p(cve_nr_pocs):
     """
     Calculate a PoC score using a logistic function.
     Returns a score between 0 and 1.
+
+    TO-DO:
+    Factor in GitHub repo stars for indication of repo quality. 
     """
     k = 0.5
     x0 = 3
