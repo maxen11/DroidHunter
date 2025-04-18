@@ -140,10 +140,10 @@ def main_menu():
             
             elif choice == "7":
                 cve_id = input("Enter CVE ID (e.g., CVE-2015-3864): ").strip()
-                data = poc.get_poc_links_for_cve(cve_id)
+                data = poc.get_poc_links_and_related_links(cve_id)
                 if data:
                     print("--"*40)
-                    print(f"{len(data)} PoCs Found for {cve_id}")
+                    print(f"{len(data[0])} PoCs Found for {cve_id}")
                     print(json.dumps(data, indent=4, ensure_ascii=False))
                     print("--"*40)
                     time.sleep(1)

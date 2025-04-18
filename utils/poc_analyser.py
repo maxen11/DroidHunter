@@ -6,14 +6,55 @@ import requests
 from tqdm import tqdm
 import cve_searchsploit as CS  # Ensure cve_searchsploit is installed if needed
 import utils.file_handler as fh
-
+from datetime import datetime
 from urllib.parse import urlparse
 
 
 STAR_CACHE = {}
-API_REQUEST_COUNT = 0
-GITHUB_REQUEST_BAR = tqdm(total=0, desc="GitHub API requests", dynamic_ncols=True, position=0)
+#MAX_API_REQUESTS = 5000  # Set a limit for API requests to avoid hitting the rate limit
+#GITHUB_API_URL = "https://api.github.com/graphql"
 
+
+def get_rate_usage(token=None):
+    """
+    Returns a tuple:
+      (used, remaining, limit, reset_time (datetime))
+    """
+    if token is None:
+        token = os.getenv("GITHUB_TOKEN")
+
+    headers = {
+        "Accept": "application/vnd.github.v3+json",
+        "User-Agent": "RateLimitChecker"
+    }
+    if token:
+        headers["Authorization"] = f"token {token}"
+
+    resp = requests.get("https://api.github.com/rate_limit", headers=headers, timeout=5)
+    resp.raise_for_status()
+    data = resp.json()
+
+    graphql = data["resources"]["graphql"]
+    limit = graphql["limit"]
+    remaining = graphql["remaining"]
+    used = graphql["used"]
+    reset_unix = graphql["reset"]
+    reset_time = datetime.utcfromtimestamp(reset_unix)
+
+    return used, remaining, limit, reset_time
+
+GITHUB_API_TOKEN = os.getenv("GITHUB_TOKEN")
+if not GITHUB_API_TOKEN:
+    print("Warning: GITHUB_TOKEN environment variable not set. Limited API access may occur.")
+API_REQUEST_COUNT, REMAINING_REQUESTS, MAX_API_REQUESTS, RESET_TIME = get_rate_usage(GITHUB_API_TOKEN) 
+#GITHUB_REQUEST_BAR = tqdm(total=MAX_API_REQUESTS, desc="GitHub API requests", dynamic_ncols=True, position=API_REQUEST_COUNT, leave=False)
+GITHUB_REQUEST_BAR = tqdm(
+    total=MAX_API_REQUESTS,
+    initial=API_REQUEST_COUNT,
+    desc="GitHub API requests",
+    dynamic_ncols=True,
+    leave=False
+)
 
 def clean_url(url):
     """
@@ -122,11 +163,14 @@ def extract_related_links_from_text(text, category_keywords, interesting_keyword
         if any(exclusion in link.lower() for exclusion in exclusion_list):
             continue
         if any(kw in link.lower() for kw in interesting_keywords):
-            classification = {}  # Assume you have classify_url() implemented.
+            classification = classify_url(link, category_keywords)
+            if not classification:
+                # no category matched, so skip
+                continue
             # For GitHub, get star count if applicable.
             stars = None
-            if "github.com" in link.lower():
-                stars = get_github_stars(link)
+            if is_regular_github_repo(link):
+                stars, readme = get_github_stars_and_readme(link)
             related_links.append({
                 'url': link,
                 'classification': classification,
@@ -151,17 +195,17 @@ def crawl_repo_for_related_links(repo_url, branch="master", depth=1, max_depth=2
         return []
     owner = parts[3]
     repo = parts[4]
-    raw_url = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/README.md"
+    #raw_url = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/README.md"
     
-    response = requests.get(raw_url)
-    if response.status_code != 200:
-        if branch == "master":
-            branch = "main"
-            raw_url = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/README.md"
-            response = requests.get(raw_url)
-        if response.status_code != 200:
-            return []
-    content = response.text
+    #response = requests.get(raw_url)
+    #if response.status_code != 200:
+    #    if branch == "master":
+    #        branch = "main"
+    #        raw_url = f"https://raw.githubusercontent.com/{owner}/{repo}/{branch}/README.md"
+    #        response = requests.get(raw_url)
+    #    if response.status_code != 200:
+    #        return []
+    stars, content = get_github_stars_and_readme(repo_url)#response.text
     
     category_keywords = {
     "Exploit/PoC-related": [
@@ -341,7 +385,7 @@ def get_poc_links_for_cve(cve_id, poc_in_github_dir='PoC-in-GitHub'):
                             url = entry['html_url']
                             # Check if it's a GitHub URL
                             if  is_regular_github_repo(url):
-                                stars = get_github_stars(url)
+                                stars, readme = get_github_stars_and_readme(url)
                                 #print(f"\n\n\n\nStars found: {stars} for url: {url}")
                             else:
                                 stars = None
@@ -353,6 +397,7 @@ def get_poc_links_for_cve(cve_id, poc_in_github_dir='PoC-in-GitHub'):
             except Exception as e:
                 print(f"[!] Error reading {file_path}: {e}")
     # Convert the set of JSON strings back to a list of dicts.
+
     result = [json.loads(item) for item in poc_links]
     return result
 
@@ -379,7 +424,7 @@ def extract_github_repo(url):
     repo = repo.replace(".git", "")
     return owner, repo
 
-def get_github_stars(url, token=None):
+def get_github_stars_and_readme(url, token=None):
     """
     Given a GitHub URL, extract the repository owner and name (after cleaning it).
     Query the GitHub API for the repository information (including stargazers_count).
@@ -391,50 +436,105 @@ def get_github_stars(url, token=None):
     """
     # First, ensure that this URL is a proper GitHub repo URL.
     if not is_regular_github_repo(url):
-        return 0
+        return 0, ""
 
     owner, repo = extract_github_repo(url)
     if not owner or not repo:
-        return 0
+        return 0, ""
 
     # Build a unique repo key to use in the global cache.
     repo_key = f"{owner}/{repo}"
     if repo_key in STAR_CACHE:
-        return STAR_CACHE[repo_key]
+        return STAR_CACHE[repo_key][0], STAR_CACHE[repo_key][1]
 
-    api_url = f"https://api.github.com/repos/{owner}/{repo}"
-    headers = {
-        "Accept": "application/vnd.github+json",
-        "User-Agent": "MyGitHubStarsFetcher"
-    }
+    #api_url = f"https://api.github.com/repos/{owner}/{repo}"
+    #headers = {
+    #    "Accept": "application/vnd.github+json",
+    #    "User-Agent": "MyGitHubStarsFetcher"
+    #}
     # Use provided token or fall back to the GITHUB_TOKEN environment variable.
-    if token is None:
-        token = os.getenv("GITHUB_TOKEN")
-    if token:
-        headers["Authorization"] = f"token {token}"
+    owner, repo = extract_github_repo(url)
+    if GITHUB_API_TOKEN is None:
+        print("No GitHub token provided. Please set the GITHUB_TOKEN environment variable.")
+        return 0, ""
+    headers = {
+        "Authorization": f"bearer {GITHUB_API_TOKEN}",
+        "Accept": "application/vnd.github.v4+json",
+        "User-Agent": "MyGitHubGraphQLClient"
+    }
+
 
     global API_REQUEST_COUNT
     try:
-        response = requests.get(api_url, headers=headers, timeout=5)
+        #response = requests.get(api_url, headers=headers, timeout=5)
+        gql = """
+            query($owner:String!, $name:String!) {
+            repository(owner: $owner, name: $name) {
+                stargazerCount
+
+                readme_md:    object(expression: "HEAD:README.md")    { ... on Blob { text } }
+                readme_MD:    object(expression: "HEAD:README.MD")    { ... on Blob { text } }
+                readme_markdown: object(expression: "HEAD:README.markdown") { ... on Blob { text } }
+                readme_rst:   object(expression: "HEAD:README.rst")   { ... on Blob { text } }
+                readme_txt:   object(expression: "HEAD:README.txt")   { ... on Blob { text } }
+            }
+            }
+            """
+
+        variables = {"owner": owner, "name": repo}
+        response = requests.post("https://api.github.com/graphql",
+                            json={"query": gql, "variables": variables},
+                            headers=headers,
+                            timeout=5)
+
         # Each API call increments our counter and updates the progress bar.
         API_REQUEST_COUNT += 1
-        GITHUB_REQUEST_BAR.total += 1
+        #GITHUB_REQUEST_BAR.total += 1
         GITHUB_REQUEST_BAR.update(1)
         GITHUB_REQUEST_BAR.set_postfix(requests=API_REQUEST_COUNT)
 
-        if response.status_code == 200:
-            data = response.json()
-            star_count = data.get("stargazers_count", 0)
-            STAR_CACHE[repo_key] = star_count
-            return star_count
-        else:
-            print(f"GitHub API returned status {response.status_code} for {api_url}: {response.text} for url: {url}")
-            STAR_CACHE[repo_key] = 0
-            return 0
+        if response.status_code != 200:
+            print("GitHub API returned status", response.status_code, "for", url, ":", response.text)
+            return 0, ""
+
+        payload = response.json()
+        result = payload.get("data", {}).get("repository")
+        if not isinstance(result, dict):
+            # either the repo doesn't exist, or something went wrong
+            STAR_CACHE[repo_key] = [0, ""]
+            return 0, ""
+
+        # 3) Safe to .get now
+        stars = result.get("stargazerCount", 0)
+
+        # pick whichever alias gave you text
+        readme = ""
+        for key in ("readme_md","readme_MD","readme_markdown","readme_rst","readme_txt"):
+            blob = result.get(key)
+            if blob and isinstance(blob, dict) and blob.get("text"):
+                readme = blob["text"]
+                break
+
+        # cache & return
+        STAR_CACHE[repo_key] = [stars, readme]
+
+
+        #if response.status_code == 200:
+        #    data = response.json()
+        #    star_count = data.get("stargazers_count", 0)
+        #    #print(json.dumps(data, indent=4, sort_keys=False))
+        #    STAR_CACHE[repo_key] = star_count
+        #    return star_count
+        #else:
+        #    print(f"GitHub API returned status {response.status_code} for {api_url}: {response.text} for url: {url}")
+        #    STAR_CACHE[repo_key] = 0
+        #    return 0
     except Exception as e:
         print("Exception encountered while fetching GitHub stars:", str(e))
-        STAR_CACHE[repo_key] = 0
-        return 0
+        STAR_CACHE[repo_key] = [0, ""]
+        return 0, ""
+    #print("Stars and readme for: \n\n\n\n", stars, readme)
+    return stars, readme
 
 
 def poc_enricher(file):
@@ -443,50 +543,14 @@ def poc_enricher(file):
 
     data = fh.read_json_file(file)
     print("Enriching with available PoCs...")
-    
-    blacklisted_names = [
-        "nidhihcl75", "hshivhare67", "Trinadh465", "pazhanivel07", "Satheesh575555",
-        "uthrasri", "nidhihcl", "ShaikUsaf", "nanopathi", "skyformat99", "bb33bb",
-        "packages_apps_Settings_AOSP10", "system_bt_AOSP10", "AOSP10", "aosp10",
-        "AbrarKhan", "RenukaSelvar", "saurabh2088", "packages_providers", "Pazhanivelmani",
-        "MssGmz99"
-    ]
 
     # Loop through CVEs with progress bars
     for year in tqdm(data, desc="Processing years"):
         for month in tqdm(data[year], desc=f"Processing months in {year}", leave=False):
             for cve_id in tqdm(data[year][month], desc="Processing CVEs", leave=False):
                 cve_details = data[year][month][cve_id]
-                poc_links = get_poc_links_for_cve(cve_id)
-                # Access the URL from each dictionary when filtering blacklisted names
-                filtered_poc_links = [link for link in poc_links if not any(name in link["url"] for name in blacklisted_names)]
-                
-                # Gather all unique related links from all filtered PoC URLs,
-                # but skip crawling on ExploitDB links.
-                all_unique_links = {
-                    "Exploit/PoC-related": [],
-                    "Writeups & Analysis": [],
-                    "Research & Whitepapers": [],
-                    "Vulnerability & Bug Discovery": [],
-                    "Authors / Repos / Institutions": [],
-                    "Domain / Hostnames / Platforms": [],
-                    "Videos, Demos, Presentations": [],
-                    "Exploit Tooling": []
-                }
-                
-                for filtered_link in filtered_poc_links:
-                    #print(filtered_link)
-                    # Use the "url" key to check for "exploit-db.com"
-                    if "exploit-db.com" in filtered_link["url"].lower():
-                        continue  # Skip crawling ExploitDB links.
-                    related_links = crawl_repo_for_related_links(filtered_link["url"])
-                    # Add recursive method, to crawl related_links if they are GitHub links
-                    for link_info in related_links:
-                        url = link_info.get("url")
-                        classification = link_info.get("classification", {})
-                        for category, keywords in classification.items():
-                            if url not in all_unique_links[category]:
-                                all_unique_links[category].append(url)
+               
+                filtered_poc_links, all_unique_links = get_poc_links_and_related_links(cve_id)
                 
                 # Update the CVE details with PoC and Related Links
                 if isinstance(cve_details, list):
@@ -502,6 +566,51 @@ def poc_enricher(file):
     new_file = input("New filename: ")
     fh.save_to_json(data, new_file)
 
+def get_poc_links_and_related_links(cve_id):
+
+    blacklisted_names = [
+        "nidhihcl75", "hshivhare67", "Trinadh465", "pazhanivel07", "Satheesh575555",
+        "uthrasri", "nidhihcl", "ShaikUsaf", "nanopathi", "skyformat99", "bb33bb",
+        "packages_apps_Settings_AOSP10", "system_bt_AOSP10", "AOSP10", "aosp10",
+        "AbrarKhan", "RenukaSelvar", "saurabh2088", "packages_providers", "Pazhanivelmani",
+        "MssGmz99"
+    ]
+
+    poc_links = get_poc_links_for_cve(cve_id)
+    # Access the URL from each dictionary when filtering blacklisted names
+    filtered_poc_links = [link for link in poc_links if not any(name in link["url"] for name in blacklisted_names)]
+    
+    # Gather all unique related links from all filtered PoC URLs,
+    # but skip crawling on ExploitDB links.
+    all_unique_links = {
+        "Exploit/PoC-related": [],
+        "Writeups & Analysis": [],
+        "Research & Whitepapers": [],
+        "Vulnerability & Bug Discovery": [],
+        "Authors / Repos / Institutions": [],
+        "Domain / Hostnames / Platforms": [],
+        "Videos, Demos, Presentations": [],
+        "Exploit Tooling": []
+    }
+    
+    for filtered_link in filtered_poc_links:
+        #print(filtered_link)
+        # Use the "url" key to check for "exploit-db.com"
+        if "exploit-db.com" in filtered_link["url"].lower():
+            continue  # Skip crawling ExploitDB links.
+        related_links = crawl_repo_for_related_links(filtered_link["url"])
+
+        #print("All related links: \n\n\n\n", related_links)
+
+        # Add recursive method, to crawl related_links if they are GitHub links
+        for link_info in related_links:
+            url = link_info.get("url")
+            classification = link_info.get("classification", {})
+            for category, keywords in classification.items():
+                if url not in all_unique_links[category]:
+                    all_unique_links[category].append(url)
+    return filtered_poc_links, all_unique_links
+            
 
 ###################### Example Usage ######################
 
@@ -514,7 +623,7 @@ if __name__ == "__main__":
         "https://github.com/dirtycow/dirtycow.github.io/wiki"
     ]
     for url in test_urls:
-        stars = get_github_stars(url)
+        stars, readme = get_github_stars_and_readme(url)
         print(f"URL: {url} -> Stars: {stars}")
 
     # Ensure to close the progress bar at the end.

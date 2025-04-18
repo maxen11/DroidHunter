@@ -69,7 +69,7 @@ else:
 data_folder="drivers"
 if not os.path.exists(f"{data_folder}/{filename}"):
     print("Error finding Edge driver, downloading and extracting...")
-    url = f"https://msedgedriver.azureedge.net/134.0.3124.51/{zip_filename}.zip"
+    url = f"https://msedgedriver.azureedge.net/134.0.3124.51/{zip_filename}"
     fh.download_and_unzip_into_folder(url, filename, zip_filename, data_folder)
     #os.chmod("drivers/msedgedriver", 644)
     path = f"drivers/{filename}"

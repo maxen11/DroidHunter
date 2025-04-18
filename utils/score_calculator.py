@@ -677,3 +677,8 @@ CVE A = sandbox escape
 CVE B = kernel exploit
 Same device → give a combined priority score
 """
+
+"""
+ Add config file to choose values for scoring profiles,
+ adjust related links crawl depth, and other parameters.
+"""
