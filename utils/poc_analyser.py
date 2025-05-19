@@ -372,6 +372,7 @@ def get_poc_links_for_cve(cve_id, poc_in_github_dir='PoC-in-GitHub'):
     """
     poc_links = set()
     
+    # --- 1. Use GitHub PoC Database to get Links ---
     year_match = re.match(r'CVE-(\d{4})-\d+', cve_id)
     if year_match:
         year = year_match.group(1)
@@ -396,6 +397,17 @@ def get_poc_links_for_cve(cve_id, poc_in_github_dir='PoC-in-GitHub'):
                             }))
             except Exception as e:
                 print(f"[!] Error reading {file_path}: {e}")
+    # --- 2. Use cve_searchsploit to get Exploit-DB IDs and form URLs ---
+    try:
+        edb_ids = CS.edbid_from_cve(cve_id)
+    except Exception as e:
+        print(f"[!] Error using cve_searchsploit for {cve_id}: {e}")
+        edb_ids = []
+
+    for edb_id in edb_ids:
+        # Standard Exploit-DB URL format:
+        url = f"https://www.exploit-db.com/exploits/{edb_id}"
+        poc_links.add(json.dumps({"url":url}))
     # Convert the set of JSON strings back to a list of dicts.
 
     result = [json.loads(item) for item in poc_links]
@@ -596,8 +608,8 @@ def get_poc_links_and_related_links(cve_id):
     for filtered_link in filtered_poc_links:
         #print(filtered_link)
         # Use the "url" key to check for "exploit-db.com"
-        if "exploit-db.com" in filtered_link["url"].lower():
-            continue  # Skip crawling ExploitDB links.
+        #if "exploit-db.com" in filtered_link["url"].lower():
+        #    continue  # Skip crawling ExploitDB links.
         related_links = crawl_repo_for_related_links(filtered_link["url"])
 
         #print("All related links: \n\n\n\n", related_links)
@@ -609,6 +621,9 @@ def get_poc_links_and_related_links(cve_id):
             for category, keywords in classification.items():
                 if url not in all_unique_links[category]:
                     all_unique_links[category].append(url)
+
+    # Filter out categories with no related links
+    #all_unique_links = {key:value for key, value in all_unique_links.items() if value}
     return filtered_poc_links, all_unique_links
             
 

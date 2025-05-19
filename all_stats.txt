@@ -1,0 +1,1599 @@
+→ Total CVEs processed: 5611
+
+-- Counts by Year --
+  2015: 86
+  2016: 661
+  2017: 943
+  2018: 742
+  2019: 461
+  2020: 512
+  2021: 473
+  2022: 494
+  2023: 599
+  2024: 416
+  2025: 224
+
+-- Counts by Type --
+  Unknown: 2521
+  EoP: 1134
+  N/A: 986
+  ID: 526
+  RCE: 281
+  DoS: 162
+  EOP: 1
+
+-- Counts by Category --
+  Qualcomm closed-source components: 829
+  Qualcomm components: 725
+  System: 725
+  Framework: 555
+  Qualcomm closed-source components 2014-2016 cumulative update: 250
+  MediaTek components: 237
+  Media framework: 197
+  Kernel components: 194
+  Imagination Technologies: 98
+  Unisoc components: 95
+  Media Framework: 89
+  Arm components: 79
+  Vulnerabilities in Qualcomm components: 76
+   Elevation of privilege vulnerability in Qualcomm components: 66
+  Kernel: 42
+  Google Play system updates: 36
+  Denial of service vulnerability in Mediaserver: 35
+  Elevation of privilege vulnerability in NVIDIA GPU driver: 30
+  NVIDIA components: 28
+  Elevation of privilege vulnerability in Qualcomm Wi-Fi driver: 24
+  Elevation of privilege vulnerability in Broadcom Wi-Fi driver: 23
+  Broadcom components: 23
+  Elevation of privilege vulnerability in Qualcomm sound driver: 20
+   Elevation of Privilege Vulnerability in Mediaserver: 18
+  Libraries: 18
+  Qualcomm closed-source   components: 18
+  Elevation of privilege vulnerability in Mediaserver: 17
+  Information disclosure vulnerability in kernel components: 17
+  Android runtime: 17
+  Elevation of privilege vulnerability in Synaptics touchscreen driver: 16
+  Remote Code Execution Vulnerabilities in libstagefright: 15
+  Remote code execution vulnerability in Mediaserver: 15
+  Information disclosure vulnerability in Mediaserver: 15
+  Information disclosure vulnerability in Qualcomm components: 15
+  Kernel LTS: 14
+  Telecommunication: 13
+  FPC components: 12
+  Remote Code Execution Vulnerability in Mediaserver: 11
+  Elevation of privilege vulnerability in Audioserver: 11
+  Elevation of privilege vulnerability in MediaTek components: 11
+  None: 11
+   Remote code execution vulnerability in Mediaserver: 10
+   Information disclosure vulnerability in Qualcomm components: 10
+  Elevation of privilege vulnerability in Qualcomm camera driver: 10
+  ARM components: 10
+  Elevation of privilege vulnerability in kernel networking subsystem: 9
+  Elevation of privilege vulnerability in Qualcomm video driver: 9
+  Elevation of privilege vulnerability in kernel file system: 9
+  Remote code execution vulnerability in Mediaserver : 9
+   Elevation of Privilege Vulnerability in Qualcomm Wi-Fi Driver: 8
+   Elevation of privilege vulnerability in Mediaserver: 8
+   Denial of service vulnerability in Mediaserver: 8
+  Elevation of privilege vulnerability in MediaTek driver: 8
+   Elevation of Privilege Vulnerability in NVIDIA Video Driver: 7
+  Elevation of privilege vulnerability in Framework APIs: 7
+  HTC components: 7
+  Library: 7
+  Misc OEM: 7
+  Elevation of privilege vulnerability in Qualcomm bootloader: 6
+   Vulnerabilities in Qualcomm components: 6
+  Elevation of privilege vulnerability in kernel performance subsystem: 6
+  Information disclosure vulnerability in Audioserver: 6
+  Information disclosure vulnerability in Qualcomm video driver: 6
+  Information disclosure vulnerability in Qualcomm camera driver: 6
+  System UI: 6
+   Elevation of privilege vulnerability in MediaTek drivers (Device specific): 5
+  Elevation of privilege vulnerability in Telephony: 5
+  Elevation of privilege vulnerability in kernel security subsystem: 5
+  Elevation of privilege vulnerability in kernel sound subsystem: 5
+  Denial of service vulnerability in kernel networking subsystem: 5
+  Elevation of privilege vulnerability in Qualcomm crypto engine driver: 5
+  Information disclosure vulnerability in Qualcomm sound driver: 5
+  Elevation of privilege vulnerability in kernel ION subsystem: 5
+  Information disclosure vulnerability in NVIDIA video driver: 5
+  Elevation of privilege vulnerability in HTC touchscreen driver: 5
+  Information disclosure vulnerability in Qualcomm Wi-Fi driver: 5
+  UNISOC components: 5
+  Elevation of Privilege Vulnerability in Wi-Fi: 4
+  Mitigations: 4
+  Information Disclosure Vulnerability in Mediaserver: 4
+   Elevation of Privilege Vulnerability in Qualcomm Sound Driver: 4
+   Information disclosure vulnerability in Mediaserver: 4
+   Elevation of privilege vulnerability in Qualcomm GPU driver: 4
+   Elevation of privilege vulnerability in kernel file system: 4
+  Elevation of privilege vulnerability in MediaTek video driver: 4
+  Information disclosure vulnerability in NVIDIA GPU driver: 4
+  Remote code execution vulnerability in Expat: 4
+  Elevation of privilege vulnerability in kernel memory subsystem: 4
+  Elevation of privilege vulnerability in NVIDIA video driver: 4
+  Elevation of privilege vulnerability in Qualcomm media codecs: 4
+  Information disclosure vulnerability in MediaTek driver: 4
+  Information disclosure vulnerability in AOSP Messaging: 4
+  Elevation of privilege vulnerability in Qualcomm Secure Execution Environment Communicator driver: 4
+  Elevation of privilege vulnerability in MediaTek thermal driver: 4
+  Android Runtime: 4
+  AMLogic: 4
+  Widevine DRM: 4
+  Elevation of Privilege Vulnerability in Bluetooth: 3
+   Information Disclosure Vulnerabilities in libstagefright: 3
+  Elevation of Privilege Vulnerability in Kernel: 3
+  Acknowledgements: 3
+  Elevation of Privilege Vulnerability in Mediaserver : 3
+   Remote Code Execution Vulnerability in Mediaserver: 3
+   Information Disclosure Vulnerability in Mediaserver: 3
+   Elevation of privilege vulnerability in Framework APIs: 3
+   Elevation of privilege vulnerability in kernel sound component: 3
+  Elevation of privilege vulnerability in Settings: 3
+  Information disclosure vulnerability in AOSP Mail: 3
+  Denial of service vulnerability in Telephony: 3
+  Elevation of privilege vulnerability in Qualcomm IPA driver: 3
+  Information disclosure vulnerability in kernel networking subsystem: 3
+  Information disclosure vulnerability in NVIDIA profiler: 3
+  Elevation of privilege vulnerability in Bluetooth: 3
+  Remote code execution vulnerability in CURL/LIBCURL: 3
+  Elevation of privilege vulnerability in HTC sound codec driver: 3
+  Elevation of privilege vulnerability in Qualcomm networking driver: 3
+  Elevation of privilege vulnerability in NVIDIA crypto driver: 3
+  Kernel component: 3
+  AMLogic components: 3
+  MediaTek: 3
+  Google Play system   updates: 3
+  Elevation of Privilege Vulnerability in Binder : 2
+  Remote Code Execution Vulnerabilities in libutils : 2
+  Remote Code Execution Vulnerability in Skia: 2
+   Denial of Service Vulnerabilities in Mediaserver: 2
+  Remote Code Execution Vulnerabilities in Mediaserver: 2
+   Remote Code Execution Vulnerabilities in Display Driver: 2
+  Elevation of Privilege Vulnerability in System Server: 2
+  Elevation of Privilege Vulnerabilities in Trustzone: 2
+  Information Disclosure Vulnerability in Kernel: 2
+  Elevation of Privilege Vulnerability in Qualcomm Performance Module: 2
+  Denial of Service Vulnerability in Minikin: 2
+  Information Disclosure Vulnerability in libstagefright: 2
+  Information Disclosure Vulnerability in Widevine: 2
+  Remote Code Execution Vulnerability in DHCPCD: 2
+   Elevation of Privilege Vulnerability in Qualcomm TrustZone : 2
+   Elevation of Privilege Vulnerability in Qualcomm Buspm Driver: 2
+   Elevation of Privilege Vulnerability in Wi-Fi: 2
+   Elevation of Privilege Vulnerability in MediaTek Wi-Fi Driver: 2
+   Elevation of Privilege Vulnerability in Conscrypt: 2
+   Elevation of Privilege Vulnerability in Qualcomm Video Driver: 2
+   Elevation of Privilege Vulnerability in Qualcomm GPU Driver: 2
+   Elevation of Privilege Vulnerability in Broadcom Wi-Fi Driver: 2
+   Elevation of Privilege Vulnerability in Qualcomm Camera Driver: 2
+   Elevation of Privilege Vulnerability in NVIDIA Camera Driver: 2
+   Elevation of privilege vulnerability in sockets: 2
+   Information disclosure vulnerability in OpenSSL: 2
+   Elevation of privilege vulnerability in Qualcomm performance component: 2
+   Elevation of privilege vulnerability in Qualcomm Wi-Fi driver: 2
+   Elevation of privilege vulnerability in MediaTek power driver: 2
+   Elevation of privilege vulnerability in MediaTek video driver: 2
+   Elevation of privilege vulnerability in MediaTek power management driver: 2
+   Elevation of privilege vulnerability in serial peripheral interface driver: 2
+   Elevation of privilege vulnerability in kernel: 2
+   Information disclosure vulnerability in NVIDIA camera driver: 2
+   Denial of service vulnerability in Qualcomm bootloader: 2
+   Elevation of privilege vulnerability in kernel networking component: 2
+   Elevation of privilege vulnerability in kernel memory system: 2
+   Elevation of privilege vulnerability in NVIDIA media driver: 2
+   Information disclosure vulnerability in kernel sound component: 2
+  Elevation of privilege vulnerability in kernel USB driver: 2
+  Elevation of privilege vulnerability in Qualcomm power driver: 2
+  Information disclosure vulnerability in Qualcomm SPMI driver: 2
+  Elevation of privilege vulnerability in Qualcomm networking component: 2
+  Elevation of privilege vulnerability in Camera service: 2
+  Denial of service vulnerability in Wi-Fi: 2
+  Denial of service vulnerability in GPS: 2
+  Remote code execution vulnerability in kernel networking subsystem: 2
+  Elevation of privilege vulnerability in System UI: 2
+  Remote code execution vulnerability in Qualcomm crypto driver: 2
+  Remote code execution vulnerability in Freetype: 2
+  Elevation of privilege vulnerability in Wi-Fi: 2
+  Elevation of privilege vulnerability in kernel: 2
+  Elevation of privilege vulnerability in NVIDIA libomx library: 2
+  Elevation of privilege vulnerability in libnl: 2
+  Elevation of privilege vulnerability in Qualcomm GPU driver: 2
+  Elevation of privilege vulnerability in Qualcomm camera: 2
+  Information disclosure vulnerability in bootloader: 2
+  Information disclosure vulnerability in STMicroelectronics driver: 2
+  Remote code execution vulnerability in libgdx: 2
+  Information disclosure vulnerability in Framework APIs: 2
+  Denial of service vulnerability in Setup Wizard: 2
+  Elevation of privilege vulnerability in Qualcomm ADSPRPC driver: 2
+  Elevation of privilege vulnerability in Qualcomm fingerprint sensor driver: 2
+  Elevation of privilege vulnerability in HTC Sensor Hub Driver: 2
+  Elevation of privilege vulnerability in Qualcomm SPCom driver: 2
+  Information disclosure vulnerability in Synaptics touchscreen driver: 2
+  Elevation of privilege vulnerability in MediaTek touchscreen driver: 2
+  Elevation of privilege vulnerability in Qualcomm sound codec driver: 2
+  Denial of service vulnerability in Qualcomm Wi-Fi driver: 2
+  Information disclosure vulnerability in Broadcom Wi-Fi driver: 2
+  Information disclosure vulnerability in NVIDIA crypto driver: 2
+  Information disclosure vulnerability in Qualcomm sound codec driver: 2
+  Information disclosure vulnerability in Qualcomm SPCom driver: 2
+  Bluetooth: 2
+  Runtime: 2
+  LG components: 2
+  Android TV: 2
+  Widevine: 2
+  Qualcomm closed-source     components: 2
+   Imagination Technologies: 2
+  Integer overflows during MP4 atom processing: 1
+  An integer underflow in ESDS processing: 1
+  Integer overflow in libstagefright when parsing the MPEG4 tx3g atom: 1
+  Integer underflow in libstagefright when processing MPEG4 covr atoms: 1
+  Integer underflow in libstagefright if size is below 6 while processing 3GPP metadata: 1
+  Integer overflow in libstagefright processing MPEG4 covr atoms when chunk_data_size is SIZE_MAX: 1
+  Buffer overflow in Sonivox Parse_wave: 1
+  Buffer overflows in libstagefright MPEG4Extractor.cpp: 1
+  Buffer overflow in mediaserver BpMediaHTTPConnection: 1
+  Vulnerability in libpng: Overflow in png_Read_IDAT_data: 1
+  Remotely exploitable memcpy() overflow in p2p_add_device() in wpa_supplicant: 1
+  Memory Corruption in OpenSSLX509Certificate Deserialization: 1
+  Buffer overflow in mediaserver BnHDCP: 1
+  Buffer overflow in libstagefright OMXNodeInstance::emptyBuffer: 1
+  Heap overflow in mediaserver AudioPolicyManager::getInputForAttr(): 1
+  Applications can intercept or emulate SIM commands to Telephony: 1
+  Vulnerability in Bitmap unmarshalling: 1
+  AppWidgetServiceImpl can create IntentSender with system privileges: 1
+  Mitigation bypass of restrictions on getRecentTasks(): 1
+  ActivityManagerService.getProcessRecordLocked() may load a system UID application into the wrong process: 1
+  Unbounded buffer read in libstagefright while parsing 3GPP metadata: 1
+  Elevation Privilege Vulnerability in Kernel: 1
+  Elevation of Privilege Vulnerability in Keystore: 1
+  Elevation of Privilege Vulnerability in Region : 1
+  Elevation of Privilege vulnerability in SMS enables notification bypass : 1
+  Elevation of Privilege Vulnerability in Lockscreen: 1
+  Denial of Service Vulnerability in Mediaserver: 1
+  Remote Code Execution Vulnerabilities in Sonivox: 1
+  Remote Code Execution Vulnerabilities in libFLAC: 1
+  Elevation of Privilege Vulnerability in KeyStore: 1
+  Elevation of Privilege Vulnerability in Media Player Framework: 1
+  Elevation of Privilege Vulnerability in Android Runtime: 1
+  Elevation of Privilege Vulnerabilities in Mediaserver: 1
+  Elevation of Privilege Vulnerability in Secure Element Evaluation Kit: 1
+  Elevation of Privilege Vulnerability in Media Projection: 1
+   Elevation of Privilege Vulnerabilities in SQLite: 1
+  Remote Code Execution Vulnerability in libutils: 1
+  Information Disclosure Vulnerabilities in Mediaserver: 1
+  Elevation of Privilege Vulnerability in libstagefright: 1
+  Elevation of Privilege Vulnerability in libmedia: 1
+   Elevation Of Privilege Vulnerability in Telephony: 1
+  Elevation of Privilege in Kernel: 1
+  Remote Code Execution Vulnerability in Bluetooth: 1
+   Elevation of Privilege Vulnerabilities in libstagefright: 1
+   Elevation of Privilege Vulnerability in SystemUI: 1
+  Information Disclosure Vulnerability in Native Frameworks Library: 1
+  Information Disclosure Vulnerability in Audio: 1
+  Information Disclosure Vulnerability in Media Framework: 1
+  Information Disclosure Vulnerability in Wi-Fi: 1
+  Information Disclosure Vulnerability in SystemUI: 1
+  Elevation of Privilege Vulnerability in misc-sd driver: 1
+  Elevation of Privilege Vulnerability in the Imagination Technologies driver: 1
+  Elevation of Privilege Vulnerability in Setup Wizard: 1
+  Information Disclosure Vulnerability in Bouncy Castle: 1
+  Denial of Service Vulnerability in SyncManager: 1
+  Attack Surface Reduction for Nexus Kernels: 1
+  Remote Code Execution Vulnerability in Broadcom Wi-Fi Driver: 1
+  Elevation of Privilege Vulnerability in Qualcomm Wi-Fi Driver: 1
+  Elevation of Privilege Vulnerability in the Debuggerd : 1
+  Remote Code Execution Vulnerabilities in libvpx: 1
+  Elevation of Privilege in Conscrypt: 1
+  Elevation of Privilege Vulnerability in the Qualcomm Performance Component: 1
+  Elevation of Privilege Vulnerability in MediaTek Wi-Fi Kernel Driver: 1
+  Elevation of Privilege Vulnerability in Kernel Keyring Component: 1
+  Mitigation Bypass Vulnerability in the Kernel: 1
+  Elevation of Privilege in MediaTek Connectivity Kernel Driver: 1
+  Information Disclosure Vulnerability in Mediaserver : 1
+  Remote Denial of Service Vulnerability in Bluetooth: 1
+  Remote Code Execution Vulnerability in Media Codec: 1
+  Remote Code Execution Vulnerability in libstagefright: 1
+  Elevation of Privilege Vulnerability in Qualcomm RF component: 1
+   Elevation of Privilege Vulnerability in IMemory Native Interface: 1
+   Elevation of Privilege Vulnerability in Telecom Component: 1
+   Elevation of Privilege Vulnerability in Download Manager: 1
+   Elevation of Privilege Vulnerability in Recovery Procedure: 1
+   Elevation of Privilege Vulnerability in Bluetooth: 1
+   Elevation of Privilege Vulnerability in Texas Instruments Haptic Driver: 1
+   Elevation of Privilege Vulnerability in Qualcomm Video Kernel Driver: 1
+   Elevation of Privilege Vulnerability in Qualcomm Power Management component: 1
+   Elevation of Privilege Vulnerability in System_server: 1
+   Information Disclosure Vulnerability in Exchange ActiveSync: 1
+   Elevation of Privilege Vulnerability in Debuggerd Component: 1
+   Elevation of Privilege Vulnerability in Setup Wizard: 1
+  Elevation of Privilege Vulnerability in Telephony: 1
+  Denial of Service Vulnerability in SyncStorageEngine: 1
+  Information Disclosure Vulnerability in AOSP Mail: 1
+  Information Disclosure Vulnerability in Framework: 1
+   Elevation of Privilege Vulnerability in Debuggerd: 1
+   Elevation of Privilege Vulnerability in Kernel: 1
+   Remote Code Execution Vulnerability in Kernel: 1
+   Information Disclosure Vulnerability in Qualcomm Tethering Controller: 1
+   Remote Code Execution Vulnerability in Bluetooth: 1
+   Elevation of Privilege Vulnerability in Binder: 1
+   Elevation of Privilege Vulnerability in Qualcomm MDP Driver: 1
+   Remote Denial of Service Vulnerability in Qualcomm Hardware Codec: 1
+   Elevation of Privilege Vulnerability in OpenSSL & BoringSSL: 1
+   Information Disclosure Vulnerability in AOSP Mail: 1
+   Denial of Service Vulnerability in Kernel: 1
+   Remote Code Execution Vulnerabilities in libwebm: 1
+   Elevation of Privilege Vulnerability in MediaTek Power Management Driver: 1
+   Elevation of Privilege Vulnerability in SD Card Emulation Layer: 1
+   Remote Denial of Service Vulnerability in Mediaserver: 1
+   Elevation of Privilege Vulnerability in Framework UI: 1
+   Information Disclosure Vulnerability in Qualcomm Wi-Fi Driver: 1
+   Information Disclosure Vulnerability in Activity Manager: 1
+   Remote code execution vulnerability in OpenSSL & BoringSSL: 1
+   Remote code execution vulnerability in Bluetooth: 1
+   Elevation of privilege vulnerability in libpng: 1
+   Elevation of privilege vulnerability in LockSettingsService: 1
+   Elevation of privilege vulnerability in ChooserTarget service: 1
+   Denial of service vulnerability in libc: 1
+   Elevation of privilege vulnerability in lsof: 1
+   Elevation of privilege vulnerability in DexClassLoader: 1
+   Elevation of privilege vulnerability in Bluetooth: 1
+   Elevation of privilege vulnerability in NFC: 1
+   Information disclosure vulnerability in Proxy Auto-Config: 1
+   Elevation of privilege vulnerability in MediaTek Wi-Fi driver: 1
+   Elevation of privilege vulnerability in NVIDIA video driver: 1
+   Elevation of privilege vulnerability in USB driver: 1
+   Elevation of privilege vulnerability in Qualcomm USB driver: 1
+   Elevation of privilege vulnerability in Qualcomm camera driver: 1
+   Elevation of privilege vulnerability in NVIDIA camera driver: 1
+   Elevation of privilege vulnerability in MediaTek hardware sensor driver: 1
+   Elevation of privilege vulnerability in MediaTek GPS driver: 1
+   Elevation of privilege vulnerability in MediaTek display driver: 1
+   Elevation of privilege vulnerability in Qualcomm sound driver: 1
+   Information disclosure vulnerability in networking component: 1
+   Information disclosure vulnerability in MediaTek Wi-Fi driver: 1
+   Elevation of privilege vulnerability in kernel video driver: 1
+   Information disclosure vulnerability in MediaTek video codec driver: 1
+   Information disclosure vulnerability in Qualcomm USB driver: 1
+   Information disclosure vulnerability in MediaTek display driver: 1
+   Information disclosure vulnerability in kernel teletype driver: 1
+   Remote code execution vulnerability in libjhead: 1
+   Denial of service vulnerability in system clock: 1
+   Elevation of privilege vulnerability in framework APIs: 1
+   Elevation of privilege vulnerability in Shell: 1
+   Information disclosure vulnerability in camera APIs: 1
+   Information disclosure vulnerability in SurfaceFlinger: 1
+   Information disclosure vulnerability in Wi-Fi: 1
+   Denial of service vulnerability in system UI: 1
+   Denial of service vulnerability in Bluetooth: 1
+   Remote code execution vulnerability in Qualcomm Wi-Fi driver: 1
+  Remote code execution vulnerability in Conscrypt: 1
+  Elevation of privilege vulnerability in kernel video driver: 1
+   Elevation of privilege vulnerability in Serial Peripheral Interface driver: 1
+   Elevation of privilege vulnerability in ION driver: 1
+   Elevation of privilege vulnerability in LG Electronics bootloader: 1
+   Information disclosure vulnerability in kernel scheduler: 1
+   Information disclosure vulnerability in MediaTek Wi-Fi driver (device specific): 1
+  Information disclosure vulnerability in USB driver: 1
+   Denial of service vulnerability in Qualcomm components: 1
+   Elevation of privilege vulnerability in Google Play services: 1
+   Information disclosure vulnerability in kernel networking component: 1
+  Remote code execution vulnerability in LibUtils: 1
+  Remote code execution vulnerability in MediaMuxer: 1
+  Elevation of privilege vulnerability in device boot: 1
+  Elevation of privilege vulnerability in Notification Manager Service: 1
+  Elevation of privilege vulnerability in Debuggerd: 1
+  Elevation of privilege vulnerability in System UI Tuner: 1
+  Elevation of privilege vulnerability in SMS: 1
+  Elevation of privilege vulnerability in Java Debug Wire Protocol: 1
+  Information disclosure vulnerability in Wi-Fi: 1
+  Elevation of privilege vulnerability in kernel netfilter subsystem: 1
+  Elevation of privilege vulnerability in kernel ASN.1 decoder: 1
+  Elevation of privilege vulnerability in Qualcomm radio interface layer: 1
+  Elevation of privilege vulnerability in Qualcomm subsystem driver: 1
+  Elevation of privilege vulnerability in kernel networking driver: 1
+  Elevation of privilege vulnerability in kernel eCryptfs filesystem: 1
+  Elevation of privilege vulnerability in NVIDIA kernel: 1
+  Denial of service vulnerability in kernel ext4 file system: 1
+  Information disclosure vulnerability in Qualcomm sound codec: 1
+  Information disclosure vulnerability in Qualcomm DMA component: 1
+  Elevation of privilege vulnerability in kernel shared memory subsystem: 1
+  Elevation of privilege vulnerability in ServiceManager: 1
+  Elevation of privilege vulnerability in Lock Settings Service: 1
+  Elevation of privilege vulnerability in Zygote process: 1
+  Elevation of privilege vulnerability in framework APIs: 1
+  Elevation of privilege vulnerability in fingerprint login: 1
+  Elevation of privilege vulnerability in Framework Listener: 1
+  Elevation of privilege vulnerability in Accessibility services: 1
+  Remote code execution vulnerability in kernel ASN.1 decoder: 1
+  Elevation of privilege vulnerability in kernel shared memory driver: 1
+  Elevation of privilege vulnerability in NVIDIA MMC test driver: 1
+  Elevation of privilege vulnerability in Qualcomm QSEE Communicator driver: 1
+  Elevation of privilege vulnerability in NVIDIA camera driver: 1
+  Elevation of privilege vulnerability in system_server: 1
+  Information disclosure vulnerability in kernel ION subsystem: 1
+  Elevation of privilege vulnerability in Qualcomm character driver: 1
+  Information disclosure vulnerability in Motorola USBNet driver: 1
+  Information disclosure vulnerability in kernel: 1
+  Denial of service vulnerability in kernel sound driver: 1
+  Elevation of privilege vulnerability in libzipfile: 1
+  Remote code execution vulnerability in Skia: 1
+  Remote code execution vulnerability in libjpeg: 1
+  Remote code execution vulnerability in Android runtime: 1
+  Elevation of privilege vulnerability in System Server: 1
+  Information disclosure vulnerability in Conscrypt: 1
+  Information disclosure vulnerability in download manager: 1
+  Denial of service vulnerability in Bluetooth: 1
+  Denial of service vulnerability in OpenJDK: 1
+  Elevation of privilege vulnerability in AOSP Launcher: 1
+  Elevation of privilege vulnerability in Account Manager Service: 1
+  Denial of service vulnerability in Proxy Auto Config: 1
+  Denial of service vulnerability in Input Manager Service: 1
+  Elevation of privilege vulnerability in kernel SCSI driver: 1
+  Elevation of privilege vulnerability in kernel media driver: 1
+  Remote code execution vulnerability in Webview: 1
+  Elevation of privilege vulnerability in kernel system-call auditing subsystem: 1
+  Elevation of privilege vulnerability in Qualcomm bus driver: 1
+  Elevation of privilege vulnerability in libziparchive: 1
+  Remote Code Execution vulnerability in Framesequence library: 1
+  Elevation of privilege vulnerability in Smart Lock: 1
+  Information disclosure vulnerability in Package Manager: 1
+  Elevation of privilege vulnerability in kernel ION driver: 1
+  Elevation of privilege vulnerability in MediaTek I2C driver: 1
+  Information disclosure vulnerability in MediaTek video driver: 1
+  Denial of service vulnerability in NVIDIA camera driver: 1
+  Information disclosure vulnerability in NVIDIA librm library: 1
+  Remote code execution vulnerability in c-ares: 1
+  Remote code execution vulnerability in Framesequence: 1
+  Information disclosure vulnerability in External Storage Provider: 1
+  Denial of service vulnerability in core networking: 1
+  Elevation of privilege vulnerability in Contacts: 1
+  Elevation of privilege vulnerability in Qualcomm radio driver: 1
+  Elevation of privilege vulnerability in kernel profiling subsystem: 1
+  Denial of service vulnerability in Qualcomm FUSE file system: 1
+  Denial of service vulnerability in bootloader: 1
+  Elevation of privilege vulnerability in Binder: 1
+  Information disclosure vulnerability in NVIDIA camera driver: 1
+  Information disclosure vulnerability in HTC input driver: 1
+  Denial of service vulnerability in kernel file system: 1
+  Remote code execution vulnerability in Surfaceflinger: 1
+  Remote code execution vulnerability in libstagefright: 1
+  Elevation of privilege vulnerability in Java.Net: 1
+  Denial of service vulnerability in Bionic DNS: 1
+  Information disclosure vulnerability in Filesystem: 1
+  Elevation of privilege vulnerability in Realtek sound driver: 1
+  Information disclosure vulnerability in Qualcomm Secure Execution Environment Communicator: 1
+  Remote code execution vulnerability in OpenSSL & BoringSSL: 1
+  Elevation of privilege vulnerability in recovery verifier: 1
+  Remote code execution vulnerability in AOSP Messaging: 1
+  Remote code execution vulnerability in Framesequence library: 1
+  Elevation of privilege vulnerability in NFC: 1
+  Elevation of privilege vulnerability in Location Manager: 1
+  Elevation of privilege vulnerability in Package Manager: 1
+  Denial of service vulnerability in Audioserver: 1
+  Elevation of privilege vulnerability in kernel FIQ debugger: 1
+  Elevation of privilege vulnerability in Qualcomm input hardware driver: 1
+  Elevation of privilege vulnerability in MediaTek Hardware Sensor Driver: 1
+  Elevation of privilege vulnerability in MediaTek APK: 1
+  Information disclosure vulnerability in Qualcomm bootloader: 1
+  Information disclosure vulnerability in Qualcomm power driver: 1
+  Denial of service vulnerability in kernel cryptographic subsystem: 1
+  Elevation of privilege vulnerability in Qualcomm camera driver (device specific): 1
+  Information disclosure vulnerability in MediaTek video codec driver: 1
+  Information disclosure vulnerability in HTC sound codec driver: 1
+  Information disclosure vulnerability in kernel USB gadget driver: 1
+  Elevation of privilege vulnerability in CameraBase: 1
+  Elevation of privilege vulnerability in SurfaceFlinger: 1
+  Denial of service vulnerability in libskia: 1
+  Information disclosure vulnerability in libskia: 1
+  Information disclosure vulnerability in Factory Reset: 1
+  Remote code execution vulnerability in Broadcom Wi-Fi firmware: 1
+  Remote code execution vulnerability in Qualcomm crypto engine driver: 1
+  Remote code execution vulnerability in v8: 1
+  Elevation of privilege vulnerability in MediaTek camera driver: 1
+  Elevation of privilege vulnerability in NVIDIA I2C HID driver: 1
+  Elevation of privilege vulnerability in Qualcomm audio driver: 1
+  Elevation of privilege vulnerability in DTS sound driver: 1
+  Elevation of privilege vulnerability in NVIDIA boot and power management processor driver: 1
+  Elevation of privilege vulnerability in Qualcomm Seemp driver: 1
+  Elevation of privilege vulnerability in Qualcomm Kyro L2 driver: 1
+  Information disclosure vulnerability in kernel memory subsystem: 1
+  Information disclosure vulnerability in Qualcomm TrustZone: 1
+  Information disclosure vulnerability in Qualcomm IPA driver: 1
+  Elevation of privilege vulnerability in HTC OEM fastboot command: 1
+  Elevation of privilege vulnerability in Qualcomm CP access driver: 1
+  Information disclosure vulnerability in kernel media driver: 1
+  Information disclosure vulnerability in Qualcomm Avtimer driver: 1
+  Information disclosure vulnerability in Qualcomm USB driver: 1
+  Information disclosure vulnerability in File-Based Encryption: 1
+  Information disclosure vulnerability in Bluetooth: 1
+  Information disclosure vulnerability in OpenSSL & BoringSSL: 1
+  Remote code execution vulnerability in GIFLIB: 1
+  Elevation of privilege vulnerability in Motorola bootloader: 1
+  Remote code execution vulnerability in libxml2: 1
+  Elevation of privilege vulnerability in Qualcomm LED driver: 1
+  Elevation of privilege vulnerability in Qualcomm crypto driver: 1
+  Elevation of privilege vulnerability in Qualcomm shared memory driver: 1
+  Elevation of privilege vulnerability in Qualcomm Slimbus driver: 1
+  Elevation of privilege vulnerability in MediaTek power driver: 1
+  Elevation of privilege vulnerability in MediaTek system management interrupt driver: 1
+  Elevation of privilege vulnerability in MediaTek command queue driver: 1
+  Elevation of privilege vulnerability in Qualcomm pin controller driver: 1
+  Elevation of privilege vulnerability in Qualcomm Secure Channel Manager Driver: 1
+  Elevation of privilege vulnerability in kernel voltage regulator driver: 1
+  Elevation of privilege vulnerability in Goodix touchscreen driver: 1
+  Elevation of privilege vulnerability in HTC bootloader: 1
+  Information disclosure vulnerability in MediaTek command queue driver: 1
+  Information disclosure vulnerability in Qualcomm crypto engine driver: 1
+  Information disclosure vulnerability in kernel UVC driver: 1
+  Information disclosure vulnerability in Qualcomm power driver (device specific): 1
+  Information disclosure vulnerability in Qualcomm LED driver: 1
+  Information disclosure vulnerability in Qualcomm shared memory driver: 1
+  Information disclosure vulnerability in kernel trace subsystem: 1
+  Synaptics components: 1
+  Imgtk components: 1
+   Broadcom components: 1
+  Amlogic components: 1
+  Multiple components: 1
+  Kernel : 1
+  Frameworks: 1
+  Platform: 1
+
+-- Counts by Severity --
+  High: 4270
+  Critical: 809
+  Moderate: 433
+  Unknown: 74
+  Low: 23
+  None*: 1
+  Critical*: 1
+
+-- Average baseScore by Type --
+  Unknown: 7.34
+  EoP: 7.63
+  ID: 5.92
+  RCE: 8.60
+  DoS: 5.98
+  N/A: 8.46
+  EOP: 6.70
+
+-- Average exploitabilityScore by Type --
+  Unknown: 2.15
+  EoP: 1.80
+  ID: 2.19
+  RCE: 2.70
+  DoS: 2.20
+  N/A: 2.95
+  EOP: 0.80
+
+-- Average impactScore by Type --
+  Unknown: 5.12
+  EoP: 5.74
+  ID: 3.64
+  RCE: 5.82
+  DoS: 3.69
+  N/A: 5.47
+  EOP: 5.90
+
+-- Average baseScore by Type --
+  Remote Code Execution Vulnerability in Mediaserver: 8.93
+  Elevation of Privilege Vulnerability in Bluetooth: 3.10
+  Elevation of Privilege Vulnerability in Wi-Fi: 6.53
+  Elevation of Privilege Vulnerability in misc-sd driver: 7.80
+  Elevation of Privilege Vulnerability in the Imagination Technologies driver: 7.80
+  Elevation of Privilege Vulnerabilities in Trustzone: 7.80
+  Elevation of Privilege Vulnerability in Kernel: 7.80
+  Information Disclosure Vulnerability in Kernel: 7.55
+  Elevation of Privilege Vulnerability in Setup Wizard: 6.60
+  Information Disclosure Vulnerability in Bouncy Castle: 3.30
+  Denial of Service Vulnerability in SyncManager: 5.00
+  Attack Surface Reduction for Nexus Kernels: 6.20
+  Mitigations: 9.55
+  Acknowledgements: 9.80
+  Remote Code Execution Vulnerability in Broadcom Wi-Fi Driver: 8.40
+  Elevation of Privilege Vulnerability in Qualcomm Performance Module: 8.40
+  Elevation of Privilege Vulnerability in Qualcomm Wi-Fi Driver: 6.20
+  Elevation of Privilege Vulnerability in the Debuggerd : 8.80
+  Denial of Service Vulnerability in Minikin: 7.00
+  Elevation of Privilege Vulnerability in Mediaserver : 6.23
+  Remote Code Execution Vulnerabilities in libvpx: 7.80
+  Elevation of Privilege in Conscrypt: 7.80
+  Elevation of Privilege Vulnerability in the Qualcomm Performance Component: 7.80
+  Elevation of Privilege Vulnerability in MediaTek Wi-Fi Kernel Driver: 5.50
+  Elevation of Privilege Vulnerability in Kernel Keyring Component: 7.00
+  Mitigation Bypass Vulnerability in the Kernel: 4.00
+  Elevation of Privilege in MediaTek Connectivity Kernel Driver: 5.30
+  Information Disclosure Vulnerability in libstagefright: 7.80
+  Information Disclosure Vulnerability in Widevine: 7.50
+  Information Disclosure Vulnerability in Mediaserver : 5.50
+  Remote Denial of Service Vulnerability in Bluetooth: 6.10
+  Remote Code Execution Vulnerability in DHCPCD: 9.80
+  Remote Code Execution Vulnerability in Media Codec: 8.40
+  Remote Code Execution Vulnerability in libstagefright: 8.40
+  Elevation of Privilege Vulnerability in Qualcomm RF component: 8.40
+   Elevation of Privilege Vulnerability in IMemory Native Interface: 8.40
+   Elevation of Privilege Vulnerability in Telecom Component: 8.40
+   Elevation of Privilege Vulnerability in Download Manager: 8.40
+   Elevation of Privilege Vulnerability in Recovery Procedure: 8.40
+   Elevation of Privilege Vulnerability in Bluetooth: 8.80
+   Elevation of Privilege Vulnerability in Texas Instruments Haptic Driver: 8.10
+   Elevation of Privilege Vulnerability in Qualcomm Video Kernel Driver: 7.40
+   Elevation of Privilege Vulnerability in Qualcomm Power Management component: 6.50
+   Elevation of Privilege Vulnerability in System_server: 7.80
+   Elevation of Privilege Vulnerability in Mediaserver: 7.80
+   Information Disclosure Vulnerability in Exchange ActiveSync: 5.50
+  Information Disclosure Vulnerability in Mediaserver: 9.80
+   Elevation of Privilege Vulnerability in Debuggerd Component: 7.80
+   Elevation of Privilege Vulnerability in Setup Wizard: 6.10
+  Elevation of Privilege Vulnerability in Telephony: 6.10
+  Denial of Service Vulnerability in SyncStorageEngine: 5.50
+  Information Disclosure Vulnerability in AOSP Mail: 5.50
+  Information Disclosure Vulnerability in Framework: 5.50
+   Remote Code Execution Vulnerability in Mediaserver: 9.33
+   Elevation of Privilege Vulnerability in Debuggerd: 7.80
+   Elevation of Privilege Vulnerability in Qualcomm TrustZone : 7.80
+   Elevation of Privilege Vulnerability in Qualcomm Wi-Fi Driver: 8.05
+   Elevation of Privilege Vulnerability in NVIDIA Video Driver: 7.46
+   Information Disclosure Vulnerability in Qualcomm Tethering Controller: 7.80
+   Remote Code Execution Vulnerability in Bluetooth: 8.80
+   Elevation of Privilege Vulnerability in Binder: 7.80
+   Elevation of Privilege Vulnerability in Qualcomm Buspm Driver: 7.00
+   Elevation of Privilege Vulnerability in Qualcomm MDP Driver: 7.00
+   Elevation of Privilege Vulnerability in Wi-Fi: 6.65
+   Elevation of Privilege Vulnerability in MediaTek Wi-Fi Driver: 7.00
+   Remote Denial of Service Vulnerability in Qualcomm Hardware Codec: 5.50
+   Elevation of Privilege Vulnerability in Conscrypt: 7.00
+   Elevation of Privilege Vulnerability in OpenSSL & BoringSSL: 9.80
+   Information Disclosure Vulnerability in AOSP Mail: 5.50
+   Information Disclosure Vulnerability in Mediaserver: 5.50
+   Denial of Service Vulnerability in Kernel: 6.80
+   Remote Code Execution Vulnerabilities in libwebm: 7.80
+   Elevation of Privilege Vulnerability in Qualcomm Video Driver: 7.80
+   Elevation of Privilege Vulnerability in Qualcomm Sound Driver: 7.80
+   Elevation of Privilege Vulnerability in Qualcomm GPU Driver: 7.80
+   Elevation of Privilege Vulnerability in Broadcom Wi-Fi Driver: 7.80
+   Elevation of Privilege Vulnerability in Qualcomm Camera Driver: 7.80
+   Elevation of Privilege Vulnerability in NVIDIA Camera Driver: 7.80
+   Elevation of Privilege Vulnerability in MediaTek Power Management Driver: 7.80
+   Elevation of Privilege Vulnerability in SD Card Emulation Layer: 7.80
+   Remote Denial of Service Vulnerability in Mediaserver: 5.50
+   Elevation of Privilege Vulnerability in Framework UI: 9.80
+   Information Disclosure Vulnerability in Qualcomm Wi-Fi Driver: 5.50
+   Information Disclosure Vulnerability in Activity Manager: 5.50
+   Remote code execution vulnerability in Mediaserver: 9.20
+   Remote code execution vulnerability in OpenSSL & BoringSSL: 9.80
+   Remote code execution vulnerability in Bluetooth: 7.50
+   Elevation of privilege vulnerability in libpng: 7.80
+   Elevation of privilege vulnerability in Mediaserver: 8.05
+   Elevation of privilege vulnerability in sockets: 8.10
+   Elevation of privilege vulnerability in LockSettingsService: 8.40
+   Elevation of privilege vulnerability in Framework APIs: 6.13
+   Elevation of privilege vulnerability in ChooserTarget service: 7.80
+   Information disclosure vulnerability in Mediaserver: 6.17
+   Information disclosure vulnerability in OpenSSL: 7.85
+   Denial of service vulnerability in Mediaserver: 6.50
+   Denial of service vulnerability in libc: 5.50
+   Elevation of privilege vulnerability in lsof: 7.00
+   Elevation of privilege vulnerability in DexClassLoader: 7.80
+   Elevation of privilege vulnerability in Bluetooth: 7.50
+   Elevation of privilege vulnerability in NFC: 4.00
+   Information disclosure vulnerability in Proxy Auto-Config: 3.30
+   Elevation of privilege vulnerability in Qualcomm GPU driver: 7.80
+   Elevation of privilege vulnerability in MediaTek Wi-Fi driver: 7.80
+   Elevation of privilege vulnerability in Qualcomm performance component: 7.80
+   Elevation of privilege vulnerability in NVIDIA video driver: 7.80
+   Elevation of privilege vulnerability in MediaTek drivers (Device specific): 7.80
+   Elevation of privilege vulnerability in kernel file system: 7.80
+   Elevation of privilege vulnerability in USB driver: 6.80
+   Elevation of privilege vulnerability in Qualcomm components: 7.80
+   Elevation of privilege vulnerability in Qualcomm USB driver: 7.80
+   Elevation of privilege vulnerability in Qualcomm Wi-Fi driver: 7.80
+   Elevation of privilege vulnerability in Qualcomm camera driver: 7.80
+   Elevation of privilege vulnerability in NVIDIA camera driver: 7.80
+   Elevation of privilege vulnerability in MediaTek power driver: 7.80
+   Elevation of privilege vulnerability in MediaTek hardware sensor driver: 7.80
+   Elevation of privilege vulnerability in MediaTek video driver: 7.80
+   Elevation of privilege vulnerability in MediaTek GPS driver: 7.80
+   Elevation of privilege vulnerability in MediaTek power management driver: 7.80
+   Elevation of privilege vulnerability in MediaTek display driver: 7.80
+   Elevation of privilege vulnerability in serial peripheral interface driver: 7.80
+   Elevation of privilege vulnerability in Qualcomm sound driver: 7.80
+   Elevation of privilege vulnerability in kernel: 7.80
+   Information disclosure vulnerability in networking component: 5.50
+   Information disclosure vulnerability in MediaTek Wi-Fi driver: 5.50
+   Elevation of privilege vulnerability in kernel video driver: 7.80
+   Information disclosure vulnerability in MediaTek video codec driver: 5.50
+   Information disclosure vulnerability in Qualcomm USB driver: 5.50
+   Information disclosure vulnerability in NVIDIA camera driver: 5.50
+   Information disclosure vulnerability in MediaTek display driver: 5.50
+   Information disclosure vulnerability in kernel teletype driver: 6.80
+   Denial of service vulnerability in Qualcomm bootloader: 5.50
+   Remote code execution vulnerability in libjhead: 7.80
+   Denial of service vulnerability in system clock: 7.50
+   Elevation of privilege vulnerability in framework APIs: 7.80
+   Elevation of privilege vulnerability in Shell: 7.80
+   Information disclosure vulnerability in camera APIs: 5.50
+   Information disclosure vulnerability in SurfaceFlinger: 5.50
+   Information disclosure vulnerability in Wi-Fi: 5.50
+   Denial of service vulnerability in system UI: 5.50
+   Denial of service vulnerability in Bluetooth: 5.50
+  Remote code execution vulnerability in Conscrypt: 9.80
+   Elevation of privilege vulnerability in kernel networking component: 7.55
+   Elevation of privilege vulnerability in kernel memory system: 7.80
+   Elevation of privilege vulnerability in kernel sound component: 5.10
+  Elevation of privilege vulnerability in kernel video driver: 7.80
+   Elevation of privilege vulnerability in Serial Peripheral Interface driver: 7.00
+   Elevation of privilege vulnerability in NVIDIA media driver: 7.40
+   Elevation of privilege vulnerability in ION driver: 7.80
+  Elevation of privilege vulnerability in Qualcomm bootloader: 7.72
+   Elevation of privilege vulnerability in LG Electronics bootloader: 8.10
+   Information disclosure vulnerability in Qualcomm components: 5.50
+   Information disclosure vulnerability in MediaTek Wi-Fi driver (device specific): 5.50
+  Information disclosure vulnerability in USB driver: 6.20
+   Elevation of privilege vulnerability in Google Play services: 5.50
+   Information disclosure vulnerability in kernel networking component: 3.30
+   Information disclosure vulnerability in kernel sound component: 5.50
+   Vulnerabilities in Qualcomm components: 8.80
+  Remote code execution vulnerability in LibUtils: 7.80
+  Remote code execution vulnerability in Mediaserver: 7.80
+  Remote code execution vulnerability in MediaMuxer: 7.80
+  Elevation of privilege vulnerability in Mediaserver: 7.75
+  Elevation of privilege vulnerability in device boot: 6.80
+  Elevation of privilege vulnerability in Settings: 7.13
+  Denial of service vulnerability in Mediaserver: 5.45
+  Elevation of privilege vulnerability in Telephony: 6.84
+  Elevation of privilege vulnerability in Notification Manager Service: 5.50
+  Elevation of privilege vulnerability in Debuggerd: 7.80
+  Elevation of privilege vulnerability in System UI Tuner: 6.80
+  Elevation of privilege vulnerability in SMS: 2.10
+  Elevation of privilege vulnerability in Java Debug Wire Protocol: 7.00
+  Information disclosure vulnerability in Mediaserver: 5.65
+  Information disclosure vulnerability in AOSP Mail: 5.50
+  Information disclosure vulnerability in Wi-Fi: 5.50
+  Denial of service vulnerability in Telephony: 6.17
+  Elevation of privilege vulnerability in kernel security subsystem: 6.50
+  Elevation of privilege vulnerability in kernel networking subsystem: 7.24
+  Elevation of privilege vulnerability in kernel netfilter subsystem: 8.40
+  Elevation of privilege vulnerability in kernel USB driver: 6.20
+  Elevation of privilege vulnerability in kernel sound subsystem: 6.47
+  Elevation of privilege vulnerability in kernel ASN.1 decoder: 4.70
+  Elevation of privilege vulnerability in Qualcomm radio interface layer: 7.80
+  Elevation of privilege vulnerability in Qualcomm subsystem driver: 7.80
+  Elevation of privilege vulnerability in kernel networking driver: 7.80
+  Elevation of privilege vulnerability in Synaptics touchscreen driver: 7.35
+  Elevation of privilege vulnerability in Qualcomm camera driver: 7.48
+  Elevation of privilege vulnerability in Qualcomm sound driver: 7.08
+  Elevation of privilege vulnerability in Qualcomm IPA driver: 7.27
+  Elevation of privilege vulnerability in Qualcomm power driver: 7.80
+  Elevation of privilege vulnerability in Broadcom Wi-Fi driver: 7.11
+  Elevation of privilege vulnerability in kernel eCryptfs filesystem: 7.80
+  Elevation of privilege vulnerability in NVIDIA kernel: 7.80
+  Elevation of privilege vulnerability in Qualcomm Wi-Fi driver: 7.17
+  Denial of service vulnerability in kernel networking subsystem: 4.80
+  Denial of service vulnerability in kernel ext4 file system: 5.10
+  Information disclosure vulnerability in Qualcomm SPMI driver: 4.40
+  Information disclosure vulnerability in Qualcomm sound codec: 5.50
+  Information disclosure vulnerability in Qualcomm DMA component: 5.50
+  Information disclosure vulnerability in kernel networking subsystem: 7.10
+  Vulnerabilities in Qualcomm components: 8.60
+  Elevation of privilege vulnerability in kernel shared memory subsystem: 7.80
+  Elevation of privilege vulnerability in Qualcomm networking component: 7.00
+  Elevation of privilege vulnerability in ServiceManager: 7.80
+  Elevation of privilege vulnerability in Lock Settings Service: 5.50
+  Elevation of privilege vulnerability in Zygote process: 7.80
+  Elevation of privilege vulnerability in framework APIs: 7.80
+  Elevation of privilege vulnerability in Camera service: 7.80
+  Elevation of privilege vulnerability in fingerprint login: 7.80
+  Denial of service vulnerability in Wi-Fi: 6.00
+  Denial of service vulnerability in GPS: 5.90
+  Elevation of privilege vulnerability in Framework Listener: 7.80
+  Elevation of privilege vulnerability in Accessibility services: 5.50
+  Remote code execution vulnerability in kernel ASN.1 decoder: 7.80
+  Remote code execution vulnerability in kernel networking subsystem: 9.80
+  Elevation of privilege vulnerability in MediaTek video driver: 7.60
+  Elevation of privilege vulnerability in kernel shared memory driver: 7.80
+  Elevation of privilege vulnerability in NVIDIA MMC test driver: 7.80
+  Elevation of privilege vulnerability in Qualcomm QSEE Communicator driver: 7.80
+  Elevation of privilege vulnerability in Qualcomm crypto engine driver: 7.48
+  Elevation of privilege vulnerability in Qualcomm video driver: 7.67
+  Elevation of privilege vulnerability in NVIDIA camera driver: 7.80
+  Elevation of privilege vulnerability in system_server: 7.80
+  Elevation of privilege vulnerability in kernel performance subsystem: 7.18
+  Information disclosure vulnerability in kernel ION subsystem: 5.50
+  Information disclosure vulnerability in NVIDIA GPU driver: 5.50
+  Elevation of privilege vulnerability in Qualcomm character driver: 7.00
+  Information disclosure vulnerability in Qualcomm sound driver: 4.86
+  Information disclosure vulnerability in Motorola USBNet driver: 5.50
+  Information disclosure vulnerability in Qualcomm components: 5.55
+  Information disclosure vulnerability in kernel components: 5.18
+  Information disclosure vulnerability in NVIDIA profiler: 5.50
+  Information disclosure vulnerability in kernel: 5.50
+  Denial of service vulnerability in kernel sound driver: 5.50
+  Elevation of privilege vulnerability in libzipfile: 7.80
+  Remote code execution vulnerability in Skia: 7.80
+  Remote code execution vulnerability in libjpeg: 7.80
+  Remote code execution vulnerability in Android runtime: 7.80
+  Elevation of privilege vulnerability in System Server: 7.80
+  Elevation of privilege vulnerability in System UI: 5.50
+  Information disclosure vulnerability in Conscrypt: 5.90
+  Information disclosure vulnerability in download manager: 5.50
+  Elevation of privilege vulnerability in Framework APIs: 6.83
+  Elevation of privilege vulnerability in AOSP Launcher: 5.50
+  Elevation of privilege vulnerability in Account Manager Service: 5.50
+  Elevation of privilege vulnerability in Bluetooth: 5.43
+  Denial of service vulnerability in Proxy Auto Config: 4.70
+  Denial of service vulnerability in Input Manager Service: 5.50
+  Remote code execution vulnerability in Qualcomm crypto driver: 9.80
+  Elevation of privilege vulnerability in kernel file system: 7.23
+  Elevation of privilege vulnerability in kernel SCSI driver: 7.30
+  Elevation of privilege vulnerability in kernel media driver: 7.80
+  Elevation of privilege vulnerability in kernel ION subsystem: 7.80
+  Elevation of privilege vulnerability in NVIDIA GPU driver: 7.68
+  Remote code execution vulnerability in Expat: 8.65
+  Remote code execution vulnerability in Webview: 8.80
+  Remote code execution vulnerability in Freetype: 7.80
+  Elevation of privilege vulnerability in kernel system-call auditing subsystem: 4.70
+  Elevation of privilege vulnerability in Qualcomm bus driver: 7.80
+  Elevation of privilege vulnerability in kernel memory subsystem: 7.40
+  Remote code execution vulnerability in CURL/LIBCURL: 7.70
+  Elevation of privilege vulnerability in libziparchive: 7.80
+  Remote Code Execution vulnerability in Framesequence library: 7.80
+  Elevation of privilege vulnerability in Smart Lock: 4.60
+  Elevation of privilege vulnerability in Wi-Fi: 6.65
+  Information disclosure vulnerability in Package Manager: 4.70
+  Elevation of privilege vulnerability in kernel: 7.80
+  Elevation of privilege vulnerability in NVIDIA video driver: 7.80
+  Elevation of privilege vulnerability in kernel ION driver: 7.80
+  Elevation of privilege vulnerability in HTC sound codec driver: 7.00
+  Elevation of privilege vulnerability in MediaTek driver: 7.20
+  Elevation of privilege vulnerability in Qualcomm media codecs: 7.80
+  Elevation of privilege vulnerability in MediaTek I2C driver: 7.00
+  Elevation of privilege vulnerability in NVIDIA libomx library: 7.80
+  Information disclosure vulnerability in MediaTek video driver: 5.50
+  Information disclosure vulnerability in NVIDIA video driver: 5.18
+  Denial of service vulnerability in NVIDIA camera driver: 4.70
+  Information disclosure vulnerability in NVIDIA librm library: 5.50
+  Remote code execution vulnerability in c-ares: 9.80
+  Remote code execution vulnerability in Framesequence: 7.80
+  Elevation of privilege vulnerability in Audioserver: 7.80
+  Elevation of privilege vulnerability in libnl: 7.40
+  Information disclosure vulnerability in External Storage Provider: 5.50
+  Denial of service vulnerability in core networking: 7.50
+  Elevation of privilege vulnerability in Contacts: 5.50
+  Information disclosure vulnerability in Audioserver: 5.50
+  Elevation of privilege vulnerability in Qualcomm GPU driver: 7.40
+  Elevation of privilege vulnerability in Qualcomm camera: 7.00
+  Elevation of privilege vulnerability in MediaTek components: 7.51
+  Elevation of privilege vulnerability in Qualcomm radio driver: 7.00
+  Elevation of privilege vulnerability in kernel profiling subsystem: 7.80
+  Information disclosure vulnerability in bootloader: 5.50
+  Denial of service vulnerability in Qualcomm FUSE file system: 5.50
+  Denial of service vulnerability in bootloader: 5.50
+  Elevation of privilege vulnerability in Binder: 7.00
+  Information disclosure vulnerability in NVIDIA camera driver: 4.70
+  Information disclosure vulnerability in MediaTek driver: 4.90
+  Information disclosure vulnerability in STMicroelectronics driver: 4.70
+  Information disclosure vulnerability in HTC input driver: 4.70
+  Remote code execution vulnerability in Surfaceflinger: 7.80
+  Remote code execution vulnerability in libgdx: 7.80
+  Remote code execution vulnerability in libstagefright: 7.80
+  Elevation of privilege vulnerability in Java.Net: 5.30
+  Information disclosure vulnerability in AOSP Messaging: 5.50
+  Information disclosure vulnerability in Framework APIs: 5.50
+  Denial of service vulnerability in Bionic DNS: 7.50
+  Information disclosure vulnerability in Filesystem: 5.50
+  Elevation of privilege vulnerability in Qualcomm Secure Execution Environment Communicator driver: 7.00
+  Elevation of privilege vulnerability in Realtek sound driver: 7.00
+  Elevation of privilege vulnerability in HTC touchscreen driver: 7.16
+  Information disclosure vulnerability in Qualcomm Secure Execution Environment Communicator: 4.70
+  Remote code execution vulnerability in OpenSSL & BoringSSL: 9.80
+  Remote code execution vulnerability in Mediaserver : 7.80
+  Elevation of privilege vulnerability in recovery verifier: 7.80
+  Remote code execution vulnerability in AOSP Messaging: 7.80
+  Remote code execution vulnerability in Framesequence library: 7.80
+  Elevation of privilege vulnerability in NFC: 7.80
+  Elevation of privilege vulnerability in Location Manager: 5.50
+  Elevation of privilege vulnerability in Package Manager: 5.50
+  Denial of service vulnerability in Setup Wizard: 5.50
+  Denial of service vulnerability in Audioserver: 5.50
+  Elevation of privilege vulnerability in kernel FIQ debugger: 7.80
+  Elevation of privilege vulnerability in Qualcomm input hardware driver: 7.00
+  Elevation of privilege vulnerability in MediaTek Hardware Sensor Driver: 7.00
+  Elevation of privilege vulnerability in Qualcomm ADSPRPC driver: 7.00
+  Elevation of privilege vulnerability in Qualcomm fingerprint sensor driver: 7.00
+  Elevation of privilege vulnerability in MediaTek APK: 7.80
+  Elevation of privilege vulnerability in HTC Sensor Hub Driver: 7.00
+  Elevation of privilege vulnerability in Qualcomm networking driver: 7.00
+  Elevation of privilege vulnerability in Qualcomm SPCom driver: 7.40
+  Information disclosure vulnerability in Qualcomm bootloader: 7.80
+  Information disclosure vulnerability in Qualcomm power driver: 5.50
+  Denial of service vulnerability in kernel cryptographic subsystem: 5.50
+  Elevation of privilege vulnerability in Qualcomm camera driver (device specific): 7.00
+  Information disclosure vulnerability in Qualcomm Wi-Fi driver: 4.86
+  Information disclosure vulnerability in MediaTek video codec driver: 4.70
+  Information disclosure vulnerability in Qualcomm video driver: 4.47
+  Information disclosure vulnerability in Qualcomm camera driver: 4.70
+  Information disclosure vulnerability in HTC sound codec driver: 4.70
+  Information disclosure vulnerability in Synaptics touchscreen driver: 4.70
+  Information disclosure vulnerability in kernel USB gadget driver: 4.70
+  Elevation of privilege vulnerability in CameraBase: 7.80
+  Elevation of privilege vulnerability in SurfaceFlinger: 7.80
+  Denial of service vulnerability in libskia: 5.50
+  Information disclosure vulnerability in libskia: 5.50
+  Information disclosure vulnerability in Factory Reset: 5.50
+  Remote code execution vulnerability in Broadcom Wi-Fi firmware: 9.80
+  Remote code execution vulnerability in Qualcomm crypto engine driver: 9.80
+  Elevation of privilege vulnerability in MediaTek touchscreen driver: 7.80
+  Remote code execution vulnerability in v8: 8.80
+  Elevation of privilege vulnerability in NVIDIA crypto driver: 7.00
+  Elevation of privilege vulnerability in MediaTek thermal driver: 7.00
+  Elevation of privilege vulnerability in MediaTek camera driver: 7.00
+  Elevation of privilege vulnerability in NVIDIA I2C HID driver: 7.00
+  Elevation of privilege vulnerability in Qualcomm audio driver: 7.00
+  Elevation of privilege vulnerability in DTS sound driver: 7.00
+  Elevation of privilege vulnerability in Qualcomm sound codec driver: 7.40
+  Elevation of privilege vulnerability in NVIDIA boot and power management processor driver: 7.00
+  Elevation of privilege vulnerability in Qualcomm Seemp driver: 7.00
+  Elevation of privilege vulnerability in Qualcomm Kyro L2 driver: 7.00
+  Information disclosure vulnerability in Qualcomm TrustZone: 5.50
+  Information disclosure vulnerability in Qualcomm IPA driver: 5.50
+  Denial of service vulnerability in Qualcomm Wi-Fi driver: 6.50
+  Elevation of privilege vulnerability in HTC OEM fastboot command: 7.00
+  Elevation of privilege vulnerability in Qualcomm CP access driver: 7.00
+  Information disclosure vulnerability in Broadcom Wi-Fi driver: 4.70
+  Information disclosure vulnerability in Qualcomm Avtimer driver: 5.50
+  Information disclosure vulnerability in Qualcomm USB driver: 3.30
+  Information disclosure vulnerability in NVIDIA crypto driver: 4.70
+  Information disclosure vulnerability in File-Based Encryption: 5.50
+  Information disclosure vulnerability in Bluetooth: 5.50
+  Information disclosure vulnerability in OpenSSL & BoringSSL: 5.50
+  Remote code execution vulnerability in GIFLIB: 5.50
+  Elevation of privilege vulnerability in Motorola bootloader: 7.80
+  Remote code execution vulnerability in libxml2: 8.80
+  Elevation of privilege vulnerability in Qualcomm LED driver: 7.00
+  Elevation of privilege vulnerability in Qualcomm crypto driver: 7.00
+  Elevation of privilege vulnerability in Qualcomm shared memory driver: 7.00
+  Elevation of privilege vulnerability in Qualcomm Slimbus driver: 7.00
+  Elevation of privilege vulnerability in MediaTek power driver: 7.00
+  Elevation of privilege vulnerability in MediaTek system management interrupt driver: 7.00
+  Elevation of privilege vulnerability in MediaTek command queue driver: 7.00
+  Elevation of privilege vulnerability in Qualcomm pin controller driver: 7.00
+  Elevation of privilege vulnerability in Qualcomm Secure Channel Manager Driver: 7.00
+  Elevation of privilege vulnerability in Goodix touchscreen driver: 7.00
+  Elevation of privilege vulnerability in HTC bootloader: 7.00
+  Information disclosure vulnerability in MediaTek command queue driver: 5.50
+  Information disclosure vulnerability in Qualcomm crypto engine driver: 5.50
+  Information disclosure vulnerability in kernel UVC driver: 4.70
+  Information disclosure vulnerability in Qualcomm power driver (device specific): 4.70
+  Information disclosure vulnerability in Qualcomm LED driver: 4.70
+  Information disclosure vulnerability in Qualcomm shared memory driver: 4.70
+  Information disclosure vulnerability in kernel trace subsystem: 4.70
+  Information disclosure vulnerability in Qualcomm sound codec driver: 4.70
+  Information disclosure vulnerability in Qualcomm SPCom driver: 4.70
+  Bluetooth: 5.50
+  Libraries: 8.02
+  Media framework: 7.32
+  System UI: 7.80
+  Kernel components: 7.22
+  MediaTek components: 7.33
+  NVIDIA components: 7.39
+  Qualcomm components: 7.86
+  Synaptics components: 4.70
+  Qualcomm closed-source components: 8.07
+  None: 6.53
+  Runtime: 4.60
+  Framework: 6.98
+  Broadcom components: 8.38
+  HTC components: 6.27
+  Media Framework: 7.09
+  System: 7.27
+  Imgtk components: 5.50
+  Android runtime: 7.76
+  LG components: 7.65
+  Qualcomm closed-source components 2014-2016 cumulative update: 9.24
+  Android Runtime: 7.90
+  Library: 7.20
+   Broadcom components: 8.80
+  Google Play system updates: 7.10
+  Kernel component: 7.70
+  FPC components: 6.86
+  AMLogic components: 7.53
+  Kernel: 6.94
+  MediaTek: 9.80
+  AMLogic: 8.20
+  ARM components: 7.80
+  Unisoc components: 6.96
+  Widevine DRM: 7.28
+  Telecommunication: 6.67
+  Android TV: 8.80
+  Kernel LTS: 7.39
+  Amlogic components: 7.80
+  Imagination Technologies: 7.46
+  UNISOC components: 8.04
+  Multiple components: 5.50
+  Kernel : 6.70
+  Arm components: 7.89
+  Frameworks: 7.80
+  Misc OEM: 5.19
+  Widevine: 7.80
+  Qualcomm closed-source   components: 7.51
+  Qualcomm closed-source     components: 7.65
+
+-- PoC Coverage by Type (has / total) --
+  Unknown: 74/2521 (2.9%)
+  EoP: 74/1134 (6.5%)
+  ID: 22/526 (4.2%)
+  RCE: 18/281 (6.4%)
+  DoS: 5/162 (3.1%)
+  N/A: 5/986 (0.5%)
+  EOP: 0/1 (0.0%)
+
+-- PoC Coverage by Category (has / total) --
+  Integer overflows during MP4 atom processing: 1/1 (100.0%)
+  An integer underflow in ESDS processing: 0/1 (0.0%)
+  Integer overflow in libstagefright when parsing the MPEG4 tx3g atom: 0/1 (0.0%)
+  Integer underflow in libstagefright when processing MPEG4 covr atoms: 0/1 (0.0%)
+  Integer underflow in libstagefright if size is below 6 while processing 3GPP metadata: 0/1 (0.0%)
+  Integer overflow in libstagefright processing MPEG4 covr atoms when chunk_data_size is SIZE_MAX: 0/1 (0.0%)
+  Buffer overflow in Sonivox Parse_wave: 0/1 (0.0%)
+  Buffer overflows in libstagefright MPEG4Extractor.cpp: 0/1 (0.0%)
+  Buffer overflow in mediaserver BpMediaHTTPConnection: 0/1 (0.0%)
+  Vulnerability in libpng: Overflow in png_Read_IDAT_data: 0/1 (0.0%)
+  Remotely exploitable memcpy() overflow in p2p_add_device() in wpa_supplicant: 0/1 (0.0%)
+  Memory Corruption in OpenSSLX509Certificate Deserialization: 1/1 (100.0%)
+  Buffer overflow in mediaserver BnHDCP: 0/1 (0.0%)
+  Buffer overflow in libstagefright OMXNodeInstance::emptyBuffer: 0/1 (0.0%)
+  Heap overflow in mediaserver AudioPolicyManager::getInputForAttr(): 0/1 (0.0%)
+  Applications can intercept or emulate SIM commands to Telephony: 0/1 (0.0%)
+  Vulnerability in Bitmap unmarshalling: 0/1 (0.0%)
+  AppWidgetServiceImpl can create IntentSender with system privileges: 0/1 (0.0%)
+  Mitigation bypass of restrictions on getRecentTasks(): 0/1 (0.0%)
+  ActivityManagerService.getProcessRecordLocked() may load a system UID application into the wrong process: 0/1 (0.0%)
+  Unbounded buffer read in libstagefright while parsing 3GPP metadata: 0/1 (0.0%)
+  Remote Code Execution Vulnerability in Mediaserver: 1/11 (9.1%)
+  Elevation Privilege Vulnerability in Kernel: 1/1 (100.0%)
+  Elevation of Privilege Vulnerability in Binder : 1/2 (50.0%)
+  Elevation of Privilege Vulnerability in Keystore: 0/1 (0.0%)
+  Elevation of Privilege Vulnerability in Region : 0/1 (0.0%)
+  Elevation of Privilege vulnerability in SMS enables notification bypass : 0/1 (0.0%)
+  Elevation of Privilege Vulnerability in Lockscreen: 0/1 (0.0%)
+  Denial of Service Vulnerability in Mediaserver: 0/1 (0.0%)
+  Remote Code Execution Vulnerabilities in libstagefright: 0/15 (0.0%)
+  Remote Code Execution Vulnerabilities in Sonivox: 0/1 (0.0%)
+  Remote Code Execution Vulnerabilities in libutils : 0/2 (0.0%)
+  Remote Code Execution Vulnerability in Skia: 0/2 (0.0%)
+  Remote Code Execution Vulnerabilities in libFLAC: 0/1 (0.0%)
+  Elevation of Privilege Vulnerability in KeyStore: 0/1 (0.0%)
+  Elevation of Privilege Vulnerability in Media Player Framework: 0/1 (0.0%)
+  Elevation of Privilege Vulnerability in Android Runtime: 0/1 (0.0%)
+  Elevation of Privilege Vulnerabilities in Mediaserver: 0/1 (0.0%)
+  Elevation of Privilege Vulnerability in Secure Element Evaluation Kit: 1/1 (100.0%)
+  Elevation of Privilege Vulnerability in Media Projection: 0/1 (0.0%)
+  Elevation of Privilege Vulnerability in Bluetooth: 0/3 (0.0%)
+   Elevation of Privilege Vulnerabilities in SQLite: 0/1 (0.0%)
+   Denial of Service Vulnerabilities in Mediaserver: 0/2 (0.0%)
+  Remote Code Execution Vulnerabilities in Mediaserver: 0/2 (0.0%)
+  Remote Code Execution Vulnerability in libutils: 0/1 (0.0%)
+  Information Disclosure Vulnerabilities in Mediaserver: 0/1 (0.0%)
+  Elevation of Privilege Vulnerability in libstagefright: 0/1 (0.0%)
+  Elevation of Privilege Vulnerability in libmedia: 1/1 (100.0%)
+   Elevation Of Privilege Vulnerability in Telephony: 0/1 (0.0%)
+  Elevation of Privilege in Kernel: 0/1 (0.0%)
+   Remote Code Execution Vulnerabilities in Display Driver: 0/2 (0.0%)
+  Remote Code Execution Vulnerability in Bluetooth: 0/1 (0.0%)
+   Elevation of Privilege Vulnerabilities in libstagefright: 1/1 (100.0%)
+   Elevation of Privilege Vulnerability in SystemUI: 0/1 (0.0%)
+  Information Disclosure Vulnerability in Native Frameworks Library: 0/1 (0.0%)
+  Elevation of Privilege Vulnerability in Wi-Fi: 0/4 (0.0%)
+  Elevation of Privilege Vulnerability in System Server: 0/2 (0.0%)
+   Information Disclosure Vulnerabilities in libstagefright: 0/3 (0.0%)
+  Information Disclosure Vulnerability in Audio: 0/1 (0.0%)
+  Information Disclosure Vulnerability in Media Framework: 0/1 (0.0%)
+  Information Disclosure Vulnerability in Wi-Fi: 0/1 (0.0%)
+  Information Disclosure Vulnerability in SystemUI: 0/1 (0.0%)
+  Elevation of Privilege Vulnerability in misc-sd driver: 1/1 (100.0%)
+  Elevation of Privilege Vulnerability in the Imagination Technologies driver: 0/1 (0.0%)
+  Elevation of Privilege Vulnerabilities in Trustzone: 1/2 (50.0%)
+  Elevation of Privilege Vulnerability in Kernel: 3/3 (100.0%)
+  Information Disclosure Vulnerability in Kernel: 0/2 (0.0%)
+  Elevation of Privilege Vulnerability in Setup Wizard: 0/1 (0.0%)
+  Information Disclosure Vulnerability in Bouncy Castle: 0/1 (0.0%)
+  Denial of Service Vulnerability in SyncManager: 0/1 (0.0%)
+  Attack Surface Reduction for Nexus Kernels: 0/1 (0.0%)
+  Mitigations: 1/4 (25.0%)
+  Acknowledgements: 0/3 (0.0%)
+  Remote Code Execution Vulnerability in Broadcom Wi-Fi Driver: 1/1 (100.0%)
+  Elevation of Privilege Vulnerability in Qualcomm Performance Module: 0/2 (0.0%)
+  Elevation of Privilege Vulnerability in Qualcomm Wi-Fi Driver: 0/1 (0.0%)
+  Elevation of Privilege Vulnerability in the Debuggerd : 0/1 (0.0%)
+  Denial of Service Vulnerability in Minikin: 0/2 (0.0%)
+  Elevation of Privilege Vulnerability in Mediaserver : 0/3 (0.0%)
+  Remote Code Execution Vulnerabilities in libvpx: 0/1 (0.0%)
+  Elevation of Privilege in Conscrypt: 0/1 (0.0%)
+  Elevation of Privilege Vulnerability in the Qualcomm Performance Component: 1/1 (100.0%)
+  Elevation of Privilege Vulnerability in MediaTek Wi-Fi Kernel Driver: 0/1 (0.0%)
+  Elevation of Privilege Vulnerability in Kernel Keyring Component: 0/1 (0.0%)
+  Mitigation Bypass Vulnerability in the Kernel: 0/1 (0.0%)
+  Elevation of Privilege in MediaTek Connectivity Kernel Driver: 0/1 (0.0%)
+  Information Disclosure Vulnerability in libstagefright: 0/2 (0.0%)
+  Information Disclosure Vulnerability in Widevine: 0/2 (0.0%)
+  Information Disclosure Vulnerability in Mediaserver : 0/1 (0.0%)
+  Remote Denial of Service Vulnerability in Bluetooth: 0/1 (0.0%)
+  Remote Code Execution Vulnerability in DHCPCD: 0/2 (0.0%)
+  Remote Code Execution Vulnerability in Media Codec: 0/1 (0.0%)
+  Remote Code Execution Vulnerability in libstagefright: 0/1 (0.0%)
+  Elevation of Privilege Vulnerability in Qualcomm RF component: 0/1 (0.0%)
+   Elevation of Privilege Vulnerability in IMemory Native Interface: 1/1 (100.0%)
+   Elevation of Privilege Vulnerability in Telecom Component: 0/1 (0.0%)
+   Elevation of Privilege Vulnerability in Download Manager: 0/1 (0.0%)
+   Elevation of Privilege Vulnerability in Recovery Procedure: 0/1 (0.0%)
+   Elevation of Privilege Vulnerability in Bluetooth: 0/1 (0.0%)
+   Elevation of Privilege Vulnerability in Texas Instruments Haptic Driver: 0/1 (0.0%)
+   Elevation of Privilege Vulnerability in Qualcomm Video Kernel Driver: 0/1 (0.0%)
+   Elevation of Privilege Vulnerability in Qualcomm Power Management component: 0/1 (0.0%)
+   Elevation of Privilege Vulnerability in System_server: 0/1 (0.0%)
+   Elevation of Privilege Vulnerability in Mediaserver: 0/18 (0.0%)
+   Information Disclosure Vulnerability in Exchange ActiveSync: 0/1 (0.0%)
+  Information Disclosure Vulnerability in Mediaserver: 1/4 (25.0%)
+   Elevation of Privilege Vulnerability in Debuggerd Component: 0/1 (0.0%)
+   Elevation of Privilege Vulnerability in Setup Wizard: 0/1 (0.0%)
+  Elevation of Privilege Vulnerability in Telephony: 0/1 (0.0%)
+  Denial of Service Vulnerability in SyncStorageEngine: 0/1 (0.0%)
+  Information Disclosure Vulnerability in AOSP Mail: 0/1 (0.0%)
+  Information Disclosure Vulnerability in Framework: 0/1 (0.0%)
+   Remote Code Execution Vulnerability in Mediaserver: 0/3 (0.0%)
+   Elevation of Privilege Vulnerability in Debuggerd: 0/1 (0.0%)
+   Elevation of Privilege Vulnerability in Qualcomm TrustZone : 1/2 (50.0%)
+   Elevation of Privilege Vulnerability in Qualcomm Wi-Fi Driver: 1/8 (12.5%)
+   Elevation of Privilege Vulnerability in NVIDIA Video Driver: 1/7 (14.3%)
+   Elevation of Privilege Vulnerability in Kernel: 1/1 (100.0%)
+   Remote Code Execution Vulnerability in Kernel: 0/1 (0.0%)
+   Information Disclosure Vulnerability in Qualcomm Tethering Controller: 0/1 (0.0%)
+   Remote Code Execution Vulnerability in Bluetooth: 0/1 (0.0%)
+   Elevation of Privilege Vulnerability in Binder: 0/1 (0.0%)
+   Elevation of Privilege Vulnerability in Qualcomm Buspm Driver: 0/2 (0.0%)
+   Elevation of Privilege Vulnerability in Qualcomm MDP Driver: 0/1 (0.0%)
+   Elevation of Privilege Vulnerability in Wi-Fi: 0/2 (0.0%)
+   Elevation of Privilege Vulnerability in MediaTek Wi-Fi Driver: 0/2 (0.0%)
+   Remote Denial of Service Vulnerability in Qualcomm Hardware Codec: 0/1 (0.0%)
+   Elevation of Privilege Vulnerability in Conscrypt: 0/2 (0.0%)
+   Elevation of Privilege Vulnerability in OpenSSL & BoringSSL: 0/1 (0.0%)
+   Information Disclosure Vulnerability in AOSP Mail: 0/1 (0.0%)
+   Information Disclosure Vulnerability in Mediaserver: 0/3 (0.0%)
+   Denial of Service Vulnerability in Kernel: 0/1 (0.0%)
+   Remote Code Execution Vulnerabilities in libwebm: 0/1 (0.0%)
+   Elevation of Privilege Vulnerability in Qualcomm Video Driver: 0/2 (0.0%)
+   Elevation of Privilege Vulnerability in Qualcomm Sound Driver: 0/4 (0.0%)
+   Elevation of Privilege Vulnerability in Qualcomm GPU Driver: 1/2 (50.0%)
+   Elevation of Privilege Vulnerability in Broadcom Wi-Fi Driver: 0/2 (0.0%)
+   Elevation of Privilege Vulnerability in Qualcomm Camera Driver: 0/2 (0.0%)
+   Elevation of Privilege Vulnerability in NVIDIA Camera Driver: 0/2 (0.0%)
+   Elevation of Privilege Vulnerability in MediaTek Power Management Driver: 0/1 (0.0%)
+   Elevation of Privilege Vulnerability in SD Card Emulation Layer: 1/1 (100.0%)
+   Remote Denial of Service Vulnerability in Mediaserver: 0/1 (0.0%)
+   Elevation of Privilege Vulnerability in Framework UI: 0/1 (0.0%)
+   Information Disclosure Vulnerability in Qualcomm Wi-Fi Driver: 0/1 (0.0%)
+   Information Disclosure Vulnerability in Activity Manager: 0/1 (0.0%)
+   Remote code execution vulnerability in Mediaserver: 0/10 (0.0%)
+   Remote code execution vulnerability in OpenSSL & BoringSSL: 0/1 (0.0%)
+   Remote code execution vulnerability in Bluetooth: 0/1 (0.0%)
+   Elevation of privilege vulnerability in libpng: 0/1 (0.0%)
+   Elevation of privilege vulnerability in Mediaserver: 0/8 (0.0%)
+   Elevation of privilege vulnerability in sockets: 0/2 (0.0%)
+   Elevation of privilege vulnerability in LockSettingsService: 1/1 (100.0%)
+   Elevation of privilege vulnerability in Framework APIs: 0/3 (0.0%)
+   Elevation of privilege vulnerability in ChooserTarget service: 0/1 (0.0%)
+   Information disclosure vulnerability in Mediaserver: 0/4 (0.0%)
+   Information disclosure vulnerability in OpenSSL: 1/2 (50.0%)
+   Denial of service vulnerability in Mediaserver: 0/8 (0.0%)
+   Denial of service vulnerability in libc: 0/1 (0.0%)
+   Elevation of privilege vulnerability in lsof: 0/1 (0.0%)
+   Elevation of privilege vulnerability in DexClassLoader: 0/1 (0.0%)
+   Elevation of privilege vulnerability in Bluetooth: 0/1 (0.0%)
+   Elevation of privilege vulnerability in NFC: 0/1 (0.0%)
+   Information disclosure vulnerability in Proxy Auto-Config: 0/1 (0.0%)
+   Elevation of privilege vulnerability in Qualcomm GPU driver: 1/4 (25.0%)
+   Elevation of privilege vulnerability in MediaTek Wi-Fi driver: 0/1 (0.0%)
+   Elevation of privilege vulnerability in Qualcomm performance component: 0/2 (0.0%)
+   Elevation of privilege vulnerability in NVIDIA video driver: 0/1 (0.0%)
+   Elevation of privilege vulnerability in MediaTek drivers (Device specific): 0/5 (0.0%)
+   Elevation of privilege vulnerability in kernel file system: 0/4 (0.0%)
+   Elevation of privilege vulnerability in USB driver: 0/1 (0.0%)
+   Elevation of privilege vulnerability in Qualcomm components: 0/66 (0.0%)
+   Elevation of privilege vulnerability in Qualcomm USB driver: 0/1 (0.0%)
+   Elevation of privilege vulnerability in Qualcomm Wi-Fi driver: 0/2 (0.0%)
+   Elevation of privilege vulnerability in Qualcomm camera driver: 0/1 (0.0%)
+   Elevation of privilege vulnerability in NVIDIA camera driver: 0/1 (0.0%)
+   Elevation of privilege vulnerability in MediaTek power driver: 0/2 (0.0%)
+   Elevation of privilege vulnerability in MediaTek hardware sensor driver: 0/1 (0.0%)
+   Elevation of privilege vulnerability in MediaTek video driver: 0/2 (0.0%)
+   Elevation of privilege vulnerability in MediaTek GPS driver: 0/1 (0.0%)
+   Elevation of privilege vulnerability in MediaTek power management driver: 0/2 (0.0%)
+   Elevation of privilege vulnerability in MediaTek display driver: 0/1 (0.0%)
+   Elevation of privilege vulnerability in serial peripheral interface driver: 0/2 (0.0%)
+   Elevation of privilege vulnerability in Qualcomm sound driver: 0/1 (0.0%)
+   Elevation of privilege vulnerability in kernel: 0/2 (0.0%)
+   Information disclosure vulnerability in networking component: 0/1 (0.0%)
+   Information disclosure vulnerability in MediaTek Wi-Fi driver: 0/1 (0.0%)
+   Elevation of privilege vulnerability in kernel video driver: 0/1 (0.0%)
+   Information disclosure vulnerability in MediaTek video codec driver: 0/1 (0.0%)
+   Information disclosure vulnerability in Qualcomm USB driver: 0/1 (0.0%)
+   Information disclosure vulnerability in NVIDIA camera driver: 0/2 (0.0%)
+   Information disclosure vulnerability in MediaTek display driver: 0/1 (0.0%)
+   Information disclosure vulnerability in kernel teletype driver: 0/1 (0.0%)
+   Denial of service vulnerability in Qualcomm bootloader: 0/2 (0.0%)
+   Remote code execution vulnerability in libjhead: 0/1 (0.0%)
+   Denial of service vulnerability in system clock: 0/1 (0.0%)
+   Elevation of privilege vulnerability in framework APIs: 0/1 (0.0%)
+   Elevation of privilege vulnerability in Shell: 0/1 (0.0%)
+   Information disclosure vulnerability in camera APIs: 0/1 (0.0%)
+   Information disclosure vulnerability in SurfaceFlinger: 0/1 (0.0%)
+   Information disclosure vulnerability in Wi-Fi: 0/1 (0.0%)
+   Denial of service vulnerability in system UI: 0/1 (0.0%)
+   Denial of service vulnerability in Bluetooth: 0/1 (0.0%)
+   Remote code execution vulnerability in Qualcomm Wi-Fi driver: 0/1 (0.0%)
+  Remote code execution vulnerability in Conscrypt: 0/1 (0.0%)
+   Elevation of privilege vulnerability in kernel networking component: 0/2 (0.0%)
+   Elevation of privilege vulnerability in kernel memory system: 1/2 (50.0%)
+   Elevation of privilege vulnerability in kernel sound component: 0/3 (0.0%)
+  Elevation of privilege vulnerability in kernel video driver: 0/1 (0.0%)
+   Elevation of privilege vulnerability in Serial Peripheral Interface driver: 0/1 (0.0%)
+   Elevation of privilege vulnerability in NVIDIA media driver: 0/2 (0.0%)
+   Elevation of privilege vulnerability in ION driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm bootloader: 0/6 (0.0%)
+   Elevation of privilege vulnerability in LG Electronics bootloader: 0/1 (0.0%)
+   Information disclosure vulnerability in Qualcomm components: 0/10 (0.0%)
+   Information disclosure vulnerability in kernel scheduler: 0/1 (0.0%)
+   Information disclosure vulnerability in MediaTek Wi-Fi driver (device specific): 0/1 (0.0%)
+  Information disclosure vulnerability in USB driver: 0/1 (0.0%)
+   Denial of service vulnerability in Qualcomm components: 0/1 (0.0%)
+   Elevation of privilege vulnerability in Google Play services: 0/1 (0.0%)
+   Information disclosure vulnerability in kernel networking component: 1/1 (100.0%)
+   Information disclosure vulnerability in kernel sound component: 1/2 (50.0%)
+   Vulnerabilities in Qualcomm components: 0/6 (0.0%)
+  Remote code execution vulnerability in LibUtils: 1/1 (100.0%)
+  Remote code execution vulnerability in Mediaserver: 1/15 (6.7%)
+  Remote code execution vulnerability in MediaMuxer: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Mediaserver: 0/17 (0.0%)
+  Elevation of privilege vulnerability in device boot: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Settings: 0/3 (0.0%)
+  Denial of service vulnerability in Mediaserver: 0/35 (0.0%)
+  Elevation of privilege vulnerability in Telephony: 1/5 (20.0%)
+  Elevation of privilege vulnerability in Notification Manager Service: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Debuggerd: 0/1 (0.0%)
+  Elevation of privilege vulnerability in System UI Tuner: 0/1 (0.0%)
+  Elevation of privilege vulnerability in SMS: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Java Debug Wire Protocol: 0/1 (0.0%)
+  Information disclosure vulnerability in Mediaserver: 0/15 (0.0%)
+  Information disclosure vulnerability in AOSP Mail: 0/3 (0.0%)
+  Information disclosure vulnerability in Wi-Fi: 0/1 (0.0%)
+  Denial of service vulnerability in Telephony: 0/3 (0.0%)
+  Elevation of privilege vulnerability in kernel security subsystem: 0/5 (0.0%)
+  Elevation of privilege vulnerability in kernel networking subsystem: 4/9 (44.4%)
+  Elevation of privilege vulnerability in kernel netfilter subsystem: 1/1 (100.0%)
+  Elevation of privilege vulnerability in kernel USB driver: 0/2 (0.0%)
+  Elevation of privilege vulnerability in kernel sound subsystem: 1/5 (20.0%)
+  Elevation of privilege vulnerability in kernel ASN.1 decoder: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm radio interface layer: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm subsystem driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in kernel networking driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Synaptics touchscreen driver: 0/16 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm camera driver: 0/10 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm sound driver: 0/20 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm IPA driver: 0/3 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm power driver: 0/2 (0.0%)
+  Elevation of privilege vulnerability in Broadcom Wi-Fi driver: 1/23 (4.3%)
+  Elevation of privilege vulnerability in kernel eCryptfs filesystem: 1/1 (100.0%)
+  Elevation of privilege vulnerability in NVIDIA kernel: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm Wi-Fi driver: 0/24 (0.0%)
+  Denial of service vulnerability in kernel networking subsystem: 1/5 (20.0%)
+  Denial of service vulnerability in kernel ext4 file system: 0/1 (0.0%)
+  Information disclosure vulnerability in Qualcomm SPMI driver: 0/2 (0.0%)
+  Information disclosure vulnerability in Qualcomm sound codec: 0/1 (0.0%)
+  Information disclosure vulnerability in Qualcomm DMA component: 0/1 (0.0%)
+  Information disclosure vulnerability in kernel networking subsystem: 0/3 (0.0%)
+  Vulnerabilities in Qualcomm components: 0/76 (0.0%)
+  Elevation of privilege vulnerability in kernel shared memory subsystem: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm networking component: 0/2 (0.0%)
+  Elevation of privilege vulnerability in ServiceManager: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Lock Settings Service: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Zygote process: 0/1 (0.0%)
+  Elevation of privilege vulnerability in framework APIs: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Camera service: 0/2 (0.0%)
+  Elevation of privilege vulnerability in fingerprint login: 0/1 (0.0%)
+  Denial of service vulnerability in Wi-Fi: 0/2 (0.0%)
+  Denial of service vulnerability in GPS: 1/2 (50.0%)
+  Elevation of privilege vulnerability in Framework Listener: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Accessibility services: 0/1 (0.0%)
+  Remote code execution vulnerability in kernel ASN.1 decoder: 0/1 (0.0%)
+  Remote code execution vulnerability in kernel networking subsystem: 1/2 (50.0%)
+  Elevation of privilege vulnerability in MediaTek video driver: 0/4 (0.0%)
+  Elevation of privilege vulnerability in kernel shared memory driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in NVIDIA MMC test driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm QSEE Communicator driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm crypto engine driver: 0/5 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm video driver: 0/9 (0.0%)
+  Elevation of privilege vulnerability in NVIDIA camera driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in system_server: 0/1 (0.0%)
+  Elevation of privilege vulnerability in kernel performance subsystem: 0/6 (0.0%)
+  Information disclosure vulnerability in kernel ION subsystem: 0/1 (0.0%)
+  Information disclosure vulnerability in NVIDIA GPU driver: 0/4 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm character driver: 0/1 (0.0%)
+  Information disclosure vulnerability in Qualcomm sound driver: 0/5 (0.0%)
+  Information disclosure vulnerability in Motorola USBNet driver: 0/1 (0.0%)
+  Information disclosure vulnerability in Qualcomm components: 0/15 (0.0%)
+  Information disclosure vulnerability in kernel components: 0/17 (0.0%)
+  Information disclosure vulnerability in NVIDIA profiler: 0/3 (0.0%)
+  Information disclosure vulnerability in kernel: 1/1 (100.0%)
+  Denial of service vulnerability in kernel sound driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in libzipfile: 0/1 (0.0%)
+  Remote code execution vulnerability in Skia: 0/1 (0.0%)
+  Remote code execution vulnerability in libjpeg: 0/1 (0.0%)
+  Remote code execution vulnerability in Android runtime: 0/1 (0.0%)
+  Elevation of privilege vulnerability in System Server: 1/1 (100.0%)
+  Elevation of privilege vulnerability in System UI: 0/2 (0.0%)
+  Information disclosure vulnerability in Conscrypt: 0/1 (0.0%)
+  Information disclosure vulnerability in download manager: 0/1 (0.0%)
+  Denial of service vulnerability in Bluetooth: 0/1 (0.0%)
+  Denial of service vulnerability in OpenJDK: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Framework APIs: 2/7 (28.6%)
+  Elevation of privilege vulnerability in AOSP Launcher: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Account Manager Service: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Bluetooth: 0/3 (0.0%)
+  Denial of service vulnerability in Proxy Auto Config: 0/1 (0.0%)
+  Denial of service vulnerability in Input Manager Service: 0/1 (0.0%)
+  Remote code execution vulnerability in Qualcomm crypto driver: 0/2 (0.0%)
+  Elevation of privilege vulnerability in kernel file system: 1/9 (11.1%)
+  Elevation of privilege vulnerability in kernel SCSI driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in kernel media driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in kernel ION subsystem: 1/5 (20.0%)
+  Elevation of privilege vulnerability in NVIDIA GPU driver: 0/30 (0.0%)
+  Remote code execution vulnerability in Expat: 0/4 (0.0%)
+  Remote code execution vulnerability in Webview: 1/1 (100.0%)
+  Remote code execution vulnerability in Freetype: 0/2 (0.0%)
+  Elevation of privilege vulnerability in kernel system-call auditing subsystem: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm bus driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in kernel memory subsystem: 2/4 (50.0%)
+  Remote code execution vulnerability in CURL/LIBCURL: 0/3 (0.0%)
+  Elevation of privilege vulnerability in libziparchive: 0/1 (0.0%)
+  Remote Code Execution vulnerability in Framesequence library: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Smart Lock: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Wi-Fi: 1/2 (50.0%)
+  Information disclosure vulnerability in Package Manager: 0/1 (0.0%)
+  Elevation of privilege vulnerability in kernel: 0/2 (0.0%)
+  Elevation of privilege vulnerability in NVIDIA video driver: 0/4 (0.0%)
+  Elevation of privilege vulnerability in kernel ION driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in HTC sound codec driver: 0/3 (0.0%)
+  Elevation of privilege vulnerability in MediaTek driver: 0/8 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm media codecs: 0/4 (0.0%)
+  Elevation of privilege vulnerability in MediaTek I2C driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in NVIDIA libomx library: 0/2 (0.0%)
+  Information disclosure vulnerability in MediaTek video driver: 0/1 (0.0%)
+  Information disclosure vulnerability in NVIDIA video driver: 0/5 (0.0%)
+  Denial of service vulnerability in NVIDIA camera driver: 0/1 (0.0%)
+  Information disclosure vulnerability in NVIDIA librm library: 0/1 (0.0%)
+  Remote code execution vulnerability in c-ares: 0/1 (0.0%)
+  Remote code execution vulnerability in Framesequence: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Audioserver: 0/11 (0.0%)
+  Elevation of privilege vulnerability in libnl: 0/2 (0.0%)
+  Information disclosure vulnerability in External Storage Provider: 0/1 (0.0%)
+  Denial of service vulnerability in core networking: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Contacts: 0/1 (0.0%)
+  Information disclosure vulnerability in Audioserver: 0/6 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm GPU driver: 0/2 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm camera: 0/2 (0.0%)
+  Elevation of privilege vulnerability in MediaTek components: 1/11 (9.1%)
+  Elevation of privilege vulnerability in Qualcomm radio driver: 1/1 (100.0%)
+  Elevation of privilege vulnerability in kernel profiling subsystem: 0/1 (0.0%)
+  Information disclosure vulnerability in bootloader: 1/2 (50.0%)
+  Denial of service vulnerability in Qualcomm FUSE file system: 0/1 (0.0%)
+  Denial of service vulnerability in bootloader: 1/1 (100.0%)
+  Elevation of privilege vulnerability in Binder: 0/1 (0.0%)
+  Information disclosure vulnerability in NVIDIA camera driver: 0/1 (0.0%)
+  Information disclosure vulnerability in MediaTek driver: 0/4 (0.0%)
+  Information disclosure vulnerability in STMicroelectronics driver: 0/2 (0.0%)
+  Information disclosure vulnerability in HTC input driver: 0/1 (0.0%)
+  Denial of service vulnerability in kernel file system: 0/1 (0.0%)
+  Remote code execution vulnerability in Surfaceflinger: 0/1 (0.0%)
+  Remote code execution vulnerability in libgdx: 0/2 (0.0%)
+  Remote code execution vulnerability in libstagefright: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Java.Net: 0/1 (0.0%)
+  Information disclosure vulnerability in AOSP Messaging: 0/4 (0.0%)
+  Information disclosure vulnerability in Framework APIs: 0/2 (0.0%)
+  Denial of service vulnerability in Bionic DNS: 0/1 (0.0%)
+  Information disclosure vulnerability in Filesystem: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm Secure Execution Environment Communicator driver: 0/4 (0.0%)
+  Elevation of privilege vulnerability in Realtek sound driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in HTC touchscreen driver: 0/5 (0.0%)
+  Information disclosure vulnerability in Qualcomm Secure Execution Environment Communicator: 0/1 (0.0%)
+  Remote code execution vulnerability in OpenSSL & BoringSSL: 0/1 (0.0%)
+  Remote code execution vulnerability in Mediaserver : 0/9 (0.0%)
+  Elevation of privilege vulnerability in recovery verifier: 0/1 (0.0%)
+  Remote code execution vulnerability in AOSP Messaging: 0/1 (0.0%)
+  Remote code execution vulnerability in Framesequence library: 1/1 (100.0%)
+  Elevation of privilege vulnerability in NFC: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Location Manager: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Package Manager: 0/1 (0.0%)
+  Denial of service vulnerability in Setup Wizard: 0/2 (0.0%)
+  Denial of service vulnerability in Audioserver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in kernel FIQ debugger: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm input hardware driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in MediaTek Hardware Sensor Driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm ADSPRPC driver: 0/2 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm fingerprint sensor driver: 0/2 (0.0%)
+  Elevation of privilege vulnerability in MediaTek APK: 0/1 (0.0%)
+  Elevation of privilege vulnerability in HTC Sensor Hub Driver: 0/2 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm networking driver: 0/3 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm SPCom driver: 0/2 (0.0%)
+  Information disclosure vulnerability in Qualcomm bootloader: 0/1 (0.0%)
+  Information disclosure vulnerability in Qualcomm power driver: 0/1 (0.0%)
+  Denial of service vulnerability in kernel cryptographic subsystem: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm camera driver (device specific): 0/1 (0.0%)
+  Information disclosure vulnerability in Qualcomm Wi-Fi driver: 0/5 (0.0%)
+  Information disclosure vulnerability in MediaTek video codec driver: 0/1 (0.0%)
+  Information disclosure vulnerability in Qualcomm video driver: 0/6 (0.0%)
+  Information disclosure vulnerability in Qualcomm camera driver: 0/6 (0.0%)
+  Information disclosure vulnerability in HTC sound codec driver: 0/1 (0.0%)
+  Information disclosure vulnerability in Synaptics touchscreen driver: 0/2 (0.0%)
+  Information disclosure vulnerability in kernel USB gadget driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in CameraBase: 0/1 (0.0%)
+  Elevation of privilege vulnerability in SurfaceFlinger: 0/1 (0.0%)
+  Denial of service vulnerability in libskia: 0/1 (0.0%)
+  Information disclosure vulnerability in libskia: 0/1 (0.0%)
+  Information disclosure vulnerability in Factory Reset: 0/1 (0.0%)
+  Remote code execution vulnerability in Broadcom Wi-Fi firmware: 1/1 (100.0%)
+  Remote code execution vulnerability in Qualcomm crypto engine driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in MediaTek touchscreen driver: 0/2 (0.0%)
+  Remote code execution vulnerability in v8: 0/1 (0.0%)
+  Elevation of privilege vulnerability in NVIDIA crypto driver: 0/3 (0.0%)
+  Elevation of privilege vulnerability in MediaTek thermal driver: 0/4 (0.0%)
+  Elevation of privilege vulnerability in MediaTek camera driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in NVIDIA I2C HID driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm audio driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in DTS sound driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm sound codec driver: 0/2 (0.0%)
+  Elevation of privilege vulnerability in NVIDIA boot and power management processor driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm Seemp driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm Kyro L2 driver: 0/1 (0.0%)
+  Information disclosure vulnerability in kernel memory subsystem: 0/1 (0.0%)
+  Information disclosure vulnerability in Qualcomm TrustZone: 0/1 (0.0%)
+  Information disclosure vulnerability in Qualcomm IPA driver: 0/1 (0.0%)
+  Denial of service vulnerability in Qualcomm Wi-Fi driver: 0/2 (0.0%)
+  Elevation of privilege vulnerability in HTC OEM fastboot command: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm CP access driver: 0/1 (0.0%)
+  Information disclosure vulnerability in kernel media driver: 1/1 (100.0%)
+  Information disclosure vulnerability in Broadcom Wi-Fi driver: 0/2 (0.0%)
+  Information disclosure vulnerability in Qualcomm Avtimer driver: 0/1 (0.0%)
+  Information disclosure vulnerability in Qualcomm USB driver: 0/1 (0.0%)
+  Information disclosure vulnerability in NVIDIA crypto driver: 0/2 (0.0%)
+  Information disclosure vulnerability in File-Based Encryption: 0/1 (0.0%)
+  Information disclosure vulnerability in Bluetooth: 0/1 (0.0%)
+  Information disclosure vulnerability in OpenSSL & BoringSSL: 0/1 (0.0%)
+  Remote code execution vulnerability in GIFLIB: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Motorola bootloader: 1/1 (100.0%)
+  Remote code execution vulnerability in libxml2: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm LED driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm crypto driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm shared memory driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm Slimbus driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in MediaTek power driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in MediaTek system management interrupt driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in MediaTek command queue driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm pin controller driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Qualcomm Secure Channel Manager Driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in kernel voltage regulator driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in Goodix touchscreen driver: 0/1 (0.0%)
+  Elevation of privilege vulnerability in HTC bootloader: 0/1 (0.0%)
+  Information disclosure vulnerability in MediaTek command queue driver: 0/1 (0.0%)
+  Information disclosure vulnerability in Qualcomm crypto engine driver: 0/1 (0.0%)
+  Information disclosure vulnerability in kernel UVC driver: 0/1 (0.0%)
+  Information disclosure vulnerability in Qualcomm power driver (device specific): 0/1 (0.0%)
+  Information disclosure vulnerability in Qualcomm LED driver: 0/1 (0.0%)
+  Information disclosure vulnerability in Qualcomm shared memory driver: 0/1 (0.0%)
+  Information disclosure vulnerability in kernel trace subsystem: 0/1 (0.0%)
+  Information disclosure vulnerability in Qualcomm sound codec driver: 0/2 (0.0%)
+  Information disclosure vulnerability in Qualcomm SPCom driver: 0/2 (0.0%)
+  Bluetooth: 0/2 (0.0%)
+  Libraries: 2/18 (11.1%)
+  Media framework: 6/197 (3.0%)
+  System UI: 0/6 (0.0%)
+  Kernel components: 29/194 (14.9%)
+  MediaTek components: 2/237 (0.8%)
+  NVIDIA components: 2/28 (7.1%)
+  Qualcomm components: 8/725 (1.1%)
+  Synaptics components: 0/1 (0.0%)
+  Qualcomm closed-source components: 2/829 (0.2%)
+  None: 0/11 (0.0%)
+  Runtime: 0/2 (0.0%)
+  Framework: 29/555 (5.2%)
+  Broadcom components: 2/23 (8.7%)
+  HTC components: 0/7 (0.0%)
+  Media Framework: 1/89 (1.1%)
+  System: 37/725 (5.1%)
+  Imgtk components: 0/1 (0.0%)
+  Android runtime: 0/17 (0.0%)
+  LG components: 0/2 (0.0%)
+  Qualcomm closed-source components 2014-2016 cumulative update: 2/250 (0.8%)
+  Android Runtime: 0/4 (0.0%)
+  Library: 0/7 (0.0%)
+   Broadcom components: 0/1 (0.0%)
+  Google Play system updates: 5/36 (13.9%)
+  Kernel component: 0/3 (0.0%)
+  FPC components: 0/12 (0.0%)
+  AMLogic components: 0/3 (0.0%)
+  Kernel: 4/42 (9.5%)
+  MediaTek: 0/3 (0.0%)
+  AMLogic: 2/4 (50.0%)
+  ARM components: 0/10 (0.0%)
+  Unisoc components: 1/95 (1.1%)
+  Widevine DRM: 0/4 (0.0%)
+  Telecommunication: 0/13 (0.0%)
+  Android TV: 0/2 (0.0%)
+  Kernel LTS: 1/14 (7.1%)
+  Amlogic components: 0/1 (0.0%)
+  Imagination Technologies: 0/98 (0.0%)
+  UNISOC components: 0/5 (0.0%)
+  Multiple components: 0/1 (0.0%)
+  Kernel : 0/1 (0.0%)
+  Arm components: 1/79 (1.3%)
+  Frameworks: 0/1 (0.0%)
+  Misc OEM: 0/7 (0.0%)
+  Widevine: 0/2 (0.0%)
+  Qualcomm closed-source   components: 0/18 (0.0%)
+  Google Play system   updates: 0/3 (0.0%)
+  Platform: 0/1 (0.0%)
+  Qualcomm closed-source     components: 0/2 (0.0%)
+   Imagination Technologies: 0/2 (0.0%)
+
+-- Distribution of attackVector --
+  LOCAL: 3422
+  NETWORK: 1389
+  ADJACENT_NETWORK: 160
+  PHYSICAL: 71
+
+-- Distribution of attackComplexity --
+  LOW: 4578
+  HIGH: 464
+
+-- Distribution of privilegesRequired --
+  NONE: 2832
+  LOW: 2094
+  HIGH: 116
+
+-- Distribution of userInteraction --
+  NONE: 3630
+  REQUIRED: 1412
+
+-- Distribution of scope --
+  UNCHANGED: 5017
+  CHANGED: 25
+
+-- Top 5 CVEs by baseScore --
+  CVE-2015-6636 (baseScore=9.8)
+  CVE-2015-6642 (baseScore=9.8)
+  CVE-2016-0801 (baseScore=9.8)
+  CVE-2016-0803 (baseScore=9.8)
+  CVE-2016-0804 (baseScore=9.8)
+
+-- Top 5 CVEs by exploitabilityScore --
+  CVE-2015-6636 (exploitabilityScore=3.9)
+  CVE-2015-6642 (exploitabilityScore=3.9)
+  CVE-2016-0801 (exploitabilityScore=3.9)
+  CVE-2016-0803 (exploitabilityScore=3.9)
+  CVE-2016-0804 (exploitabilityScore=3.9)
+
+-- Top 5 CVEs by num_poc --
+  CVE-2022-0847 (num_poc=100)
+  CVE-2016-5195 (num_poc=58)
+  CVE-2016-5195 (num_poc=58)
+  CVE-2019-2215 (num_poc=26)
+  CVE-2016-0728 (num_poc=14)
+
+-- Top 5 CVEs by max_poc_stars --
+  CVE-2023-45866 (max_poc_stars=1518)
+  CVE-2022-0847 (max_poc_stars=1101)
+  CVE-2016-5195 (max_poc_stars=975)
+  CVE-2016-5195 (max_poc_stars=975)
+  CVE-2017-5754 (max_poc_stars=575)
+
+Median baseScore overall: 7.80

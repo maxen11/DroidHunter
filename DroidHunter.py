@@ -58,10 +58,13 @@ def main_menu():
                         print("5. Top by ASB Category (Full Details)")
                         print("6. Top per ASB Category (Category, CVE-ID, Score)")
                         print("7. Top By Nr PoCs")
-                        print("8. Lookup CVE Details")
-                        print("9. Change file")
-                        print("10. Set timeframe")
-                        print("11. Exit")
+                        print("8. CVE Amount by Types with PoCs")
+                        print("9. All stats")
+                        print("10. Make plots")
+                        print("11. Lookup CVE Details")
+                        print("12. Change file")
+                        print("13. Set timeframe")
+                        print("14. Exit")
                         option = input("\nOption: ")
                         if option == "1":
                             amount = queryAmount()
@@ -87,6 +90,36 @@ def main_menu():
                             else:
                                 print("Invalid option. ")
                         elif option == "8":
+                            ls.count_cve_types_with_poc(scores_file)
+                        elif option == "9":
+                            ls.compute_all_cve_stats(scores_file)
+                        elif option == "10":
+                            ls.plot_severity_heatmap(scores_file)
+                            #ls.plot_type_layer_bipartite(scores_file)
+                            #ls.plot_cvss_boxplots(scores_file)
+                            ls.plot_cve_type_distribution(scores_file)
+                            ls.plot_poc_availability_by_type(scores_file)
+                            ls.plot_avg_pocs_by_layer(scores_file)
+                            ls.plot_layer_type_stacked_bar(scores_file)
+                            ls.plot_cvss_violin_strip(scores_file)
+                            ls.plot_cvss_density_by_type(scores_file)
+                            ls.plot_cvss_density_by_component(scores_file)
+                            ls.plot_avg_pocs_by_type(scores_file)
+                            ls.plot_avg_pocs_by_component(scores_file)
+                            ls.plot_correlation_heatmap(scores_file)
+                            ls.plot_poc_coverage_timeseries_by_type(scores_file)
+                            ls.plot_poc_cvss_coverage_by_type(scores_file)
+                            ls.plot_poc_cvss_coverage_by_half_point_bin(scores_file)
+                            ls.plot_poc_cvss_coverage_1point_bins(scores_file, types_of_interest=None, min_count=1)
+                            ls.plot_poc_cvss_coverage_with_counts(scores_file)
+                            ls.plot_cve_count_by_score(scores_file)
+                            ls.plot_poc_coverage_with_counts(scores_file)
+                            ls.plot_cve_count_heatmap_by_type_score(scores_file)
+                            ls.plot_cve_count_stacked_bar_by_score_type(scores_file)
+                            ls.plot_poc_coverage_smoothed(scores_file)
+                            ls.plot_poc_coverage_small_multiples(scores_file)
+
+                        elif option == "11":
                             while True:
                                 print("1. Choose CVE")
                                 print("2. Exit")
@@ -104,18 +137,18 @@ def main_menu():
                                         time.sleep(1)
                                 else:
                                     print("Invalid option. ")
-                        elif option == "9":
+                        elif option == "12":
                             old_file = scores_file
                             print(f"File {old_file} will be replaced.")
                             scores_file = fh.choose_json_file("Choose new file")
                             if not scores_file:
                                 print("File not selected. Using old file.")
                                 scores_file = old_file
-                        elif option == "10":
+                        elif option == "13":
                             start = input("Start year: ")
                             end = input("End year: ")
                             ls.set_timeframe(start, end)
-                        elif option == "11":
+                        elif option == "14":
                             break
             elif choice == "6":
                 filename = fh.choose_json_file("Choose file to read from")

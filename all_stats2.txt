@@ -1,0 +1,746 @@
+Total CVEs: 5611
+
+-- CVEs per Year --
+  2015: 86
+  2016: 661
+  2017: 943
+  2018: 742
+  2019: 461
+  2020: 512
+  2021: 473
+  2022: 494
+  2023: 599
+  2024: 416
+  2025: 224
+
+-- Severity Distribution --
+  High: 4270
+  Critical: 809
+  Moderate: 433
+  Unknown: 74
+  Low: 23
+  None*: 1
+  Critical*: 1
+
+-- Counts by Vulnerability Type --
+  Other: 4507
+  Elevation Of Privilege: 663
+  Information Disclosure: 223
+  Remote Code Execution: 124
+  Denial Of Service: 89
+  Remote Denial Of Service: 3
+  Elevation Privilege: 1
+  Mitigation Bypass: 1
+
+-- Counts by Component --
+  Qualcomm Closed-Source Components: 849
+  Qualcomm Components: 817
+  System: 725
+  Framework: 557
+  Media Framework: 287
+  Qualcomm Closed-Source Components 2014-2016 Cumulative Update: 250
+  Mediatek Components: 248
+  Kernel Components: 214
+  Mediaserver: 172
+  Unisoc Components: 100
+  Imagination Technologies: 100
+  Arm Components: 89
+  Vulnerabilities In Qualcomm Components: 82
+  Kernel: 57
+  Qualcomm Wi-Fi Driver: 44
+  Google Play System Updates: 39
+  Nvidia Gpu Driver: 34
+  Qualcomm Sound Driver: 30
+  Broadcom Wi-Fi Driver: 28
+  Nvidia Components: 28
+  Libstagefright: 24
+  Broadcom Components: 24
+  Android Runtime: 23
+  Qualcomm Camera Driver: 19
+  Kernel Networking Subsystem: 19
+  Synaptics Touchscreen Driver: 18
+  Audioserver: 18
+  Libraries: 18
+  Bluetooth: 17
+  Nvidia Video Driver: 17
+  Qualcomm Video Driver: 17
+  Framework Apis: 14
+  Kernel File System: 14
+  Kernel Lts: 14
+  Wi-Fi: 13
+  Telecommunication: 13
+  Mediatek Driver: 12
+  Fpc Components: 12
+  : 11
+  Telephony: 10
+  Qualcomm Bootloader: 9
+  Qualcomm Gpu Driver: 8
+  Nvidia Camera Driver: 8
+  Mediatek Video Driver: 7
+  Qualcomm Crypto Engine Driver: 7
+  Htc Components: 7
+  Library: 7
+  Misc Oem: 7
+  Kernel Performance Subsystem: 6
+  Kernel Ion Subsystem: 6
+  System UI: 6
+  Aosp Mail: 5
+  Mediatek Drivers (Device Specific): 5
+  Kernel Sound Component: 5
+  Kernel Security Subsystem: 5
+  Kernel Sound Subsystem: 5
+  Kernel Memory Subsystem: 5
+  Aosp Messaging: 5
+  Htc Touchscreen Driver: 5
+  Nvidia Crypto Driver: 5
+  Binder: 4
+  Libutils: 4
+  Setup Wizard: 4
+  Mitigations: 4
+  Widevine: 4
+  Mediatek Wi-Fi Driver: 4
+  Conscrypt: 4
+  Openssl & Boringssl: 4
+  Qualcomm Ipa Driver: 4
+  Expat: 4
+  Htc Sound Codec Driver: 4
+  Qualcomm Media Codecs: 4
+  Qualcomm Secure Execution Environment Communicator Driver: 4
+  Qualcomm Spcom Driver: 4
+  Mediatek Thermal Driver: 4
+  Qualcomm Sound Codec Driver: 4
+  Amlogic Components: 4
+  Amlogic: 4
+  Widevine Drm: 4
+  Skia: 3
+  System Server: 3
+  Acknowledgements: 3
+  Qualcomm Trustzone: 3
+  Mediatek Power Management Driver: 3
+  Qualcomm Usb Driver: 3
+  Mediatek Power Driver: 3
+  Serial Peripheral Interface Driver: 3
+  Surfaceflinger: 3
+  System Ui: 3
+  Kernel Networking Component: 3
+  Settings: 3
+  Qualcomm Power Driver: 3
+  Nvidia Profiler: 3
+  Qualcomm Crypto Driver: 3
+  Curl/Libcurl: 3
+  Bootloader: 3
+  Qualcomm Networking Driver: 3
+  Mediatek: 3
+  Keystore: 2
+  Display Driver: 2
+  Systemui: 2
+  Trustzone: 2
+  Qualcomm Performance Module: 2
+  Minikin: 2
+  Dhcpcd: 2
+  Download Manager: 2
+  System_Server: 2
+  Debuggerd: 2
+  Qualcomm Buspm Driver: 2
+  Sockets: 2
+  Openssl: 2
+  Nfc: 2
+  Qualcomm Performance Component: 2
+  Usb Driver: 2
+  Mediatek Hardware Sensor Driver: 2
+  Mediatek Display Driver: 2
+  Kernel Video Driver: 2
+  Mediatek Video Codec Driver: 2
+  Kernel Memory System: 2
+  Nvidia Media Driver: 2
+  Kernel Usb Driver: 2
+  Kernel Asn.1 Decoder: 2
+  Qualcomm Spmi Driver: 2
+  Qualcomm Networking Component: 2
+  Camera Service: 2
+  Gps: 2
+  Kernel Media Driver: 2
+  Freetype: 2
+  Framesequence Library: 2
+  Package Manager: 2
+  Nvidia Libomx Library: 2
+  Libnl: 2
+  Qualcomm Camera: 2
+  Stmicroelectronics Driver: 2
+  Libgdx: 2
+  Qualcomm Adsprpc Driver: 2
+  Qualcomm Fingerprint Sensor Driver: 2
+  Htc Sensor Hub Driver: 2
+  Libskia: 2
+  Mediatek Touchscreen Driver: 2
+  Qualcomm Led Driver: 2
+  Qualcomm Shared Memory Driver: 2
+  Mediatek Command Queue Driver: 2
+  Runtime: 2
+  Lg Components: 2
+  Android Tv: 2
+  Integer Overflows During Mp4 Atom Processing: 1
+  An Integer Underflow In Esds Processing: 1
+  Integer Overflow In Libstagefright When Parsing The Mpeg4 Tx3G Atom: 1
+  Integer Underflow In Libstagefright When Processing Mpeg4 Covr Atoms: 1
+  Integer Underflow In Libstagefright If Size Is Below 6 While Processing 3Gpp Metadata: 1
+  Integer Overflow In Libstagefright Processing Mpeg4 Covr Atoms When Chunk_Data_Size Is Size_Max: 1
+  Buffer Overflow In Sonivox Parse_Wave: 1
+  Buffer Overflows In Libstagefright Mpeg4Extractor.Cpp: 1
+  Buffer Overflow In Mediaserver Bpmediahttpconnection: 1
+  Vulnerability In Libpng: Overflow In Png_Read_Idat_Data: 1
+  Remotely Exploitable Memcpy() Overflow In P2P_Add_Device() In Wpa_Supplicant: 1
+  Memory Corruption In Opensslx509Certificate Deserialization: 1
+  Buffer Overflow In Mediaserver Bnhdcp: 1
+  Buffer Overflow In Libstagefright Omxnodeinstance::Emptybuffer: 1
+  Heap Overflow In Mediaserver Audiopolicymanager::Getinputforattr(): 1
+  Applications Can Intercept Or Emulate Sim Commands To Telephony: 1
+  Vulnerability In Bitmap Unmarshalling: 1
+  Appwidgetserviceimpl Can Create Intentsender With System Privileges: 1
+  Mitigation Bypass Of Restrictions On Getrecenttasks(): 1
+  Activitymanagerservice.Getprocessrecordlocked() May Load A System Uid Application Into The Wrong Process: 1
+  Unbounded Buffer Read In Libstagefright While Parsing 3Gpp Metadata: 1
+  Region: 1
+  Sms Enables Notification Bypass: 1
+  Lockscreen: 1
+  Sonivox: 1
+  Libflac: 1
+  Media Player Framework: 1
+  Secure Element Evaluation Kit: 1
+  Media Projection: 1
+  Sqlite: 1
+  Libmedia: 1
+  Elevation Of Privilege In Kernel: 1
+  Native Frameworks Library: 1
+  Audio: 1
+  Misc-Sd Driver: 1
+  The Imagination Technologies Driver: 1
+  Bouncy Castle: 1
+  Syncmanager: 1
+  Attack Surface Reduction For Nexus Kernels: 1
+  The Debuggerd: 1
+  Libvpx: 1
+  Elevation Of Privilege In Conscrypt: 1
+  The Qualcomm Performance Component: 1
+  Mediatek Wi-Fi Kernel Driver: 1
+  Kernel Keyring Component: 1
+  The Kernel: 1
+  Elevation Of Privilege In Mediatek Connectivity Kernel Driver: 1
+  Media Codec: 1
+  Qualcomm Rf Component: 1
+  Imemory Native Interface: 1
+  Telecom Component: 1
+  Recovery Procedure: 1
+  Texas Instruments Haptic Driver: 1
+  Qualcomm Video Kernel Driver: 1
+  Qualcomm Power Management Component: 1
+  Exchange Activesync: 1
+  Debuggerd Component: 1
+  Syncstorageengine: 1
+  Qualcomm Tethering Controller: 1
+  Qualcomm Mdp Driver: 1
+  Qualcomm Hardware Codec: 1
+  Libwebm: 1
+  Sd Card Emulation Layer: 1
+  Framework Ui: 1
+  Activity Manager: 1
+  Libpng: 1
+  Locksettingsservice: 1
+  Choosertarget Service: 1
+  Libc: 1
+  Lsof: 1
+  Dexclassloader: 1
+  Proxy Auto-Config: 1
+  Mediatek Gps Driver: 1
+  Networking Component: 1
+  Kernel Teletype Driver: 1
+  Libjhead: 1
+  System Clock: 1
+  Shell: 1
+  Camera Apis: 1
+  Ion Driver: 1
+  Lg Electronics Bootloader: 1
+  Kernel Scheduler: 1
+  Mediatek Wi-Fi Driver (Device Specific): 1
+  Google Play Services: 1
+  Mediamuxer: 1
+  Device Boot: 1
+  Notification Manager Service: 1
+  System Ui Tuner: 1
+  Sms: 1
+  Java Debug Wire Protocol: 1
+  Kernel Netfilter Subsystem: 1
+  Qualcomm Radio Interface Layer: 1
+  Qualcomm Subsystem Driver: 1
+  Kernel Networking Driver: 1
+  Kernel Ecryptfs Filesystem: 1
+  Nvidia Kernel: 1
+  Kernel Ext4 File System: 1
+  Qualcomm Sound Codec: 1
+  Qualcomm Dma Component: 1
+  Kernel Shared Memory Subsystem: 1
+  Servicemanager: 1
+  Lock Settings Service: 1
+  Zygote Process: 1
+  Fingerprint Login: 1
+  Framework Listener: 1
+  Accessibility Services: 1
+  Kernel Shared Memory Driver: 1
+  Nvidia Mmc Test Driver: 1
+  Qualcomm Qsee Communicator Driver: 1
+  Qualcomm Character Driver: 1
+  Motorola Usbnet Driver: 1
+  Kernel Sound Driver: 1
+  Libzipfile: 1
+  Libjpeg: 1
+  Openjdk: 1
+  Aosp Launcher: 1
+  Account Manager Service: 1
+  Proxy Auto Config: 1
+  Input Manager Service: 1
+  Kernel Scsi Driver: 1
+  Webview: 1
+  Kernel System-Call Auditing Subsystem: 1
+  Qualcomm Bus Driver: 1
+  Libziparchive: 1
+  Smart Lock: 1
+  Kernel Ion Driver: 1
+  Mediatek I2C Driver: 1
+  Nvidia Librm Library: 1
+  C-Ares: 1
+  Framesequence: 1
+  External Storage Provider: 1
+  Core Networking: 1
+  Contacts: 1
+  Qualcomm Radio Driver: 1
+  Kernel Profiling Subsystem: 1
+  Qualcomm Fuse File System: 1
+  Htc Input Driver: 1
+  Java.Net: 1
+  Bionic Dns: 1
+  Filesystem: 1
+  Realtek Sound Driver: 1
+  Qualcomm Secure Execution Environment Communicator: 1
+  Recovery Verifier: 1
+  Location Manager: 1
+  Kernel Fiq Debugger: 1
+  Qualcomm Input Hardware Driver: 1
+  Mediatek Apk: 1
+  Kernel Cryptographic Subsystem: 1
+  Qualcomm Camera Driver (Device Specific): 1
+  Kernel Usb Gadget Driver: 1
+  Camerabase: 1
+  Factory Reset: 1
+  Broadcom Wi-Fi Firmware: 1
+  V8: 1
+  Mediatek Camera Driver: 1
+  Nvidia I2C Hid Driver: 1
+  Qualcomm Audio Driver: 1
+  Dts Sound Driver: 1
+  Nvidia Boot And Power Management Processor Driver: 1
+  Qualcomm Seemp Driver: 1
+  Qualcomm Kyro L2 Driver: 1
+  Htc Oem Fastboot Command: 1
+  Qualcomm Cp Access Driver: 1
+  Qualcomm Avtimer Driver: 1
+  File-Based Encryption: 1
+  Giflib: 1
+  Motorola Bootloader: 1
+  Libxml2: 1
+  Qualcomm Slimbus Driver: 1
+  Mediatek System Management Interrupt Driver: 1
+  Qualcomm Pin Controller Driver: 1
+  Qualcomm Secure Channel Manager Driver: 1
+  Kernel Voltage Regulator Driver: 1
+  Goodix Touchscreen Driver: 1
+  Htc Bootloader: 1
+  Kernel Uvc Driver: 1
+  Qualcomm Power Driver (Device Specific): 1
+  Kernel Trace Subsystem: 1
+  Synaptics Components: 1
+  Imgtk Components: 1
+  Multiple Components: 1
+  Platform: 1
+
+Missing NVD data: 569/5611
+Missing Priority Score: 0/5611
+
+baseScore: mean=7.49, median=7.80, 25%=6.80, 75%=7.80
+
+exploitabilityScore: mean=2.26, median=1.80, 25%=1.80, 75%=2.80
+
+impactScore: mean=5.16, median=5.90, 25%=3.60, 75%=5.90
+
+priorityScore: mean=0.36, median=0.37, 25%=0.25, 75%=0.45
+
+Avg #PoCs per CVE: 0.11
+Max PoC stars overall: 1518
+Avg #References per CVE: 1.54
+
+-- PoC Coverage by Vulnerability Type (has/total, %) --
+  Other: 139/4507 (3.1%)
+  Elevation Of Privilege: 40/663 (6.0%)
+  Information Disclosure: 7/223 (3.1%)
+  Remote Code Execution: 8/124 (6.5%)
+  Denial Of Service: 3/89 (3.4%)
+  Remote Denial Of Service: 0/3 (0.0%)
+  Elevation Privilege: 1/1 (100.0%)
+  Mitigation Bypass: 0/1 (0.0%)
+
+-- PoC Coverage by Component (has/total, %) --
+  Qualcomm Closed-Source Components: 2/849 (0.2%)
+  Qualcomm Components: 8/817 (1.0%)
+  System: 37/725 (5.1%)
+  Framework: 29/557 (5.2%)
+  Media Framework: 7/287 (2.4%)
+  Qualcomm Closed-Source Components 2014-2016 Cumulative Update: 2/250 (0.8%)
+  Mediatek Components: 3/248 (1.2%)
+  Kernel Components: 29/214 (13.6%)
+  Mediaserver: 3/172 (1.7%)
+  Unisoc Components: 1/100 (1.0%)
+  Imagination Technologies: 0/100 (0.0%)
+  Arm Components: 1/89 (1.1%)
+  Vulnerabilities In Qualcomm Components: 0/82 (0.0%)
+  Kernel: 10/57 (17.5%)
+  Qualcomm Wi-Fi Driver: 1/44 (2.3%)
+  Google Play System Updates: 5/39 (12.8%)
+  Nvidia Gpu Driver: 0/34 (0.0%)
+  Qualcomm Sound Driver: 0/30 (0.0%)
+  Broadcom Wi-Fi Driver: 2/28 (7.1%)
+  Nvidia Components: 2/28 (7.1%)
+  Libstagefright: 1/24 (4.2%)
+  Broadcom Components: 2/24 (8.3%)
+  Android Runtime: 0/23 (0.0%)
+  Qualcomm Camera Driver: 0/19 (0.0%)
+  Kernel Networking Subsystem: 6/19 (31.6%)
+  Synaptics Touchscreen Driver: 0/18 (0.0%)
+  Audioserver: 0/18 (0.0%)
+  Libraries: 2/18 (11.1%)
+  Bluetooth: 0/17 (0.0%)
+  Nvidia Video Driver: 1/17 (5.9%)
+  Qualcomm Video Driver: 0/17 (0.0%)
+  Framework Apis: 2/14 (14.3%)
+  Kernel File System: 1/14 (7.1%)
+  Kernel Lts: 1/14 (7.1%)
+  Wi-Fi: 1/13 (7.7%)
+  Telecommunication: 0/13 (0.0%)
+  Mediatek Driver: 0/12 (0.0%)
+  Fpc Components: 0/12 (0.0%)
+  : 0/11 (0.0%)
+  Telephony: 1/10 (10.0%)
+  Qualcomm Bootloader: 0/9 (0.0%)
+  Qualcomm Gpu Driver: 2/8 (25.0%)
+  Nvidia Camera Driver: 0/8 (0.0%)
+  Mediatek Video Driver: 0/7 (0.0%)
+  Qualcomm Crypto Engine Driver: 0/7 (0.0%)
+  Htc Components: 0/7 (0.0%)
+  Library: 0/7 (0.0%)
+  Misc Oem: 0/7 (0.0%)
+  Kernel Performance Subsystem: 0/6 (0.0%)
+  Kernel Ion Subsystem: 1/6 (16.7%)
+  System UI: 0/6 (0.0%)
+  Aosp Mail: 0/5 (0.0%)
+  Mediatek Drivers (Device Specific): 0/5 (0.0%)
+  Kernel Sound Component: 1/5 (20.0%)
+  Kernel Security Subsystem: 0/5 (0.0%)
+  Kernel Sound Subsystem: 1/5 (20.0%)
+  Kernel Memory Subsystem: 2/5 (40.0%)
+  Aosp Messaging: 0/5 (0.0%)
+  Htc Touchscreen Driver: 0/5 (0.0%)
+  Nvidia Crypto Driver: 0/5 (0.0%)
+  Binder: 1/4 (25.0%)
+  Libutils: 1/4 (25.0%)
+  Setup Wizard: 0/4 (0.0%)
+  Mitigations: 1/4 (25.0%)
+  Widevine: 0/4 (0.0%)
+  Mediatek Wi-Fi Driver: 0/4 (0.0%)
+  Conscrypt: 0/4 (0.0%)
+  Openssl & Boringssl: 0/4 (0.0%)
+  Qualcomm Ipa Driver: 0/4 (0.0%)
+  Expat: 0/4 (0.0%)
+  Htc Sound Codec Driver: 0/4 (0.0%)
+  Qualcomm Media Codecs: 0/4 (0.0%)
+  Qualcomm Secure Execution Environment Communicator Driver: 0/4 (0.0%)
+  Qualcomm Spcom Driver: 0/4 (0.0%)
+  Mediatek Thermal Driver: 0/4 (0.0%)
+  Qualcomm Sound Codec Driver: 0/4 (0.0%)
+  Amlogic Components: 0/4 (0.0%)
+  Amlogic: 2/4 (50.0%)
+  Widevine Drm: 0/4 (0.0%)
+  Skia: 0/3 (0.0%)
+  System Server: 1/3 (33.3%)
+  Acknowledgements: 0/3 (0.0%)
+  Qualcomm Trustzone: 1/3 (33.3%)
+  Mediatek Power Management Driver: 0/3 (0.0%)
+  Qualcomm Usb Driver: 0/3 (0.0%)
+  Mediatek Power Driver: 0/3 (0.0%)
+  Serial Peripheral Interface Driver: 0/3 (0.0%)
+  Surfaceflinger: 0/3 (0.0%)
+  System Ui: 0/3 (0.0%)
+  Kernel Networking Component: 1/3 (33.3%)
+  Settings: 0/3 (0.0%)
+  Qualcomm Power Driver: 0/3 (0.0%)
+  Nvidia Profiler: 0/3 (0.0%)
+  Qualcomm Crypto Driver: 0/3 (0.0%)
+  Curl/Libcurl: 0/3 (0.0%)
+  Bootloader: 2/3 (66.7%)
+  Qualcomm Networking Driver: 0/3 (0.0%)
+  Mediatek: 0/3 (0.0%)
+  Keystore: 0/2 (0.0%)
+  Display Driver: 0/2 (0.0%)
+  Systemui: 0/2 (0.0%)
+  Trustzone: 1/2 (50.0%)
+  Qualcomm Performance Module: 0/2 (0.0%)
+  Minikin: 0/2 (0.0%)
+  Dhcpcd: 0/2 (0.0%)
+  Download Manager: 0/2 (0.0%)
+  System_Server: 0/2 (0.0%)
+  Debuggerd: 0/2 (0.0%)
+  Qualcomm Buspm Driver: 0/2 (0.0%)
+  Sockets: 0/2 (0.0%)
+  Openssl: 1/2 (50.0%)
+  Nfc: 0/2 (0.0%)
+  Qualcomm Performance Component: 0/2 (0.0%)
+  Usb Driver: 0/2 (0.0%)
+  Mediatek Hardware Sensor Driver: 0/2 (0.0%)
+  Mediatek Display Driver: 0/2 (0.0%)
+  Kernel Video Driver: 0/2 (0.0%)
+  Mediatek Video Codec Driver: 0/2 (0.0%)
+  Kernel Memory System: 1/2 (50.0%)
+  Nvidia Media Driver: 0/2 (0.0%)
+  Kernel Usb Driver: 0/2 (0.0%)
+  Kernel Asn.1 Decoder: 0/2 (0.0%)
+  Qualcomm Spmi Driver: 0/2 (0.0%)
+  Qualcomm Networking Component: 0/2 (0.0%)
+  Camera Service: 0/2 (0.0%)
+  Gps: 1/2 (50.0%)
+  Kernel Media Driver: 1/2 (50.0%)
+  Freetype: 0/2 (0.0%)
+  Framesequence Library: 1/2 (50.0%)
+  Package Manager: 0/2 (0.0%)
+  Nvidia Libomx Library: 0/2 (0.0%)
+  Libnl: 0/2 (0.0%)
+  Qualcomm Camera: 0/2 (0.0%)
+  Stmicroelectronics Driver: 0/2 (0.0%)
+  Libgdx: 0/2 (0.0%)
+  Qualcomm Adsprpc Driver: 0/2 (0.0%)
+  Qualcomm Fingerprint Sensor Driver: 0/2 (0.0%)
+  Htc Sensor Hub Driver: 0/2 (0.0%)
+  Libskia: 0/2 (0.0%)
+  Mediatek Touchscreen Driver: 0/2 (0.0%)
+  Qualcomm Led Driver: 0/2 (0.0%)
+  Qualcomm Shared Memory Driver: 0/2 (0.0%)
+  Mediatek Command Queue Driver: 0/2 (0.0%)
+  Runtime: 0/2 (0.0%)
+  Lg Components: 0/2 (0.0%)
+  Android Tv: 0/2 (0.0%)
+  Integer Overflows During Mp4 Atom Processing: 1/1 (100.0%)
+  An Integer Underflow In Esds Processing: 0/1 (0.0%)
+  Integer Overflow In Libstagefright When Parsing The Mpeg4 Tx3G Atom: 0/1 (0.0%)
+  Integer Underflow In Libstagefright When Processing Mpeg4 Covr Atoms: 0/1 (0.0%)
+  Integer Underflow In Libstagefright If Size Is Below 6 While Processing 3Gpp Metadata: 0/1 (0.0%)
+  Integer Overflow In Libstagefright Processing Mpeg4 Covr Atoms When Chunk_Data_Size Is Size_Max: 0/1 (0.0%)
+  Buffer Overflow In Sonivox Parse_Wave: 0/1 (0.0%)
+  Buffer Overflows In Libstagefright Mpeg4Extractor.Cpp: 0/1 (0.0%)
+  Buffer Overflow In Mediaserver Bpmediahttpconnection: 0/1 (0.0%)
+  Vulnerability In Libpng: Overflow In Png_Read_Idat_Data: 0/1 (0.0%)
+  Remotely Exploitable Memcpy() Overflow In P2P_Add_Device() In Wpa_Supplicant: 0/1 (0.0%)
+  Memory Corruption In Opensslx509Certificate Deserialization: 1/1 (100.0%)
+  Buffer Overflow In Mediaserver Bnhdcp: 0/1 (0.0%)
+  Buffer Overflow In Libstagefright Omxnodeinstance::Emptybuffer: 0/1 (0.0%)
+  Heap Overflow In Mediaserver Audiopolicymanager::Getinputforattr(): 0/1 (0.0%)
+  Applications Can Intercept Or Emulate Sim Commands To Telephony: 0/1 (0.0%)
+  Vulnerability In Bitmap Unmarshalling: 0/1 (0.0%)
+  Appwidgetserviceimpl Can Create Intentsender With System Privileges: 0/1 (0.0%)
+  Mitigation Bypass Of Restrictions On Getrecenttasks(): 0/1 (0.0%)
+  Activitymanagerservice.Getprocessrecordlocked() May Load A System Uid Application Into The Wrong Process: 0/1 (0.0%)
+  Unbounded Buffer Read In Libstagefright While Parsing 3Gpp Metadata: 0/1 (0.0%)
+  Region: 0/1 (0.0%)
+  Sms Enables Notification Bypass: 0/1 (0.0%)
+  Lockscreen: 0/1 (0.0%)
+  Sonivox: 0/1 (0.0%)
+  Libflac: 0/1 (0.0%)
+  Media Player Framework: 0/1 (0.0%)
+  Secure Element Evaluation Kit: 1/1 (100.0%)
+  Media Projection: 0/1 (0.0%)
+  Sqlite: 0/1 (0.0%)
+  Libmedia: 1/1 (100.0%)
+  Elevation Of Privilege In Kernel: 0/1 (0.0%)
+  Native Frameworks Library: 0/1 (0.0%)
+  Audio: 0/1 (0.0%)
+  Misc-Sd Driver: 1/1 (100.0%)
+  The Imagination Technologies Driver: 0/1 (0.0%)
+  Bouncy Castle: 0/1 (0.0%)
+  Syncmanager: 0/1 (0.0%)
+  Attack Surface Reduction For Nexus Kernels: 0/1 (0.0%)
+  The Debuggerd: 0/1 (0.0%)
+  Libvpx: 0/1 (0.0%)
+  Elevation Of Privilege In Conscrypt: 0/1 (0.0%)
+  The Qualcomm Performance Component: 1/1 (100.0%)
+  Mediatek Wi-Fi Kernel Driver: 0/1 (0.0%)
+  Kernel Keyring Component: 0/1 (0.0%)
+  The Kernel: 0/1 (0.0%)
+  Elevation Of Privilege In Mediatek Connectivity Kernel Driver: 0/1 (0.0%)
+  Media Codec: 0/1 (0.0%)
+  Qualcomm Rf Component: 0/1 (0.0%)
+  Imemory Native Interface: 1/1 (100.0%)
+  Telecom Component: 0/1 (0.0%)
+  Recovery Procedure: 0/1 (0.0%)
+  Texas Instruments Haptic Driver: 0/1 (0.0%)
+  Qualcomm Video Kernel Driver: 0/1 (0.0%)
+  Qualcomm Power Management Component: 0/1 (0.0%)
+  Exchange Activesync: 0/1 (0.0%)
+  Debuggerd Component: 0/1 (0.0%)
+  Syncstorageengine: 0/1 (0.0%)
+  Qualcomm Tethering Controller: 0/1 (0.0%)
+  Qualcomm Mdp Driver: 0/1 (0.0%)
+  Qualcomm Hardware Codec: 0/1 (0.0%)
+  Libwebm: 0/1 (0.0%)
+  Sd Card Emulation Layer: 1/1 (100.0%)
+  Framework Ui: 0/1 (0.0%)
+  Activity Manager: 0/1 (0.0%)
+  Libpng: 0/1 (0.0%)
+  Locksettingsservice: 1/1 (100.0%)
+  Choosertarget Service: 0/1 (0.0%)
+  Libc: 0/1 (0.0%)
+  Lsof: 0/1 (0.0%)
+  Dexclassloader: 0/1 (0.0%)
+  Proxy Auto-Config: 0/1 (0.0%)
+  Mediatek Gps Driver: 0/1 (0.0%)
+  Networking Component: 0/1 (0.0%)
+  Kernel Teletype Driver: 0/1 (0.0%)
+  Libjhead: 0/1 (0.0%)
+  System Clock: 0/1 (0.0%)
+  Shell: 0/1 (0.0%)
+  Camera Apis: 0/1 (0.0%)
+  Ion Driver: 0/1 (0.0%)
+  Lg Electronics Bootloader: 0/1 (0.0%)
+  Kernel Scheduler: 0/1 (0.0%)
+  Mediatek Wi-Fi Driver (Device Specific): 0/1 (0.0%)
+  Google Play Services: 0/1 (0.0%)
+  Mediamuxer: 0/1 (0.0%)
+  Device Boot: 0/1 (0.0%)
+  Notification Manager Service: 0/1 (0.0%)
+  System Ui Tuner: 0/1 (0.0%)
+  Sms: 0/1 (0.0%)
+  Java Debug Wire Protocol: 0/1 (0.0%)
+  Kernel Netfilter Subsystem: 1/1 (100.0%)
+  Qualcomm Radio Interface Layer: 0/1 (0.0%)
+  Qualcomm Subsystem Driver: 0/1 (0.0%)
+  Kernel Networking Driver: 0/1 (0.0%)
+  Kernel Ecryptfs Filesystem: 1/1 (100.0%)
+  Nvidia Kernel: 0/1 (0.0%)
+  Kernel Ext4 File System: 0/1 (0.0%)
+  Qualcomm Sound Codec: 0/1 (0.0%)
+  Qualcomm Dma Component: 0/1 (0.0%)
+  Kernel Shared Memory Subsystem: 0/1 (0.0%)
+  Servicemanager: 0/1 (0.0%)
+  Lock Settings Service: 0/1 (0.0%)
+  Zygote Process: 0/1 (0.0%)
+  Fingerprint Login: 0/1 (0.0%)
+  Framework Listener: 0/1 (0.0%)
+  Accessibility Services: 0/1 (0.0%)
+  Kernel Shared Memory Driver: 0/1 (0.0%)
+  Nvidia Mmc Test Driver: 0/1 (0.0%)
+  Qualcomm Qsee Communicator Driver: 0/1 (0.0%)
+  Qualcomm Character Driver: 0/1 (0.0%)
+  Motorola Usbnet Driver: 0/1 (0.0%)
+  Kernel Sound Driver: 0/1 (0.0%)
+  Libzipfile: 0/1 (0.0%)
+  Libjpeg: 0/1 (0.0%)
+  Openjdk: 0/1 (0.0%)
+  Aosp Launcher: 0/1 (0.0%)
+  Account Manager Service: 0/1 (0.0%)
+  Proxy Auto Config: 0/1 (0.0%)
+  Input Manager Service: 0/1 (0.0%)
+  Kernel Scsi Driver: 0/1 (0.0%)
+  Webview: 1/1 (100.0%)
+  Kernel System-Call Auditing Subsystem: 0/1 (0.0%)
+  Qualcomm Bus Driver: 0/1 (0.0%)
+  Libziparchive: 0/1 (0.0%)
+  Smart Lock: 0/1 (0.0%)
+  Kernel Ion Driver: 0/1 (0.0%)
+  Mediatek I2C Driver: 0/1 (0.0%)
+  Nvidia Librm Library: 0/1 (0.0%)
+  C-Ares: 0/1 (0.0%)
+  Framesequence: 0/1 (0.0%)
+  External Storage Provider: 0/1 (0.0%)
+  Core Networking: 0/1 (0.0%)
+  Contacts: 0/1 (0.0%)
+  Qualcomm Radio Driver: 1/1 (100.0%)
+  Kernel Profiling Subsystem: 0/1 (0.0%)
+  Qualcomm Fuse File System: 0/1 (0.0%)
+  Htc Input Driver: 0/1 (0.0%)
+  Java.Net: 0/1 (0.0%)
+  Bionic Dns: 0/1 (0.0%)
+  Filesystem: 0/1 (0.0%)
+  Realtek Sound Driver: 0/1 (0.0%)
+  Qualcomm Secure Execution Environment Communicator: 0/1 (0.0%)
+  Recovery Verifier: 0/1 (0.0%)
+  Location Manager: 0/1 (0.0%)
+  Kernel Fiq Debugger: 0/1 (0.0%)
+  Qualcomm Input Hardware Driver: 0/1 (0.0%)
+  Mediatek Apk: 0/1 (0.0%)
+  Kernel Cryptographic Subsystem: 0/1 (0.0%)
+  Qualcomm Camera Driver (Device Specific): 0/1 (0.0%)
+  Kernel Usb Gadget Driver: 0/1 (0.0%)
+  Camerabase: 0/1 (0.0%)
+  Factory Reset: 0/1 (0.0%)
+  Broadcom Wi-Fi Firmware: 1/1 (100.0%)
+  V8: 0/1 (0.0%)
+  Mediatek Camera Driver: 0/1 (0.0%)
+  Nvidia I2C Hid Driver: 0/1 (0.0%)
+  Qualcomm Audio Driver: 0/1 (0.0%)
+  Dts Sound Driver: 0/1 (0.0%)
+  Nvidia Boot And Power Management Processor Driver: 0/1 (0.0%)
+  Qualcomm Seemp Driver: 0/1 (0.0%)
+  Qualcomm Kyro L2 Driver: 0/1 (0.0%)
+  Htc Oem Fastboot Command: 0/1 (0.0%)
+  Qualcomm Cp Access Driver: 0/1 (0.0%)
+  Qualcomm Avtimer Driver: 0/1 (0.0%)
+  File-Based Encryption: 0/1 (0.0%)
+  Giflib: 0/1 (0.0%)
+  Motorola Bootloader: 1/1 (100.0%)
+  Libxml2: 0/1 (0.0%)
+  Qualcomm Slimbus Driver: 0/1 (0.0%)
+  Mediatek System Management Interrupt Driver: 0/1 (0.0%)
+  Qualcomm Pin Controller Driver: 0/1 (0.0%)
+  Qualcomm Secure Channel Manager Driver: 0/1 (0.0%)
+  Kernel Voltage Regulator Driver: 0/1 (0.0%)
+  Goodix Touchscreen Driver: 0/1 (0.0%)
+  Htc Bootloader: 0/1 (0.0%)
+  Kernel Uvc Driver: 0/1 (0.0%)
+  Qualcomm Power Driver (Device Specific): 0/1 (0.0%)
+  Kernel Trace Subsystem: 0/1 (0.0%)
+  Synaptics Components: 0/1 (0.0%)
+  Imgtk Components: 0/1 (0.0%)
+  Multiple Components: 0/1 (0.0%)
+  Platform: 0/1 (0.0%)
+
+-- Top 5 CVEs by num_poc --
+  CVE-2022-0847 (num_poc=100)
+  CVE-2016-5195 (num_poc=58)
+  CVE-2016-5195 (num_poc=58)
+  CVE-2019-2215 (num_poc=26)
+  CVE-2016-0728 (num_poc=14)
+
+-- Top 5 CVEs by max_poc_stars --
+  CVE-2023-45866 (max_poc_stars=1518)
+  CVE-2022-0847 (max_poc_stars=1101)
+  CVE-2016-5195 (max_poc_stars=975)
+  CVE-2016-5195 (max_poc_stars=975)
+  CVE-2017-5754 (max_poc_stars=575)
+
+-- Top 5 CVEs by baseScore --
+  CVE-2015-6636 (baseScore=9.8)
+  CVE-2015-6642 (baseScore=9.8)
+  CVE-2016-0801 (baseScore=9.8)
+  CVE-2016-0803 (baseScore=9.8)
+  CVE-2016-0804 (baseScore=9.8)
+
+-- Top 5 CVEs by exploitabilityScore --
+  CVE-2015-6636 (exploitabilityScore=3.9)
+  CVE-2015-6642 (exploitabilityScore=3.9)
+  CVE-2016-0801 (exploitabilityScore=3.9)
+  CVE-2016-0803 (exploitabilityScore=3.9)
+  CVE-2016-0804 (exploitabilityScore=3.9)
