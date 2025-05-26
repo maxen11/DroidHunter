@@ -30,8 +30,6 @@ def save_to_json(data, filename=None):
     with filepath.open("w", encoding="utf-8") as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
 
-# Ja precis, vi tänker samma då. Tänkte mer vad som kan vara rätt i stunden, så att man får en bra utgångspunkt för att kunna utvecklas, lära sig och på sikt utforska olika andra möjligheter, vilket är positivt att kunna göra på samma bolag 
-
 def read_json_file(filename, data_dir=data_dir):
     filepath = data_dir / filename
     if not filepath.exists():

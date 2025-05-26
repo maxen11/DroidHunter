@@ -199,10 +199,9 @@ def enrich_with_nvd(json_file):
                             Failed_CVEs += 1
 
     print_progress("Successful enrichment!")
-    print()  # Ensure the final message is on its own line.
+    print() 
     filename = input("Input desired file name (.json): ")
     fh.save_to_json(asb_data, filename)
 
 if __name__ == "__main__":
-    # Example usage: provide your input JSON file containing the CVE data.
     enrich_with_nvd("input_file.json")
