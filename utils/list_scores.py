@@ -975,10 +975,10 @@ def plot_layer_type_stacked_bar(file: str):
     ax.set_title('CVE Counts per Layer & Vulnerability Type', fontsize=20)
 
     # 3) Rotate x‐tick labels 45° and bump font size
-    ax.set_xticklabels(counts.index, rotation=45, ha='right', fontsize=14)
-    ax.tick_params(axis='y', labelsize=14)
+    ax.set_xticklabels(counts.index, rotation=45, ha='right', fontsize=20)
+    ax.tick_params(axis='y', labelsize=20)
 
-    ax.legend(title='Type', fontsize=18, title_fontsize=18)
+    ax.legend(title='Type', fontsize=20, title_fontsize=20)
 
 
     plt.tight_layout()
@@ -990,31 +990,41 @@ def plot_cvss_violin_strip(file: str, types_of_interest=None):
     Combined violin + strip plot of CVSS baseScore distributions
     for each vuln_type in types_of_interest.
     """
+    import numpy as np
+    import matplotlib.pyplot as plt
+
     df = load_cve_dataframe(file)
     if types_of_interest is None:
-        types_of_interest = ['EoP','RCE','ID','DoS','Unclassified']
-    
+        types_of_interest = ['EoP', 'RCE', 'ID', 'DoS', 'Unclassified']
+
     data = [
         df[df['vuln_type'] == t]['baseScore'].dropna().values
         for t in types_of_interest
     ]
     positions = np.arange(len(types_of_interest))
-    
+
     fig, ax = plt.subplots(figsize=(10, 6))
     # violin
     ax.violinplot(data, positions=positions, showmedians=True)
-    
+
     # jittered strip
     for i, vals in enumerate(data):
         x = np.random.normal(i, 0.04, size=len(vals))
         ax.scatter(x, vals, s=10, alpha=0.3)
-    
+
     ax.set_xticks(positions)
-    ax.set_xticklabels(types_of_interest, fontsize=20)
+    ax.set_xticklabels(types_of_interest, fontsize=20, rotation=45)
     ax.set_ylabel('CVSS Base Score', fontsize=20)
     ax.set_title('CVSS Base Score Distribution by Vulnerability Type', fontsize=20)
+
+    # set y-axis ticks at increments of 1 from 0 to 10
+    ax.set_yticks(np.arange(2, 11, 1))
+    ax.tick_params(axis='y', labelsize=18)
+
     plt.tight_layout()
     plt.show()
+
+
 
     # ————————————————————————————————————————————
 # Extended loader: include PoC count
@@ -1184,11 +1194,13 @@ def plot_poc_coverage_timeseries_by_type(file: str, types_of_interest=None):
     plt.xlabel('Date', fontsize=20)
     plt.ylabel('PoC Coverage (%)', fontsize=20)
     plt.title('Time Series: PoC Coverage by Vulnerability Type', fontsize=20)
-    plt.legend(title='Vuln Type', fontsize=20, title_fontsize=13)
-    plt.xticks(rotation=45)
+    plt.legend(title='Vuln Type', fontsize=20, title_fontsize=20)
+    plt.xticks(rotation=45, fontsize=20)
+    plt.yticks(fontsize=20)
     plt.grid(alpha=0.3)
     plt.tight_layout()
     plt.show()
+
 
 
 import numpy as np
@@ -1365,7 +1377,7 @@ def plot_poc_cvss_coverage_1point_bins(
                 label=t
             )
 
-    plt.xlabel('CVSS BaseScore (binned, 1-point bins)', fontsize=20)
+    plt.xlabel('CVSS BaseScore (binned)', fontsize=20)
     plt.ylabel('PoC Coverage (%)', fontsize=20)
     plt.title(
         f'PoC Coverage vs. CVSS (1-point bins, ≥{min_count} CVEs/bin)',
@@ -1384,7 +1396,7 @@ def plot_poc_cvss_coverage_with_counts(
     file: str,
     types_of_interest=None,
     bin_width: float = 1.0,
-    min_count: int = 5
+    min_count: int = 1
 ):
     """
     Plot PoC coverage (%) per CVSS bin (default 1.0‐point bins) as a line,
@@ -1423,7 +1435,7 @@ def plot_poc_cvss_coverage_with_counts(
     midpoints = [interval.left + bin_width/2 for interval in cov.index]
 
     # 7) Plot
-    fig, ax1 = plt.subplots(figsize=(10,6))
+    fig, ax1 = plt.subplots(figsize=(10, 6))
 
     # Line: PoC coverage
     for t in types_of_interest:
@@ -1434,9 +1446,11 @@ def plot_poc_cvss_coverage_with_counts(
                 marker='o',
                 label=f"{t} coverage"
             )
-    ax1.set_xlabel('CVSS BaseScore (binned, 1-point bins)', fontsize=20)
+    ax1.set_xlabel('CVSS BaseScore (binned)', fontsize=20)
     ax1.set_ylabel('PoC Coverage (%)', fontsize=20)
     ax1.set_ylim(0, 100)
+    ax1.tick_params(axis='x', labelsize=20)
+    ax1.tick_params(axis='y', labelsize=20)
 
     # Secondary axis: counts as bars
     ax2 = ax1.twinx()
@@ -1448,18 +1462,20 @@ def plot_poc_cvss_coverage_with_counts(
         color='gray',
         label='CVE count'
     )
-    ax2.set_ylabel('Number of CVEs in bin')
-    
+    ax2.set_ylabel('Number of CVEs in bin', fontsize=20)
+    ax2.tick_params(axis='y', labelsize=20)
+
     # Legends
     lines, labels = ax1.get_legend_handles_labels()
     bars, bar_labels = ax2.get_legend_handles_labels()
-    ax1.legend(lines + bars, labels + bar_labels, loc='upper left')
-    
-    plt.title(f"PoC Coverage and CVE Count per CVSS Bin (≥{min_count} CVEs)" , fontsize=20)
-    plt.xticks(midpoints, [f"{m:.1f}" for m in midpoints], rotation=45)
+    ax1.legend(lines + bars, labels + bar_labels, loc='upper left', fontsize=20, title_fontsize=20)
+
+    plt.title(f"PoC Coverage and CVE Count per CVSS Bin (≥{min_count} CVEs)", fontsize=20)
+    plt.xticks(midpoints, [f"{m:.1f}" for m in midpoints], rotation=45, fontsize=20)
     plt.grid(alpha=0.3)
     plt.tight_layout()
     plt.show()
+
 
 
 def plot_cve_count_by_score(
@@ -1492,7 +1508,7 @@ def plot_cve_count_by_score(
     # 5) bar plot
     plt.figure(figsize=(8,5))
     plt.bar(midpoints, counts.values, width=bin_width*0.8, color='skyblue', edgecolor='k')
-    plt.xticks(midpoints, [f"{m:.1f}" for m in midpoints])
+    plt.xticks(midpoints, [f"{m:.1f}" for m in midpoints], fontsize=20)
     plt.xlabel('CVSS BaseScore (binned)', fontsize=20)
     plt.ylabel('Number of CVEs', fontsize=20)
     plt.title('CVE Count by CVSS BaseScore Bin', fontsize=20)
@@ -1637,6 +1653,10 @@ def plot_cve_count_stacked_bar_by_score_type(
     """
     Stacked bar chart: for each CVSS bin, how many CVEs of each type.
     """
+    import numpy as np
+    import pandas as pd
+    import matplotlib.pyplot as plt
+
     # 1) load & prepare
     df = load_extended_df(file)
     df = df.dropna(subset=['baseScore'])
@@ -1654,7 +1674,7 @@ def plot_cve_count_stacked_bar_by_score_type(
     # 4) pivot counts
     pivot = (
         df[df['vuln_type'].isin(types_of_interest)]
-        .groupby(['score_bin','vuln_type'])
+        .groupby(['score_bin', 'vuln_type'])
         .size()
         .unstack(fill_value=0)
     )
@@ -1664,18 +1684,27 @@ def plot_cve_count_stacked_bar_by_score_type(
     ax = pivot.plot(
         kind='bar',
         stacked=True,
-        figsize=(10,6),
-        #colormap='tab20'
+        figsize=(10, 6)
     )
     ax.set_xlabel('CVSS BaseScore Bin', fontsize=20)
     ax.set_ylabel('CVE Count', fontsize=20)
     ax.set_title('Stacked CVE Counts by CVSS Bin & Vulnerability Type', fontsize=20)
 
-    ax.legend(title='Type', fontsize=18, title_fontsize=18)
+    ax.legend(title='Type', fontsize=20, title_fontsize=20)
 
-    plt.xticks(rotation=45, ha='right')
+    # Set y‐axis tick label size
+    ax.tick_params(axis='y', labelsize=20)
+
+    # Rotate + right‐align x‐tick labels:
+    ax.tick_params(axis='x', labelsize=20)  # only setting labelsize via tick_params
+    for lbl in ax.get_xticklabels():
+        lbl.set_rotation(45)
+        lbl.set_ha('right')
+
     plt.tight_layout()
     plt.show()
+
+
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -1829,8 +1858,8 @@ def plot_avg_pocs_by_layer(file: str):
     plt.xlabel('System Layer', fontsize=20)
     plt.ylabel('Average # of PoCs per CVE', fontsize=20)
     plt.title('Average Number of PoCs by System Layer', fontsize=20)
-    plt.xticks(rotation=45, ha='right', fontsize=14)
-    plt.yticks(fontsize=14)
+    plt.xticks(rotation=45, ha='right', fontsize=20)
+    plt.yticks(fontsize=20)
     plt.tight_layout()
     plt.show()
 
