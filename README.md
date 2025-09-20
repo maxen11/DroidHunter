@@ -86,15 +86,30 @@ It automates the process of collecting, enriching, and analyzing security bullet
 
 ### Prerequisites
 
-- Python 3.7+
-- Internet connection (for enrichment steps)
-- Install python libraries via `requirements.txt`
-- Chromium Drivers, install with `sudo apt install chromium chromium-driver`
-- Set GitHub API Token Environment variable
-  1. `echo 'export GITHUB_TOKEN="<token>"' >> ~/.bashrc`
-  2. `source ~/.bashrc`
-  or
-  1. `export export GITHUB_TOKEN="<token>"` (Temporary)
+- **Python** 3.7+
+- **Internet connection** (for enrichment steps)
+- **Install required Python libraries**  
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+- **Chromium & Chromium Driver**  
+  ```bash
+  sudo apt install chromium chromium-driver
+  ```
+
+- **GitHub API Token (GITHUB_TOKEN)**
+  - Add permanently to your shell:  
+    ```bash
+    echo 'export GITHUB_TOKEN="<token>"' >> ~/.bashrc
+    source ~/.bashrc
+    ```
+
+  - Or export temporarily (valid for the current session only):  
+    ```bash
+    export GITHUB_TOKEN="<token>"
+    ```
+
 
 ---
 
