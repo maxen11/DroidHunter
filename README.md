@@ -74,10 +74,11 @@ It automates the process of collecting, enriching, and analyzing security bullet
 
 - Fetch Android Security Bulletin CVEs
 - Enrich data with CVSS scores from the NVD
-- Gather PoC links from GitHub and ExploitDB
-- Calculate custom priority scores
+- Gather PoC links from GitHub and ExploitDB, enriched with blogs and other resources
+- Calculate custom priority scores 
 - List and explore top CVEs by different metrics
 - Lookup CVE details and PoC links on demand
+- Search GitHub PoCs and their parsed blogs and other resources for any CVE (not just Android)
 - Fully interactive terminal interface
 
 ---
